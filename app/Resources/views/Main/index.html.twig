@@ -3,7 +3,12 @@
 {% block title %}BlogBundle:Main:index{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Main:index pagesdved</h1>
+    <div class="col">
 
-    <a href="{{ path('logbook') }}">Ici le logbook</a>
+        <h1>Bienvenue sur {{ site_name }}</h1>
+        <div class="col-xs-offset-2 col-xs-8">
+            <p>Le site est actuellement en construction, les différentes sections ouvreront au fur et à mesure de mon avancement et apprentissage !</p>
+            <p>Vous pouvez d'ores et déjà retrouver mes objectifs, difficultés et avancées sur le développement du site <a href="{{ path('logbook') }}">dans mon logbook</a></p>
+        </div>
+    </div>
 {% endblock %}

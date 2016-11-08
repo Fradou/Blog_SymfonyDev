@@ -19,6 +19,30 @@
 
     </head>
     <body>
+    <header>
+        <div class="container-fluid nav_container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav navbar-nav navbar-left nav-social nav_networks">
+                    <a href="{{ path('index') }}" target="_blank"><img src="{{ asset('/img/home-black.png') }}" alt="home"></a>
+                    <a href="{{ path('profile') }}" target="_blank"><img src="{{ asset('/img/profile-black.png')}}" alt="profil"></a>
+                    <a href="{{ path('resume') }}" target="_blank"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></a>
+                </div>
+                <div class="nav navbar-nav navbar-right nav-social nav_networks">
+                    <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
+                    <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
+                    <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
+                </div>
+
+            </div>
+        </div>
+    </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

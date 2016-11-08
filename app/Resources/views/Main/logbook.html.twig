@@ -4,10 +4,9 @@
 
 {% block body %}
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-offset-2 col-xs-8"><h1>Bienvenue sur le journal de développement de mon site perso</h1></div>
-            <div class="col-xs-offset-2 col-xs-8"><h2>Ici vous retrouverez des postes court sur les avancées, difficultés et autre rencontrées en développant mon blog perso.</h2></div>
-        </div>
+        <h1>Bienvenue sur le journal de développement de mon site perso</h1>
+        <h2>Ici vous retrouverez des postes court sur les avancées, difficultés et autre rencontrées en développant mon blog perso.</h2>
+
         <div class="row" id="logbook_articles">
             {% for logbook in logbooks %}
                 <div class="col-xs-offset-2 col-xs-8">

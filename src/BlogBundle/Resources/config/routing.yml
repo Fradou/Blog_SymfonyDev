@@ -1,18 +1,6 @@
-index:
-    path:     /
-    defaults: { _controller: BlogBundle:Main:index }
-
-resume:
-    path:     /resume
-    defaults: { _controller: BlogBundle:Main:resume }
-
-contact:
-    path:     /contact
-    defaults: { _controller: BlogBundle:Main:contact }
-
-logbook:
-    path:     /logbook
-    defaults: { _controller: BlogBundle:Main:logbook }
+blog_main:
+    resource: "@BlogBundle/Resources/config/routing/main.yml"
+    prefix:   /
 
 blog_logbook:
     resource: "@BlogBundle/Resources/config/routing/logbook.yml"

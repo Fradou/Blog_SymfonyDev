@@ -3,7 +3,6 @@
 namespace BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use BlogBundle\Entity\logbook;
 
 class MainController extends Controller
 {
@@ -21,9 +20,9 @@ class MainController extends Controller
         ));
     }
 
-    public function contactAction()
+    public function profileAction()
     {
-        return $this->render('Main/contact.html.twig', array(
+        return $this->render('Main/profile.html.twig', array(
             // ...
         ));
     }
@@ -36,6 +35,13 @@ class MainController extends Controller
 
         return $this->render('Main/logbook.html.twig', array(
             'logbooks' => $logbooks,
+        ));
+    }
+
+    public function projectAction()
+    {
+        return $this->render('Main/project.html.twig', array(
+            // ...
         ));
     }
 

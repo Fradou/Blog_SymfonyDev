@@ -35,6 +35,11 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        site_name: "Time2Dev"
+        twitter: "alex_fradet"
+        github: "Fradou"
+        linkedin: "alexandrefradet"
 
 # Doctrine Configuration
 doctrine:
