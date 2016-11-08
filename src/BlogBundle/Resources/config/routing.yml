@@ -13,3 +13,7 @@ contact:
 logbook:
     path:     /logbook
     defaults: { _controller: BlogBundle:Main:logbook }
+
+blog_logbook:
+    resource: "@BlogBundle/Resources/config/routing/logbook.yml"
+    prefix:   /logbook

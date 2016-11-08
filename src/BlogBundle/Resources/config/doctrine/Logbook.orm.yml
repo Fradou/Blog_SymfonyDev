@@ -1,7 +1,7 @@
-BlogBundle\Entity\logbook:
+BlogBundle\Entity\Logbook:
     type: entity
     table: null
-    repositoryClass: BlogBundle\Repository\logbookRepository
+    repositoryClass: BlogBundle\Repository\LogbookRepository
     id:
         id:
             type: integer
@@ -12,14 +12,15 @@ BlogBundle\Entity\logbook:
         title:
             type: string
             length: 255
+        content:
+            type: text
         img:
             type: string
             length: 255
             nullable: true
-        content:
-            type: text
-            nullable: true
         other:
             type: string
             length: 255
+            nullable: true
+
     lifecycleCallbacks: {  }

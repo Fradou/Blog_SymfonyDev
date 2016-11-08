@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Logbook</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ logbook.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ logbook.title }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ logbook.content }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ logbook.img }}</td>
+            </tr>
+            <tr>
+                <th>Other</th>
+                <td>{{ logbook.other }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('logbook_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('logbook_edit', { 'id': logbook.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

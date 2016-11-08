@@ -3,6 +3,7 @@
 namespace BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use BlogBundle\Entity\logbook;
 
 class MainController extends Controller
 {
@@ -29,8 +30,12 @@ class MainController extends Controller
 
     public function logbookAction()
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $logbooks = $em->getRepository('BlogBundle:Logbook')->findAll();
+
         return $this->render('Main/logbook.html.twig', array(
-            // ...
+            'logbooks' => $logbooks,
         ));
     }
 

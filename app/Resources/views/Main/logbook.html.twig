@@ -1,7 +1,28 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}BlogBundle:Main:logbook{% endblock %}
+{% block title %}Logbook - Journal de Dev{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Main:logbook page</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-8"><h1>Bienvenue sur le journal de développement de mon site perso</h1></div>
+            <div class="col-xs-offset-2 col-xs-8"><h2>Ici vous retrouverez des postes court sur les avancées, difficultés et autre rencontrées en développant mon blog perso.</h2></div>
+        </div>
+        <div class="row" id="logbook_articles">
+            {% for logbook in logbooks %}
+                <div class="col-xs-offset-2 col-xs-8">
+                    <h3>{{ logbook.title }}</h3>
+                    {%  if logbook.img %}
+                        <img src="{{ logbook.img }}"/>
+                    {% endif %}
+                    <p>{{ logbook.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
+
+{# <td><a href="{{ path('logbook_show', { 'id': logbook.id }) }}">{{ logbook.id }}</a></td>
+                                <a href="{{ path('logbook_show', { 'id': logbook.id }) }}">show</a>
+                                <a href="{{ path('logbook_edit', { 'id': logbook.id }) }}">edit</a>
+#}
