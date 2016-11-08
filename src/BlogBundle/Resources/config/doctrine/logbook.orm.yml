@@ -1,0 +1,25 @@
+BlogBundle\Entity\logbook:
+    type: entity
+    table: null
+    repositoryClass: BlogBundle\Repository\logbookRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        img:
+            type: string
+            length: 255
+            nullable: true
+        content:
+            type: text
+            nullable: true
+        other:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

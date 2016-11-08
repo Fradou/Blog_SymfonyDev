@@ -1,0 +1,15 @@
+index:
+    path:     /
+    defaults: { _controller: BlogBundle:Main:index }
+
+resume:
+    path:     /resume
+    defaults: { _controller: BlogBundle:Main:resume }
+
+contact:
+    path:     /contact
+    defaults: { _controller: BlogBundle:Main:contact }
+
+logbook:
+    path:     /logbook
+    defaults: { _controller: BlogBundle:Main:logbook }
