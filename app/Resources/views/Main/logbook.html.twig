@@ -11,6 +11,9 @@
             {% for logbook in logbooks %}
                 <div class="col-xs-offset-2 col-xs-8">
                     <h3>{{ logbook.title }}</h3>
+                    {%  if logbook.other %}
+                        <p>{{ logbook.other }}</p>
+                    {%  endif %}
                     {%  if logbook.img %}
                         <img src="{{ logbook.img }}"/>
                     {% endif %}

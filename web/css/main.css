@@ -8,3 +8,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #logbook_articles {
 }
+
+body {
+    text-align:center;
+}
+
+header {
+    height: 10vh;
+}
+
+header img {
+    margin-top:1vh;
+}
