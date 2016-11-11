@@ -45,4 +45,11 @@ class MainController extends Controller
         ));
     }
 
+    public function settingsAction()
+    {
+        return $this->render('Main/settings.html.twig', array(
+            // ...
+        ));
+    }
+
 }

@@ -1,0 +1,15 @@
+BlogBundle\Entity\Test:
+    type: entity
+    table: null
+    repositoryClass: BlogBundle\Repository\TestRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        test:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
