@@ -7,6 +7,23 @@
         <h1>Bienvenue sur le journal de développement de mon site perso</h1>
         <h2>Ici vous retrouverez des postes court sur les avancées, difficultés et autre rencontrées en développant mon blog perso.</h2>
 
+        <div class="row" id="logbook_obj">
+            {% for logbook in logbooks %}
+                {% if logbook.title == "Objectifs" %}
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <h3>{{ logbook.title }}</h3>
+                        {%  if logbook.other %}
+                            <p>{{ logbook.other }}</p>
+                        {%  endif %}
+                        {%  if logbook.img %}
+                            <img src="{{ logbook.img }}"/>
+                        {% endif %}
+                        <p>{{ logbook.content }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
         <div class="row" id="logbook_articles">
             {% for logbook in logbooks %}
                 <div class="col-xs-offset-2 col-xs-8">
