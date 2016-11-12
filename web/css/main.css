@@ -1,12 +1,32 @@
+/* Colors from light to dark
+
+#00e500
+#00b200
+#009900
+#007f00
+#006600
+#003300
+*/
+
+
 h1 {
-    color:red;
+    color: #006600;
+}
+
+h3 {
+    color: #009900;
+}
+
+h4 {
+    color: #00b200;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-align:center
 }
 
-#logbook_articles {
+ul {
+    text-align: left;
 }
 
 body {
@@ -17,6 +37,9 @@ header {
     height: 10vh;
 }
 
+#logbook_articles {
+}
+
 header img {
     margin-top:1vh;
 }
@@ -24,4 +47,42 @@ header img {
 .disable{
     pointer-events: none;
     opacity: 0.35;
+}
+
+.logbook h4 {
+    font-style: oblique;
+}
+
+hr {
+    width: 75%;
+    color: #006600;
+    border-color: #006600;
+    background-color: #006600;
+}
+
+img {
+    height: 48px;
+    width: 48px;
+}
+
+/* Empty blocs to help layout */
+
+.bl_sp_xs {
+    height: 2.5vh;
+
+}
+
+.bl_sp_sm {
+    height: 5vh;
+
+}
+
+.bl_sp_md {
+    height: 7.5vh;
+
+}
+
+.bl_sp_lg {
+    height: 10vh;
+
 }
