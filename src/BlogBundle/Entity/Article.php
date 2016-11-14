@@ -29,6 +29,10 @@ class Article
      */
     private $img;
 
+    /**
+     * @var boolean
+     */
+    private $visible;
 
     /**
      * Get id
@@ -107,5 +111,30 @@ class Article
     public function getImg()
     {
         return $this->img;
+    }
+
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     *
+     * @return Article
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean
+     */
+    public function getVisible()
+    {
+        return $this->visible;
     }
 }

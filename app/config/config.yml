@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@BlogBundle/Resources/config/services.yml" }
+    - { resource: config_easy.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -71,9 +72,4 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-easy_admin:
-    entities:
-        - BlogBundle\Entity\Article
-        - BlogBundle\Entity\Category
-        - BlogBundle\Entity\Logbook
 

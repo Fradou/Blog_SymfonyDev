@@ -18,4 +18,6 @@ BlogBundle\Entity\Article:
             type: string
             length: 255
             nullable: true
+        visible:
+            type: boolean
     lifecycleCallbacks: {  }
