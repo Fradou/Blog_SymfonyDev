@@ -71,14 +71,9 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-# Assetic Configuration
-assetic:
-    debug:          "%kernel.debug%"
-    use_controller: false
-    bundles:        [ ]
-    #java: /usr/bin/java
-    filters:
-        cssrewrite: ~
-        sass: ~
-        compass: ~
+easy_admin:
+    entities:
+        - BlogBundle\Entity\Article
+        - BlogBundle\Entity\Category
+        - BlogBundle\Entity\Logbook
 

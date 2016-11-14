@@ -5,3 +5,7 @@ blog_main:
 blog_logbook:
     resource: "@BlogBundle/Resources/config/routing/logbook.yml"
     prefix:   /logbook
+
+blog_category:
+    resource: "@BlogBundle/Resources/config/routing/category.yml"
+    prefix:   /category

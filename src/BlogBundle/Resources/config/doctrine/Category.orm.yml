@@ -1,7 +1,7 @@
-BlogBundle\Entity\Test:
+BlogBundle\Entity\Category:
     type: entity
     table: null
-    repositoryClass: BlogBundle\Repository\TestRepository
+    repositoryClass: BlogBundle\Repository\CategoryRepository
     id:
         id:
             type: integer
@@ -9,7 +9,8 @@ BlogBundle\Entity\Test:
             generator:
                 strategy: AUTO
     fields:
-        test:
+        name:
             type: string
             length: 255
+            unique: true
     lifecycleCallbacks: {  }
