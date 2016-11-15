@@ -8,15 +8,16 @@ easy_admin:
     entities:
         Article:
             class: BlogBundle\Entity\Article
+            image_base_path: ''
             label: 'Article'
             list:
                 title: "Articles de la partie Blog du site"
                 fields:
                     - 'id'
-                    - { property: 'title', label: 'Adresse image' }
-                    - { property: 'img', label: 'Adresse image', type: 'image' }
+                    - { property: 'title', label: 'Titre' }
+                    - { property: 'img', label: 'Adresse image', type: 'image', base_path: '' }
                     - { property: 'content', label: "Contenu de l'article" }
-                    - { property: 'visible' }
+                    - { property: 'visible', label: "Article visible" }
         Category:
             class: BlogBundle\Entity\Category
             list:
@@ -26,7 +27,8 @@ easy_admin:
         Logbook:
             class: BlogBundle\Entity\Logbook
             list:
-                fields: ['title', { property: 'content', label: 'Contenu du post' }]
+                fields: ['title', { property: 'content', label: 'Contenu du post', type: 'raw' }]
+
 
     # Pour la page search, determine les champs ou faire la recherche
     list:

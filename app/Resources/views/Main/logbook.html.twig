@@ -43,7 +43,7 @@
                     {%  if logbook.img %}
                         <img src="{{ logbook.img }}"/>
                     {% endif %}
-                    <p>{{ logbook.content }}</p>
+                    <p>{{ logbook.content | raw }}</p>
                     <hr>
                 </div>
             {% endif %}
