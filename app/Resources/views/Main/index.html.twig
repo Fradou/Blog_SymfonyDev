@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 
 {% block title %}Accueil - Home | {{ site_name }} {% endblock %}
-
+{% block menu %}{% endblock %}
 {% block body %}
     <div class="col">
 
@@ -11,4 +11,12 @@
             <p>Vous pouvez d'ores et déjà retrouver mes objectifs, difficultés et avancées sur le développement du site <a href="{{ path('logbook') }}">dans mon logbook</a></p>
         </div>
     </div>
+        <div class="row">
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile"></div>
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile"></div>
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile"></div>
+        </div>
 {% endblock %}

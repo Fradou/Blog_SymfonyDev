@@ -28,14 +28,14 @@
 
         <div class="bl_sp_xs"></div>
 
-        <div class="row logbook" id="logbook_articles">
+        <div class="row logbook section" id="logbook_articles">
 
             <div class="col offset-s1 s10 offset-m2 m8 offset-l3 l6">
                 <h3>Journal</h3>
             </div>
             {% for logbook in logbooks %}
             {% if logbook.title != "Objectifs" %}
-                <div class="col offset-s2 s8 offset-m2 m8 offset-l3 l6">
+                <div class="col offset-s2 s8 offset-m2 m8 offset-l3 l6 hoverable">
                     <h4><small>{{ logbook.title }}</small></h4>
                     {%  if logbook.other %}
                         <p>{{ logbook.other }}</p>

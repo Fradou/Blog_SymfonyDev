@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Bienvenue sur {{ site_name }} par Alexandre Fradet !{% endblock %}</title>
+        <title>{% block title %}{{ site_name }} par Alexandre Fradet !{% endblock %}</title>
 
         <!-- Latest compiled and minified CSS -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
@@ -14,10 +14,6 @@
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         {% block stylesheets %}
@@ -28,21 +24,22 @@
 
     </head>
     <body>
+        {% block menu %}
     <header>
         <div class="">
             <div class="row" id="navbar">
 
                 <div class="col s10 offset-s1 m4 home_bloc_btn">
-                    <a href=""><img src="" alt=""><img src="{{ asset('/img/logo_perso-white.png') }}" alt="" ></a>
                     <a href="{{ path('index') }}"><img src="{{ asset('/img/home-black.png') }}" alt="home" ></a>
-                    <a class="disable" href="{{ path('profile') }}"><img src="{{ asset('/img/profile-black.png')}}" alt="profil"></a>
                     <a class="disable" href="{{ path('resume') }}"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></a>
+                    <a href="{{ path('logbook') }}"><img src="{{ asset('/img/logbook-black.png')}}" alt="logbook"></a>
+                    <a class="disable" href="{{ path('settings') }}"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></a>
                 </div>
                 <div class="col s10 offset-s1 offset-m1 m2 home_bloc_btn">
-                    <a class="disable" href="{{ path('settings') }}"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></a>
-                    <a href="{{ path('logbook') }}"><img src="{{ asset('/img/logbook-black.png')}}" alt="logbook"></a>
+                    <a href="{{ path('index') }}"><img src="" alt=""><img src="{{ asset('/img/logo_perso-white.png') }}" alt="" ></a>
                 </div>
                 <div class="col s10 offset-s1 offset-m1 m4 home_bloc_btn">
+                    <a class="disable" href="{{ path('profile') }}"><img src="{{ asset('/img/profile-black.png')}}" alt="profil"></a>
                     <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
                     <a  href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
                     <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
@@ -50,11 +47,14 @@
             </div>
         </div>
     </header>
+        {%  endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="{{ asset('css/main.js') }}" ></script>
             <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script type="text/javascript" src="js/materialize.min.js"></script>
+            <!-- Compiled and minified Materialize JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
         {% endblock %}
     </body>
 </html>

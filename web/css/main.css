@@ -99,10 +99,17 @@ img {
 }
 
 #navbar {
-    border-bottom: 2px solid #009900;
     box-shadow: 2px 2px 2px 0px #009900;
     height: auto;
 }
 
 .home_bloc_btn {
+}
+
+.home_bloc_tile {
+    height: 25vh;
+    box-shadow: 2px 2px 2px 2px #009900;
+    margin-top: 5vh;
+    background-color:red;
+
 }
