@@ -1,30 +1,38 @@
-/* Colors from light to dark
+/* Colors from light to dark  #00e500  #00b200  #009900  #007f00  #006600  #003300 */
 
-#00e500
-#00b200
-#009900
-#007f00
-#006600
-#003300
-*/
-
-
-h1 {
-    color: #006600;
-}
-
-h3 {
-    color: #009900;
-}
-
-h4 {
-    color: #00b200;
-}
-
+/* Titres et polices */
 h1, h2, h3, h4, h5, h6 {
     text-align:center
 }
 
+h1 {
+    color: #006600;
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    color: #009900;
+    font-size: 1.75rem;
+}
+
+h4 {
+    color: #00b200;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.15rem;
+}
+
+/* */
 ul {
     text-align: left;
 }
@@ -37,7 +45,7 @@ header {
     height: 10vh;
 }
 
-#logbook_articles {
+#logbook_obj {
 }
 
 header img {
@@ -53,8 +61,7 @@ header img {
     font-style: oblique;
 }
 
-hr {
-    width: 75%;
+.divider {
     color: #006600;
     border-color: #006600;
     background-color: #006600;
@@ -88,7 +95,7 @@ img {
 }
 
 #logbook_articles {
-    text-align:center;
+    text-align: justify;
 }
 
 #navbar {

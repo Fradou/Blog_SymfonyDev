@@ -3,14 +3,14 @@
 {% block title %}Journal de Dev - Logbook | {{ site_name }}{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>Bienvenue sur le journal de développement de mon site perso</h1>
-        <h2><small>Ici vous retrouverez des postes courts sur les avancées, difficultés, etc rencontrés en développant mon site perso.</small></h2>
+    <div class="">
+        <h1>Journal de développement - Logbook</h1>
+        <h2><small>Ici vous trouverez des postes courts sur les avancées et difficultés rencontrées en développant mon site perso.</small></h2>
 
         <div class="row logbook" id="logbook_obj">
-            <div class="col-xs-offset-2 col-xs-8">
+            <div class="col offset-s1 s10 offset-m2 m8 offset-l3 l6">
                 <h3>Objectifs</h3>
-                <h4>A l'heure actuelle, les principaux axes de développement sur lesquels je souhaite travailler pour mon site sont :</h4>
+                <h4><small>Axes de développement sur lesquels je souhaite travailler pour mon site :</small></h4>
                 <ul>
                     <li>Développement de toutes les sections du site</li>
                     <li>Tenue du logbook de développement</li>
@@ -18,10 +18,10 @@
                 </ul>
                 <br>
 
-                <h4>Et en optionnel :</h4>
+                <h4><small>Optionnel :</small></h4>
                 <ul>
                     <li>Commencer à créer une chatbot</li>
-                    <li>Intégrer API Github / créer script de récupération pour intégrer automatiquement mes textes de commit dans le logbook lors des commit / push </li>
+                    <li>Intégrer API Github / créer script pour intégrer automatiquement mes de commit dans le logbook. </li>
                 </ul>
             </div>
         </div>
@@ -30,13 +30,13 @@
 
         <div class="row logbook" id="logbook_articles">
 
-            <div class="col-xs-offset-2 col-xs-8">
+            <div class="col offset-s1 s10 offset-m2 m8 offset-l3 l6">
                 <h3>Journal</h3>
             </div>
             {% for logbook in logbooks %}
             {% if logbook.title != "Objectifs" %}
-                <div class="col-xs-offset-2 col-xs-8">
-                    <h4>{{ logbook.title }}</h4>
+                <div class="col offset-s2 s8 offset-m2 m8 offset-l3 l6">
+                    <h4><small>{{ logbook.title }}</small></h4>
                     {%  if logbook.other %}
                         <p>{{ logbook.other }}</p>
                     {%  endif %}
@@ -44,7 +44,7 @@
                         <img src="{{ logbook.img }}"/>
                     {% endif %}
                     <p>{{ logbook.content | raw }}</p>
-                    <hr>
+                    <div class="divider"></div>
                 </div>
             {% endif %}
             {% endfor %}
