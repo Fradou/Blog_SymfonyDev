@@ -99,7 +99,7 @@ img {
 }
 
 #navbar {
-    box-shadow: 2px 2px 2px 0px #009900;
+    box-shadow: 2px 2px 2px 0 #009900;
     height: auto;
 }
 
@@ -108,8 +108,12 @@ img {
 
 .home_bloc_tile {
     height: 25vh;
-    box-shadow: 2px 2px 2px 2px #009900;
     margin-top: 5vh;
-    background-color:red;
+    border-bottom: 1px solid #006600;
+    border-left: 1px solid #006600;
 
+}
+
+.hoverable img {
+    margin-top: -2.5vh;
 }

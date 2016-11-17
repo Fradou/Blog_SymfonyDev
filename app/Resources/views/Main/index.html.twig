@@ -12,11 +12,13 @@
         </div>
     </div>
         <div class="row">
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile"></div>
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile"></div>
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile"></div>
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile"></div>
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile"></div>
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile"></div>
+            <a href="{{ path('logbook') }}"><div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable">
+                    <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
+            </div></a>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></div>
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable"></div>
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"></div>
         </div>
 {% endblock %}
