@@ -7,30 +7,28 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     color: #006600;
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    color:#007f00;
 }
 
 h3 {
     color: #009900;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 h4 {
     color: #00b200;
-    font-size: 1.5rem;
-}
-
-h5 {
     font-size: 1.25rem;
 }
 
-h6 {
+h5 {
     font-size: 1.15rem;
 }
+
 
 /* */
 ul {
@@ -43,9 +41,6 @@ body {
 
 header {
     height: 10vh;
-}
-
-#logbook_obj {
 }
 
 header img {
@@ -98,6 +93,9 @@ img {
     text-align: justify;
 }
 
+#logbook_obj {
+}
+
 #navbar {
     box-shadow: 2px 2px 2px 0 #009900;
     height: auto;
@@ -111,7 +109,9 @@ img {
     margin-top: 5vh;
     border-bottom: 1px solid #006600;
     border-left: 1px solid #006600;
+}
 
+.home_bloc_tile p {
 }
 
 .hoverable img {

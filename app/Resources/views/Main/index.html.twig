@@ -12,13 +12,29 @@
         </div>
     </div>
         <div class="row">
-            <a href="{{ path('logbook') }}"><div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable">
+
+            <a href="{{ path('profile') }}">
+                <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
+                    <img src="{{ asset('/img/social-black.png')}}" alt="profil">
+                    <ul>
+                        <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
+                        <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-blue.png')}}" alt="twitter"></a>
+                        <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-blue.png')}}" alt="linkedin"></a></li>
+                    </ul>
+                </div></a>
+
+            <a href="{{ path('logbook') }}"><div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
                     <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
+                    <h2>Logbook</h2>
+                    <p>Les updates du développement des sections de mon site perso.<br> A terme, mon feed dev perso qui incluera feed github et probablement tweeter !</p>
             </div></a>
+
             <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></div>
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></div>
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable"></div>
+
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></div>
+
             <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable"></div>
+
             <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"></div>
         </div>
 {% endblock %}
