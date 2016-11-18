@@ -9,6 +9,12 @@ BlogBundle\Entity\Logbook:
             generator:
                 strategy: AUTO
     fields:
+        date:
+          nullable: true
+          type: date
+          gedmo:
+            timestampable:
+              on: create
         title:
             type: string
             length: 255

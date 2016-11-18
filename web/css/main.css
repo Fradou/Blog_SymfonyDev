@@ -117,3 +117,9 @@ img {
 .hoverable img {
     margin-top: -2.5vh;
 }
+
+#socialnet_tile img {
+    height: 36px;
+    width: 36px;
+    margin:auto;
+}

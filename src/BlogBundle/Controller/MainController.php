@@ -31,7 +31,7 @@ class MainController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $logbooks = $em->getRepository('BlogBundle:Logbook')->findAll();
+        $logbooks = $em->getRepository('BlogBundle:Logbook')->findBy(array(),array('date' => 'desc'));
 
         return $this->render('Main/logbook.html.twig', array(
             'logbooks' => $logbooks,

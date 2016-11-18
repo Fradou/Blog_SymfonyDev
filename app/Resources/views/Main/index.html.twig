@@ -3,7 +3,7 @@
 {% block title %}Accueil - Home | {{ site_name }} {% endblock %}
 {% block menu %}{% endblock %}
 {% block body %}
-    <div class="col">
+    <div class="row">
 
         <h1>Bienvenue sur {{ site_name }}</h1>
         <div class="col offset-s2 s8">
@@ -15,18 +15,20 @@
 
             <a href="{{ path('profile') }}">
                 <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
-                    <img src="{{ asset('/img/social-black.png')}}" alt="profil">
-                    <ul>
+                    <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
+                    <h2>Profil</h2>
+                    <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
+                    <div class="tile" id="socialnet_tile">
                         <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
-                        <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-blue.png')}}" alt="twitter"></a>
-                        <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-blue.png')}}" alt="linkedin"></a></li>
-                    </ul>
+                        <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
+                        <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
+                    </div>
                 </div></a>
 
             <a href="{{ path('logbook') }}"><div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
                     <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
                     <h2>Logbook</h2>
-                    <p>Les updates du développement des sections de mon site perso.<br> A terme, mon feed dev perso qui incluera feed github et probablement tweeter !</p>
+                    <p>Journal de bord du développement des sections de mon site perso.<br> A terme, mon feed dev perso qui incluera github et probablement tweeter !</p>
             </div></a>
 
             <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></div>
