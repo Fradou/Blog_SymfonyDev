@@ -17,26 +17,41 @@
                 <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
                     <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
                     <h2>Profil</h2>
-                    <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
-                    <div class="tile" id="socialnet_tile">
-                        <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
-                        <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
-                        <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
-                    </div>
+                    <p>Ma page de présentation générale.<br>Mon parcours, mes attentes, mes envies.</p>
                 </div></a>
 
             <a href="{{ path('logbook') }}"><div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
                     <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
                     <h2>Logbook</h2>
-                    <p>Journal de bord du développement des sections de mon site perso.<br> A terme, mon feed dev perso qui incluera github et probablement tweeter !</p>
+                    <p>Journal de bord de développement du site.<br> Section principale du site.<br>A terme, incluera github et tweeter !</p>
             </div></a>
 
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/settings-black.png')}}" alt="settings">
+                <h2>Profil</h2>
+                <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
+            </div>
 
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></div>
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum">
+                <h2>Profil</h2>
+                <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
+            </div>
 
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable"></div>
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <h2>Profil</h2>
+                <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
+            </div>
 
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable"></div>
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/social-black.png')}}" alt="logbook">
+                <h2>Contact</h2>
+                <p>Me retrouver</p>
+                <div class="tile" id="socialnet_tile">
+                    <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
+                    <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
+                    <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
+                </div>
+            </div>
         </div>
 {% endblock %}
