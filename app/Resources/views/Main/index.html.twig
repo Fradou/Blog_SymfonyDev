@@ -18,6 +18,8 @@
                     <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
                     <h2>Profil</h2>
                     <p>Ma page de présentation générale.<br>Mon parcours, mes attentes, mes envies.</p>
+                    <div class="bl_sp_xs"></div>
+                    <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
                </div>
             </a>
 
@@ -36,7 +38,7 @@
                 <p>Ce que j'ai fait.<br>Ce que je suis en train de faire.<br>Ce que je ferai.</p>
                 <div class="bl_sp_xs"></div>
                 <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
-            </div>*
+            </div>
             </a>
 
             <a href="{{ path('project') }}">
@@ -68,5 +70,6 @@
                     <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
                 </div>
             </div>
+            <a href="" id="winning_star">*</a>
         </div>
 {% endblock %}

@@ -40,14 +40,14 @@
 
                 -->
                 <li>
-                    <div class="collapsible-header">
+                    <div class="collapsible-header" id="log_title">
                         <h2>Journal</h2>
                     </div>
 
                 </li>
                 {% for logbook in logbooks %}
                     {% if logbook.title != "Objectifs" %}
-                        <li class="logbook_article">
+                        <li class="log_article">
                             <div class="collapsible-header">
                                 <h3><small>{{ logbook.date | date("d/m") }} - {{ logbook.title }}</small></h3>
                             </div>

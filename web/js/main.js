@@ -6,4 +6,8 @@ $(document).ready(function () {
         $("#maillink").hide();
         $("#mailelem").show();
     });
+    $("#log_title").click(function(){
+
+        $(".log_article:first-child").simulate('mousedown');
+    });
 });
