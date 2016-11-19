@@ -17,3 +17,7 @@ logbook:
 settings:
     path:     /settings
     defaults: { _controller: BlogBundle:Main:settings }
+
+project:
+    path:     /project
+    defaults: { _controller: BlogBundle:Main:project }

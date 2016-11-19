@@ -41,6 +41,7 @@ twig:
         twitter: "alex_fradet"
         github: "Fradou"
         linkedin: "alexandrefradet"
+        mail: "alex.fradet.1@gmail.com"
 
 # Doctrine Configuration
 doctrine:

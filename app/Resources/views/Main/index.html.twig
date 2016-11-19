@@ -18,39 +18,54 @@
                     <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
                     <h2>Profil</h2>
                     <p>Ma page de présentation générale.<br>Mon parcours, mes attentes, mes envies.</p>
-                </div></a>
+               </div>
+            </a>
 
-            <a href="{{ path('logbook') }}"><div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
+            <a href="{{ path('logbook') }}">
+                <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
                     <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
                     <h2>Logbook</h2>
                     <p>Journal de bord de développement du site.<br> Section principale du site.<br>A terme, incluera github et tweeter !</p>
-            </div></a>
+                </div>
+            </a>
 
+            <a href="{{ path('project') }}">
             <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
-                <img src="{{ asset('/img/settings-black.png')}}" alt="settings">
-                <h2>Profil</h2>
-                <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
-            </div>
+                <img src="{{ asset('/img/settings-black.png')}}" alt="projets">
+                <h2>Projets</h2>
+                <p>Ce que j'ai fait.<br>Ce que je suis en train de faire.<br>Ce que je ferai.</p>
+                <div class="bl_sp_xs"></div>
+                <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
+            </div>*
+            </a>
 
+            <a href="{{ path('project') }}">
             <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable">
-                <img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum">
+                <img src="{{ asset('/img/curriculum-black.png')}}" alt="blog">
                 <h2>Profil</h2>
                 <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
+                <div class="bl_sp_xs"></div>
+                <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
             </div>
+                </a>
 
             <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
-                <h2>Profil</h2>
-                <p>Ma page de présentation générale. Mon parcours, mes attentes et sans doute un peu mes idées.</p>
+                <img src="{{ asset('/img/blog-black.png')}}" alt="blog">
+                <h2>Blog</h2>
+                <p>De la tech et des idées.</p>
+                <div class="bl_sp_xs"></div>
+                <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
             </div>
 
             <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
                 <img src="{{ asset('/img/social-black.png')}}" alt="logbook">
                 <h2>Contact</h2>
-                <p>Me retrouver</p>
+                <p><span id="maillink">Me contacter</span><span id="mailelem">{{ mail }} <a href="mailto:alex.fradet.1@gmail.com"><img src="{{ asset('/img/mail-black.png')}}"/></a></span><br>
+                Me retrouver sur le web :</p>
                 <div class="tile" id="socialnet_tile">
                     <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
                     <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
-                    <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
+                    <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
                 </div>
             </div>
         </div>
