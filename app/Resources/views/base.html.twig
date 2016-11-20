@@ -13,6 +13,7 @@
 
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -21,16 +22,16 @@
         {% endblock %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     </head>
     <body>
         {% block menu %}
     <header>
-        <div class="">
+        <nav class="green">
             <div class="row" id="navbar">
-
                 <div class="col s10 offset-s1 m4 home_bloc_btn">
-                    <a href="{{ path('index') }}"><img src="{{ asset('/img/home-black.png') }}" alt="home" ></a>
+                    <a href="{{ path('index') }}"><img src="{{ asset('/img/home-black.png') }}" alt="home" class="" ></a>
                     <a class="disable" href="{{ path('resume') }}"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></a>
                     <a href="{{ path('logbook') }}"><img src="{{ asset('/img/logbook-black.png')}}" alt="logbook"></a>
                     <a class="disable" href="{{ path('settings') }}"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></a>
@@ -45,7 +46,7 @@
                     <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
         {%  endblock %}
 

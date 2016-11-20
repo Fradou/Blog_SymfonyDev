@@ -160,3 +160,7 @@ img {
 .collapsible-body p {
     text-align:justify;
 }
+
+.floating img {
+    margin-top: -15px;
+}
