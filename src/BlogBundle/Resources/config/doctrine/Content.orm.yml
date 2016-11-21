@@ -15,13 +15,15 @@ BlogBundle\Entity\Content:
         category:
             type: string
             length: 255
+            nullable: true
         content:
             type: text
-            nullable: true
         other:
             type: string
             length: 255
+            nullable: true
         img:
             type: string
             length: 255
+            nullable: true
     lifecycleCallbacks: {  }

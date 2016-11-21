@@ -6,7 +6,6 @@
 
     <div class="row">
         <div class="col s12 offset-m2 m8 offset-l3 l6">
-
             <div class="logbook_title">
                 <h1>Journal de développement - Logbook</h1>
                 <p>Ici vous trouverez des postes courts sur les avancées et difficultés rencontrées en développant mon site perso.</p>
@@ -46,7 +45,6 @@
 
                 </li>
                 {% for logbook in logbooks %}
-                    {% if logbook.title != "Objectifs" %}
                         <li class="log_article">
                             <div class="collapsible-header">
                                 <h3><small>{{ logbook.date | date("d/m") }} - {{ logbook.title }}</small></h3>
@@ -61,7 +59,6 @@
                                 <p>{{ logbook.content | raw }}</p>
                             </div>
                         </li>
-                    {% endif %}
                 {% endfor %}
             </ul>
         </div>

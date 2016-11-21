@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8" />
+
     <title>{% block title %}{{ site_name }} par Alexandre Fradet !{% endblock %}</title>
 
     <!-- Latest compiled and minified CSS -->
@@ -23,46 +24,87 @@
         <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     {% endblock %}
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('img/loho-perso-white.png')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/img/logo-perso-white.ico') }}" />
+
 </head>
+
 <body>
 {% block menu %}
-    <header>
-        <nav class="green darken-3 z-depth-3">
+    <header id="head">
+        <nav class="green darken-3 z-depth-5">
             <div class="nav-wrapper wrapper">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
                 <ul id="nav-mobile" class="left hide-on-med-and-down home_bloc_btn valign">
-                    <li><a href="{{ path('profile') }}">Profil</a></li>
-                    <li><a class="disable" href="{{ path('project') }}">Projets</a></li>
+                    <li><a href="{{ path('index') }}">Home</a></li>
+                    <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
+                    <li><a href="{{ path('project') }}">Projets</a></li>
                     <li><a href="{{ path('logbook') }}">Logbook</a></li>
                     <li><a class="disable" href="{{ path('blog') }}">Blog</a></li>
                 </ul>
 
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{ path('profile') }}">Profil</a></li>
-                    <li><a class="disable" href="{{ path('project') }}">Projets</a></li>
+                    <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
+                    <li><a href="{{ path('project') }}">Projets</a></li>
                     <li><a href="{{ path('logbook') }}">Logbook</a></li>
                     <li><a class="disable" href="{{ path('blog') }}">Blog</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+{%  endblock %}
 
-    <div class="fixed-action-btn horizontal">
-        <a href="{{ path('index') }}" class="btn-floating btn-large green darken-3">
-            <img src="{{ asset('/img/logo_perso-white.png') }}" alt="retour accueil">
+    <ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+                <a href="#!user"><img class="circle" src="{{ asset('/img/portrait_alexandrefradet.jpg') }}"></a>
+                <a href="#!name"><span class="black-text name">Alexandre FRADET</span></a>
+                <a href="#!email"><span class="black-text email">alex.fradet.1@gmail.com</span></a>
+            </div></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+
+
+<main>
+    <div class="fixed-action-btn">
+        <a href="#head" class="btn-floating btn-large green darken-3">
+            <img src="{{ asset('/img/arrow_up-black.png') }}" alt="retour haut">
         </a>
         <ul>
             <li><a href="https://twitter.com/{{ twitter }}" target="_blank" class="btn-floating yellow darken-1"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a></li>
             <li><a href="https://github.com/{{ github }}" target="_blank" class="btn-floating green"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a></li>
             <li><a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank" class="btn-floating blue"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
-            <li><a class="btn-floating red"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
+            <li><a href="mailto:{{ mail}}" class="btn-floating red"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
         </ul>
     </div>
-{%  endblock %}
 
 {% block body %}{% endblock %}
+</main>
+
+{% block footer %}
+    <footer class="page-footer green darken-3 z-depth-5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">{{ site_name }}</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.<br></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a href="#" data-activates="slide-out" class="button-collapse2 white-text">Profil</a></li>
+                        <li><a href="{{ path('project') }}" class="white-text">Projets</a></li>
+                        <li><a href="{{ path('logbook') }}" class="white-text">Logbook</a></li>
+                        <li><a href="{{ path('blog') }}" class="disable white-text">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
 
 {% block javascripts %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -71,5 +113,7 @@
     <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
 
 {% endblock %}
+
 </body>
+
 </html>

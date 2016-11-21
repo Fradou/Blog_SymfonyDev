@@ -13,7 +13,7 @@
     </div>
     <div class="row">
 
-        <a href="{{ path('profile') }}">
+        <a href="#" data-activates="slide-out" class="button-collapse2">
             <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
                 <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
                 <h2>Profil</h2>
@@ -36,8 +36,6 @@
                 <img src="{{ asset('/img/settings-black.png')}}" alt="projets">
                 <h2>Projets</h2>
                 <p>Stack technique perso.<br>Mes réalisations.</p>
-                <div class="bl_sp_xs"></div>
-                <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
             </div>
         </a>
 
@@ -73,3 +71,4 @@
         <a href="" id="winning_star">*</a>
     </div>
 {% endblock %}
+{% block footer %}{% endblock %}

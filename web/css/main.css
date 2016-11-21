@@ -38,6 +38,13 @@ ul {
 body {
     text-align:center;
     background-image: url('../img/background-greyzz.png');
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .disable{
@@ -165,12 +172,6 @@ img {
     margin: 3px;
 }
 
-.fixed-action-btn {
-    top: 32px;
-
-
-}
-
 #project_main ul {
 }
 
@@ -183,4 +184,16 @@ img {
 
 .card-action div {
     display: inline;
+}
+
+.log_article h2 {
+    background-image:none;
+}
+
+footer .row {
+    margin-bottom: 0px;
+}
+
+.userview {
+    background-image: url('../img/background-japanese.png');
 }
