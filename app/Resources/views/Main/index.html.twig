@@ -11,37 +11,37 @@
             <p>Vous pouvez d'ores et déjà retrouver mes objectifs, difficultés et avancées sur le développement du site <a href="{{ path('logbook') }}">dans mon logbook</a></p>
         </div>
     </div>
-        <div class="row">
+    <div class="row">
 
-            <a href="{{ path('profile') }}">
-                <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
-                    <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
-                    <h2>Profil</h2>
-                    <p>Ma page de présentation générale.<br>Mon parcours, mes attentes, mes envies.</p>
-                    <div class="bl_sp_xs"></div>
-                    <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
-               </div>
-            </a>
-
-            <a href="{{ path('logbook') }}">
-                <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
-                    <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
-                    <h2>Logbook</h2>
-                    <p>Journal de bord de développement du site.<br> Section principale du site.<br>A terme, incluera github et tweeter !</p>
-                </div>
-            </a>
-
-            <a href="{{ path('project') }}">
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
-                <img src="{{ asset('/img/settings-black.png')}}" alt="projets">
-                <h2>Projets</h2>
-                <p>"Stack technique" perso.<br>Mes réalisations.</p>
+        <a href="{{ path('profile') }}">
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
+                <h2>Profil</h2>
+                <p>Ma page de présentation générale.<br>Mon parcours, mes attentes, mes envies.</p>
                 <div class="bl_sp_xs"></div>
                 <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
             </div>
-            </a>
+        </a>
 
-            <a href="{{ path('project') }}">
+        <a href="{{ path('logbook') }}">
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
+                <h2>Logbook</h2>
+                <p>Journal de bord de développement du site.<br> Section principale du site.<br>A terme, incluera github et tweeter !</p>
+            </div>
+        </a>
+
+        <a href="{{ path('project') }}">
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/settings-black.png')}}" alt="projets">
+                <h2>Projets</h2>
+                <p>Stack technique perso.<br>Mes réalisations.</p>
+                <div class="bl_sp_xs"></div>
+                <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
+            </div>
+        </a>
+
+        <a href="{{ path('project') }}">
             <div class="col offset-s1 s10 offset-m1 m4 offset-l2 l2 home_bloc_tile hoverable">
                 <img src="{{ asset('/img/curriculum-black.png')}}" alt="blog">
                 <h2>Profil</h2>
@@ -49,27 +49,27 @@
                 <div class="bl_sp_xs"></div>
                 <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
             </div>
-                </a>
+        </a>
 
-            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
-                <img src="{{ asset('/img/blog-black.png')}}" alt="blog">
-                <h2>Blog</h2>
-                <p>De la tech et des idées.</p>
-                <div class="bl_sp_xs"></div>
-                <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
-            </div>
-
-            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
-                <img src="{{ asset('/img/social-black.png')}}" alt="logbook">
-                <h2>Contact</h2>
-                <p><span id="maillink">Me contacter</span><span id="mailelem">{{ mail }} <a href="mailto:alex.fradet.1@gmail.com"><img src="{{ asset('/img/mail-black.png')}}"/></a></span><br>
-                Me retrouver sur le web :</p>
-                <div class="tile" id="socialnet_tile">
-                    <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
-                    <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
-                    <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
-                </div>
-            </div>
-            <a href="" id="winning_star">*</a>
+        <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
+            <img src="{{ asset('/img/blog-black.png')}}" alt="blog">
+            <h2>Blog</h2>
+            <p>De la tech et des idées.</p>
+            <div class="bl_sp_xs"></div>
+            <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
         </div>
+
+        <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
+            <img src="{{ asset('/img/social-black.png')}}" alt="logbook">
+            <h2>Contact</h2>
+            <p><span id="maillink">Me contacter</span><span id="mailelem">{{ mail }} <a href="mailto:alex.fradet.1@gmail.com"><img src="{{ asset('/img/mail-black.png')}}"/></a></span><br>
+                Me retrouver sur le web :</p>
+            <div class="tile" id="socialnet_tile">
+                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
+                <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
+                <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
+            </div>
+        </div>
+        <a href="" id="winning_star">*</a>
+    </div>
 {% endblock %}

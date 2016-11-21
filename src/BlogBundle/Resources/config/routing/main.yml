@@ -21,3 +21,6 @@ settings:
 project:
     path:     /project
     defaults: { _controller: BlogBundle:Main:project }
+
+blog:
+    path:     /blog

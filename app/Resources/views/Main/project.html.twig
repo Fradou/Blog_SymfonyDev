@@ -1,7 +1,78 @@
 {% extends "base.html.twig" %}
 
-{% block title %}BlogBundle:Main:projet{% endblock %}
+{% block title %}Projets - Stack technique perso | {{ site_name }}{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Main:Projet page</h1>
+
+    <div id="project_main" class="row">
+        <div class="col s12 offset-m2 m8 offset-l3 l6">
+            <h1>Projet - Stack technique</h1>
+            <h2>Projets</h2>
+            <h3><small>Réalisations - Contributions - Essais</small></h3>
+            <h2>Technique</h2>
+            <h3><small>Ce que j'utilise</small></h3>
+        </div>
+    </div>
+    <div class=container">
+        <div class="row project-tile">
+            <div class="col s12 offset-m1 m5">
+                <div class="card lime darken-1 z-depth-2">
+                    <div class="card-content white-text">
+                        <span class="card-title">JavaScript</span>
+                        <ul>
+                            <li>Site réalisé avec jQuery.</li>
+                            <li>Si je dois partir sur une nouvelle techno JS front, ce serait React.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="green-text text-darken-4">This is a link</a>
+                        <a href="#" class="green-text text-darken-4">This is a link</a>
+                    </div>
+                </div>
+                <div class="card light-green z-depth-4">
+                    <div class="card-content white-text">
+                        <span class="card-title">Back office</span>
+                        <ul>
+                            <li>Php & Symfony 2 : En formation @WildCodeSchool.</li>
+                            <li>Site réalisé avec.</li>
+                            <li>A choisir, ma prochaine techno back serait nodejs.</li>
+                        </ul>
+
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="green-text text-darken-4">Wild Code School</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m5">
+                <div class="card green lighten-2 z-depth-2">
+                    <div class="card-content white-text ">
+                        <span class="card-title">CSS</span>
+                        <ul>
+                            <li>Site réalisé en Materializecss.</li>
+                            <li>Je travaille sur Bootstrap.</li>
+                            <li>J'hésite entre Foundation et du CSS sans framework pour mon prochain projet.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="green-text text-darken-4">Materialize</a>
+                        <a href="#" class="green-text text-darken-4">Bootstrap</a>
+                        <a href="#" class="green-text text-darken-4">Fondation</a>
+
+                    </div>
+                </div>
+                <div class="card green accent-4 z-depth-3">
+                    <div class="card-content white-text">
+                            <span class="card-title">
+                                    Site hebergé sur un VPS 1&1
+                            </span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="green-text text-darken-4">1&1</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
