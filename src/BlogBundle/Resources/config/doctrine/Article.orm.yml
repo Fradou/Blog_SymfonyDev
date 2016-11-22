@@ -20,4 +20,17 @@ BlogBundle\Entity\Article:
             nullable: true
         visible:
             type: boolean
+
+    manyToMany:
+        categories:
+            targetEntity: Category
+            inversedBy: articles
+            joinTable:
+                name: articles_categories
+                joinColumns:
+                    article_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    category_id:
+                        referencedColumnName: id
     lifecycleCallbacks: {  }
