@@ -1,62 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}{{ site_name }} par Alexandre Fradet !{% endblock %}</title>
+<head>
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8" />
 
-        <!-- Latest compiled and minified CSS -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-        <!-- Optional theme -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
-        <!-- Latest compiled and minified JavaScript -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+    <title>{% block title %}{{ site_name }} par Alexandre Fradet !{% endblock %}</title>
 
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Materialize icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
-        {% endblock %}
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    </head>
-    <body>
-        {% block menu %}
-    <header>
-        <div class="">
-            <div class="row" id="navbar">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    {% endblock %}
 
-                <div class="col s10 offset-s1 m4 home_bloc_btn">
-                    <a href="{{ path('index') }}"><img src="{{ asset('/img/home-black.png') }}" alt="home" ></a>
-                    <a class="disable" href="{{ path('resume') }}"><img src="{{ asset('/img/curriculum-black.png')}}" alt="curriculum"></a>
-                    <a href="{{ path('logbook') }}"><img src="{{ asset('/img/logbook-black.png')}}" alt="logbook"></a>
-                    <a class="disable" href="{{ path('settings') }}"><img src="{{ asset('/img/settings-black.png')}}" alt="settings"></a>
+    <link rel="icon" type="image/png" href="{{ asset('img/loho-perso-white.png')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/img/logo-perso-white.ico') }}" />
+
+</head>
+
+<body>
+{% block menu %}
+    <header id="head">
+        <nav class="green darken-3 z-depth-5">
+            <div class="nav-wrapper wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                <ul id="nav-mobile" class="left hide-on-med-and-down home_bloc_btn valign">
+                    <li><a href="{{ path('index') }}">Home</a></li>
+                    <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
+                    <li><a href="{{ path('project') }}">Projets</a></li>
+                    <li><a href="{{ path('logbook') }}">Logbook</a></li>
+                    <li><a class="disable" href="{{ path('blog') }}">Blog</a></li>
+                </ul>
+
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
+                    <li><a href="{{ path('project') }}">Projets</a></li>
+                    <li><a href="{{ path('logbook') }}">Logbook</a></li>
+                    <li><a class="disable" href="{{ path('blog') }}">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+{%  endblock %}
+
+    <ul id="slide-out" class="side-nav">
+        <li><div class="userView">
+                <a href="#!user"><img class="circle" src="{{ asset('/img/portrait_alexandrefradet.jpg') }}"></a>
+                <a href="#!name"><span class="black-text name">Alexandre FRADET</span></a>
+                <a href="#!email"><span class="black-text email">alex.fradet.1@gmail.com</span></a>
+            </div></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+
+
+<main>
+    <div class="fixed-action-btn">
+        <a href="#head" class="btn-floating btn-large green darken-3">
+            <img src="{{ asset('/img/arrow_up-black.png') }}" alt="retour haut">
+        </a>
+        <ul>
+            <li><a href="https://twitter.com/{{ twitter }}" target="_blank" class="btn-floating yellow darken-1"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a></li>
+            <li><a href="https://github.com/{{ github }}" target="_blank" class="btn-floating green"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a></li>
+            <li><a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank" class="btn-floating blue"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
+            <li><a href="mailto:{{ mail}}" class="btn-floating red"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
+        </ul>
+    </div>
+
+{% block body %}{% endblock %}
+</main>
+
+{% block footer %}
+    <footer class="page-footer green darken-3 z-depth-5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">{{ site_name }}</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.<br></p>
                 </div>
-                <div class="col s10 offset-s1 offset-m1 m2 home_bloc_btn">
-                    <a href="{{ path('index') }}"><img src="" alt=""><img src="{{ asset('/img/logo_perso-white.png') }}" alt="" ></a>
-                </div>
-                <div class="col s10 offset-s1 offset-m1 m4 home_bloc_btn">
-                    <a class="disable" href="{{ path('profile') }}"><img src="{{ asset('/img/profile-black.png')}}" alt="profil"></a>
-                    <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
-                    <a  href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
-                    <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a href="#" data-activates="slide-out" class="button-collapse2 white-text">Profil</a></li>
+                        <li><a href="{{ path('project') }}" class="white-text">Projets</a></li>
+                        <li><a href="{{ path('logbook') }}" class="white-text">Logbook</a></li>
+                        <li><a href="{{ path('blog') }}" class="disable white-text">Blog</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </header>
-        {%  endblock %}
+    </footer>
+{% endblock %}
 
-        {% block body %}{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
 
-        {% block javascripts %}
-            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <!-- Compiled and minified Materialize JavaScript -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-            <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
+{% endblock %}
 
-        {% endblock %}
-    </body>
+</body>
+
 </html>

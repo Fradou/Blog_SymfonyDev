@@ -38,14 +38,13 @@ ul {
 body {
     text-align:center;
     background-image: url('../img/background-greyzz.png');
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-header {
-    height: 10vh;
-}
-
-header img {
-    margin-top:1vh;
+main {
+    flex: 1 0 auto;
 }
 
 .disable{
@@ -95,11 +94,7 @@ img {
 }
 
 #logbook_obj {
-}
 
-#navbar {
-    box-shadow: 2px 2px 2px 0 #009900;
-    height: auto;
 }
 
 .home_bloc_btn {
@@ -159,4 +154,46 @@ img {
 
 .collapsible-body p {
     text-align:justify;
+}
+
+.floating img {
+    margin-top: -15px;
+}
+
+.fixed-action-btn img {
+    width: 28px;
+    height: 28px;
+    margin: 6px;
+}
+
+.btn-large img {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+}
+
+#project_main ul {
+}
+
+#project_main li {
+}
+
+.project-tile li {
+
+}
+
+.card-action div {
+    display: inline;
+}
+
+.log_article h2 {
+    background-image:none;
+}
+
+footer .row {
+    margin-bottom: 0px;
+}
+
+.userview {
+    background-image: url('../img/background-japanese.png');
 }

@@ -13,20 +13,6 @@ class MainController extends Controller
         ));
     }
 
-    public function resumeAction()
-    {
-        return $this->render('Main/resume.html.twig', array(
-            // ...
-        ));
-    }
-
-    public function profileAction()
-    {
-        return $this->render('Main/profile.html.twig', array(
-            // ...
-        ));
-    }
-
     public function logbookAction()
     {
         $em = $this->getDoctrine()->getManager();

@@ -1,7 +1,90 @@
 {% extends "base.html.twig" %}
 
-{% block title %}BlogBundle:Main:projet{% endblock %}
+{% block title %}Projets - Stack technique perso | {{ site_name }}{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Main:Projet page</h1>
+
+    <div id="project_main" class="row">
+        <div class="col s12 offset-m2 m8 offset-l3 l6">
+            <h1>Projet - Stack technique</h1>
+            <h2>Projets</h2>
+            <h3><small>Réalisations - Contributions - Essais</small></h3>
+            <h2>Technique</h2>
+            <h3><small>Ce que j'utilise</small></h3>
+        </div>
+    </div>
+    <div class=container">
+        <div class="row project-tile">
+            <div class="col offset-s1 s10 offset-m1 m5">
+                <div class="card light-green z-depth-4">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>PHP</strong></span>
+                        <ul>
+                            <li>Site réalisé avec <strong>Symfony 2</strong>.</li>
+                            <li>En formation sur ce framework <strong>@WildCodeSchool</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://www.wildcodeschool.fr/" class="green-text text-darken-4">Wild Code School</a>
+                        <a href="https://symfony.com" target="_blank" class="green-text text-darken-4">Symfony</a>
+                    </div>
+                </div>
+
+                <div class="card green lighten-2 z-depth-4">
+                    <div class="card-content white-text ">
+                        <span class="card-title"><strong>CSS</strong></span>
+                        <ul>
+                            <li>Site réalisé en <strong>Materializecss</strong>.</li>
+                            <li>Je travaille sur <strong>Bootstrap</strong>.</li>
+                            <li>J'hésite entre <strong>Foundation</strong> et du CSS sans framework pour mon prochain projet.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://materializecss.com/" class="green-text text-darken-4">Materialize</a>
+                        <a href="http://getbootstrap.com/" class="green-text text-darken-4">Bootstrap</a>
+                        <a href="http://foundation.zurb.com/" class="green-text text-darken-4">Foundation</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m5">
+                <div class="card lime darken-1 z-depth-4">
+                    <div class="card-content white-text">
+                        <span class="card-title"><strong>JavaScript</strong></span>
+                        <ul>
+                            <li>Site réalisé avec <strong>jQuery</strong>, librairie avec laquelle je travaille.</li>
+                            <li>J'ai testé rapidement <strong>AngularJS</strong>.</li>
+                            <li>Si je dois partir sur une nouvelle techno JS front, ce serait <strong>ReactJS</strong>.</li>
+                            <li>Ma prochaine techno back sera probablement <strong>NodeJS</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://jquery.com/" class="green-text text-darken-4">jQuery</a>
+                        <a href="https://angularjs.org/" class="green-text text-darken-4">AngularJS</a>
+                    </div>
+                </div>
+                <div class="card green accent-4 z-depth-4">
+                    <div class="card-content white-text">
+                            <span class="card-title">
+                                    Site hebergé sur un <strong>VPS</strong> 1&1
+                            </span>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://www.1and1.fr" class="green-text text-darken-4">1&1</a>
+                    </div>
+                </div>
+                <div class="card green accent-2 z-depth-4">
+                    <div class="card-content white-text">
+                        <p>
+                            <strong>
+                            Je travaille principalement avec PHP Storm et un peu de SublimeText.
+                            </strong>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+

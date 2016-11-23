@@ -194,4 +194,33 @@ class Logbook
     {
         return $this->updated;
     }
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Logbook
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
 }

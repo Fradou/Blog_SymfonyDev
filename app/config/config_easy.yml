@@ -20,6 +20,7 @@ easy_admin:
                     - { property: 'visible', label: "Article visible" }
         Category:
             class: BlogBundle\Entity\Category
+            label: 'Categories'
 
             list:
                 fields:
@@ -28,7 +29,16 @@ easy_admin:
         Logbook:
             class: BlogBundle\Entity\Logbook
             list:
-                fields: ['title', { property: 'content', label: 'Contenu du post', type: 'raw' }]
+                fields: ['title', { property: 'content', label: 'Contenu du post', type: 'raw' }, 'date']
+        Content:
+            class: BlogBundle\Entity\Content
+            label: 'Contenus divers'
+            list:
+                fields:
+                    - 'id'
+                    - { property: 'title'}
+                    - { property: 'content', label: 'Contenu du post', type: 'raw' }
+                    - { property: 'img', type: 'image'}
 
 
     # Pour la page search, determine les champs ou faire la recherche
