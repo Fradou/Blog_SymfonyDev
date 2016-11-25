@@ -137,4 +137,55 @@ class Article
     {
         return $this->visible;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $categories;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add category
+     *
+     * @param \BlogBundle\Entity\Category $category
+     *
+     * @return Article
+     */
+    public function addCategory(\BlogBundle\Entity\Category $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \BlogBundle\Entity\Category $category
+     */
+    public function removeCategory(\BlogBundle\Entity\Category $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    public function __toString()
+    {
+        return strval($this->title);
+    }
 }

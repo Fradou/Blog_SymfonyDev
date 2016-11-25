@@ -9,3 +9,4 @@ blog_logbook:
 blog_category:
     resource: "@BlogBundle/Resources/config/routing/category.yml"
     prefix:   /category
+

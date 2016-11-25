@@ -16,16 +16,19 @@ easy_admin:
                     - 'id'
                     - { property: 'title', label: 'Titre' }
                     - { property: 'img', label: 'Adresse image', type: 'image', base_path: '' }
-                    - { property: 'content', label: "Contenu de l'article" }
-                    - { property: 'visible', label: "Article visible" }
+                    - { property: 'content', label: "Contenu" }
+                    - { property: 'visible', label: "Visible" }
+                    - { property: 'categories', label: "Categories associées" }
         Category:
             class: BlogBundle\Entity\Category
             label: 'Categories'
-
             list:
+                title: "Categories des articles"
                 fields:
                     - 'id'
-                    - { property: 'name', label: 'Nom de catégorie', css_class: 'test', template: ' ' }
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'articles', label: 'Articles liés' }
+
         Logbook:
             class: BlogBundle\Entity\Logbook
             list:
@@ -48,3 +51,13 @@ easy_admin:
         max_results: 15
     design:
         brand_color: '#377E27'
+        menu:
+            - { label: 'Gestion DB'}
+            - Article
+            - Category
+            - Logbook
+            - Content
+            - { label: 'Retour au site'}
+            - { label: 'Accueil', route: 'index' }
+            - { label: 'Log', route: 'logbook' }
+#            - { label: 'Other Task', route: 'other_task', params: { max: 7 } }
