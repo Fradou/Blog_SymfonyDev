@@ -14,4 +14,16 @@ BlogBundle\Entity\Logcom:
             length: 255
         content:
             type: text
+        visible:
+            type: boolean
+
+    manyToOne:
+        user:
+            targetEntity: User
+            inversedBy: comments
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+
+
     lifecycleCallbacks: {  }
