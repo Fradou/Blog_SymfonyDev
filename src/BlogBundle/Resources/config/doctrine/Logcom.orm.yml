@@ -1,0 +1,17 @@
+BlogBundle\Entity\Logcom:
+    type: entity
+    table: null
+    repositoryClass: BlogBundle\Repository\LogcomRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        subject:
+            type: string
+            length: 255
+        content:
+            type: text
+    lifecycleCallbacks: {  }
