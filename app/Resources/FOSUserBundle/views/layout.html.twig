@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Inscription - Register | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col offset-l4 l4 offset-m3 m6 offset-s2 s8">
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+
+        <div class="bl_sp_md"></div>
+
+
+        {% for type, messages in app.session.flashBag.all %}
+            {% for message in messages %}
+                <div class="{{ type }} col offset-l4 l4 offset-m3 m6 offset-s2 s8">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div class="col offset-l4 l4 offset-m3 m6 offset-s2 s8">
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+    </div>
+{% endblock %}

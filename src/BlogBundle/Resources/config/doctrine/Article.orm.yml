@@ -21,6 +21,11 @@ BlogBundle\Entity\Article:
         visible:
             type: boolean
 
+    oneToMany:
+        comments:
+            targetEntity: Comment
+            mappedBy: Article
+
     manyToMany:
         categories:
             targetEntity: Category

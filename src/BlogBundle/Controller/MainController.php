@@ -17,10 +17,18 @@ class MainController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $logcoms = $em->getRepository('BlogBundle:Logcom')->findBy(
+            array(),
+            array('id' => 'desc'),
+            5,
+            0
+        );
+
         $logbooks = $em->getRepository('BlogBundle:Logbook')->findBy(array(),array('date' => 'desc'));
 
         return $this->render('Main/logbook.html.twig', array(
             'logbooks' => $logbooks,
+            'logcoms' => $logcoms,
         ));
     }
 
