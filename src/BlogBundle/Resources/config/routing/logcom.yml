@@ -1,0 +1,24 @@
+logcom_index:
+    path:     /
+    defaults: { _controller: "BlogBundle:Logcom:index" }
+    methods:  GET
+
+logcom_show:
+    path:     /{id}/show
+    defaults: { _controller: "BlogBundle:Logcom:show" }
+    methods:  GET
+
+logcom_new:
+    path:     /new
+    defaults: { _controller: "BlogBundle:Logcom:new" }
+    methods:  [GET, POST]
+
+logcom_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BlogBundle:Logcom:edit" }
+    methods:  [GET, POST]
+
+logcom_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BlogBundle:Logcom:delete" }
+    methods:  DELETE

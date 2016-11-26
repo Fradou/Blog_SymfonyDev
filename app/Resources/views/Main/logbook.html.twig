@@ -45,23 +45,43 @@
 
                 </li>
                 {% for logbook in logbooks %}
-                        <li class="log_article">
-                            <div class="collapsible-header">
-                                <h3><small>{{ logbook.date | date("d/m") }} - {{ logbook.title }}</small></h3>
-                            </div>
-                            <div class="collapsible-body">
-                                {%  if logbook.other %}
-                                    <p>{{ logbook.other }}</p>
-                                {%  endif %}
-                                {%  if logbook.img %}
-                                    <img src="{{ logbook.img }}"/>
-                                {% endif %}
-                                <p>{{ logbook.content | raw }}</p>
-                            </div>
-                        </li>
+                    <li class="log_article">
+                        <div class="collapsible-header">
+                            <h3><small>{{ logbook.date | date("d/m") }} - {{ logbook.title }}</small></h3>
+                        </div>
+                        <div class="collapsible-body">
+                            {%  if logbook.other %}
+                                <p>{{ logbook.other }}</p>
+                            {%  endif %}
+                            {%  if logbook.img %}
+                                <img src="{{ logbook.img }}"/>
+                            {% endif %}
+                            <p>{{ logbook.content | raw }}</p>
+                        </div>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
+
+        <div class="col s12 m2 l3">
+            <div class="col offset-s2 s8" id="logbook_comment">
+                <div id="logcom_header">
+                    <h2>Vos petits com</h2>
+                    <p>Ce qu'ils ont pensés du logbook</p>
+                </div>
+
+                {% for logcom in logcoms %}
+
+                        <h3><small>{{ logcom.user }}</small></h3>
+                    <p><span>{{ logcom.subject }}</span><br>
+                        {{ logcom.content }}</p>
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+
     </div>
 {% endblock %}
 

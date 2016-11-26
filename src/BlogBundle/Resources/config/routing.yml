@@ -10,3 +10,7 @@ blog_category:
     resource: "@BlogBundle/Resources/config/routing/category.yml"
     prefix:   /category
 
+blog_logcom:
+        resource: "@BlogBundle/Resources/config/routing/logcom.yml"
+        prefix:   /logcom
+

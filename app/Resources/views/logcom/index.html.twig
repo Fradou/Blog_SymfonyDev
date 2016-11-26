@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Logcoms list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Subject</th>
+                <th>Content</th>
+                <th>Visible</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for logcom in logcoms %}
+            <tr>
+                <td><a href="{{ path('logcom_show', { 'id': logcom.id }) }}">{{ logcom.id }}</a></td>
+                <td>{{ logcom.subject }}</td>
+                <td>{{ logcom.content }}</td>
+                <td>{% if logcom.visible %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('logcom_show', { 'id': logcom.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('logcom_edit', { 'id': logcom.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('logcom_new') }}">Create a new logcom</a>
+        </li>
+    </ul>
+{% endblock %}

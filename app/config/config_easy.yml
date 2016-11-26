@@ -50,6 +50,7 @@ easy_admin:
                     - 'id'
                     - { property: 'subject'}
                     - { property: 'content'}
+                    - { property: 'visible', label: "Visible" }
 
         Logcom:
             class: BlogBundle\Entity\Logcom
@@ -59,6 +60,7 @@ easy_admin:
                     - 'id'
                     - { property: 'subject'}
                     - { property: 'content'}
+                    - { property: 'visible', label: "Visible" }
 
 
 

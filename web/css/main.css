@@ -209,3 +209,15 @@ footer .row {
 }
 
 **/
+
+#logbook_comment span {
+    font-weight: bold;
+}
+
+#logcom_header {
+    margin-top: 12.5vh;
+}
+
+#logcom_header h3 {
+    line-height: 100%;
+}
