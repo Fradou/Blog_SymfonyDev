@@ -23,7 +23,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "symfony/twig-bridge": "^3.1",
         "javiereguiluz/easyadmin-bundle": "^1.16",
-        "friendsofsymfony/user-bundle": "~2.0@dev"
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "friendsofsymfony/rest-bundle": "^2.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

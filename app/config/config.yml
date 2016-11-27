@@ -33,6 +33,10 @@ framework:
     fragments:       ~
     http_method_override: true
 
+  # Activate serializer for FOSRest
+    serializer:
+        enabled: true
+
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
