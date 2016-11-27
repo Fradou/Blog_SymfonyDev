@@ -54,17 +54,20 @@
         </nav>
     </header>
 {%  endblock %}
+<main>
+
+{# Profile side-nav #}
 
     <ul id="slide-out" class="side-nav">
         <li>
             <div class="userView">
-                <a href="#!user"><img class="circle" src="{{ asset('/img/portrait_alexandrefradet.jpg') }}"></a>
-                <a href="#!name"><span class="black-text name">Alexandre FRADET</span></a>
-                <a href="#!email"><span class="black-text email">alex.fradet.1@gmail.com</span></a>
+                <a href=""><img class="circle" src="{{ asset('/img/portrait_alexandrefradet.jpg') }}"></a>
+                <a href=""><span class="black-text name">Alexandre FRADET</span></a>
+                <a href=""><span class="black-text email">alex.fradet.1@gmail.com</span></a>
             </div>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
+        <li><a href=""><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="">Second Link</a></li>
         <li><div class="divider"></div></li>
         <li><a class="subheader">Subheader</a></li>
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
@@ -75,11 +78,13 @@
         <li>Ancien téléconseiller</li>
     </ul>
 
+{# Bottom fixed button #}
 
-<main>
     <div class="fixed-action-btn">
-        <a href="#head" class="btn-floating btn-large green darken-3">
-            <img src="{{ asset('/img/arrow_up-black.png') }}" alt="retour haut">
+        <a href="#" data-activates="slide-out" class="button-collapse2 btn-floating btn-large green darken-3">
+
+ {#       <a href="#head" class="btn-floating btn-large green darken-3"> #}
+            <img src="{{ asset('/img/profile-black.png') }}" alt="profile">
         </a>
         <ul>
             <li><a href="https://twitter.com/{{ twitter }}" target="_blank" class="btn-floating yellow darken-1"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a></li>
@@ -91,6 +96,7 @@
 
 {% block body %}{% endblock %}
 </main>
+
 
 {% block footer %}
     <footer class="page-footer green darken-3 z-depth-5">
