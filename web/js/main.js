@@ -14,16 +14,6 @@ $(document).ready(function () {
         $(".log_article:first-child").simulate('mousedown');
     });
 
-    /** Materialize mobile menu **/
-    $(".button-collapse").sideNav({
-            menuWidth: 100
-        }
-    );
-
-    // Initialize collapse button
-    $(".button-collapse2").sideNav();
-    $('.collapsible').collapsible();
-
     /**
      *
      var options = [
@@ -35,4 +25,24 @@ $(document).ready(function () {
      ];
      Materialize.scrollFire(options);
      */
+
+
+    /**
+     *      MATERIALIZE
+     **/
+
+    //   Activate carousel
+    $('.carousel').carousel();
+
+    //  Materialize mobile menu
+    $(".button-collapse").sideNav({
+            menuWidth: 100
+        }
+    );
+
+    //  Initialize collapse button
+    $(".button-collapse2").sideNav();
+    $('.collapsible').collapsible();
+
+
 });
