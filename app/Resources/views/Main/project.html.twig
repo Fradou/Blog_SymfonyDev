@@ -4,15 +4,24 @@
 
 {% block body %}
 
+    <div class="col hide-on-small-only m3 l2">
+        <ul class="section table-of-contents pinned">
+            <li><a href="#competences">Competences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#hackaton">Intialization</a></li>
+        </ul>
+    </div>
+
         <div class="col s12 offset-m2 m8 offset-l3 l6">
-            <h1>Projets - Stack technique</h1>
+            <h1 class="section scrollspy" id="competences">Projets - Stack technique</h1>
 
         </div>
-    <div class=container">
+    <div class="container">
         <h2>Compètences technique</h2>
-        <h3><small>Ce que j'utilise</small></h3>
+        <h3><small>Stack technique perso !</small></h3>
+
         <div class="row project-tile">
-            <div class="col offset-s1 s10 offset-m1 m5">
+            <div class="col offset-s1 s10 m5">
                 <div class="card light-green z-depth-4">
                     <div class="card-content green-text text-darken-4">
                         <span class="card-title"><strong>PHP</strong></span>
@@ -51,11 +60,18 @@
 
 
             </div>
-            <div class="col offset-s1 s10 m5">
+            <div class="col offset-s1 s10 m6">
+                <div class="card lime lighten-2 z-depth-2">
+                    <div class="card-content green-text text-darken-4">
+                            <span class="card-title">
+                                    <strong>HTML 5</strong>
+                            </span>
+                    </div>
+                </div>
 
                 <div class="card green lighten-2 z-depth-4">
                     <div class="card-content green-text text-darken-4">
-                        <span class="card-title"><strong>CSS</strong></span>
+                        <span class="card-title"><strong>CSS 3</strong></span>
                         <ul>
                             <li>Je travaille sur <strong>Bootstrap</strong>.</li>
                             <li>Site réalisé en <strong>Materializecss</strong>.</li>
@@ -83,15 +99,114 @@
                         <ul style="text-align: center">
                             <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
                             <li>Base de données <strong>MySQL</strong>.</li>
+                            <li>Serveur <strong>Apache2</strong>.</li>
                             <li>Linux <strong>Ubuntu</strong></li>
                         </ul>
 
                     </div>
                 </div>
+
+
             </div>
         </div>
         <h2>Projets</h2>
-        <h3><small>Réalisations & Contributions</small></h3>
+        <h3><small>Réalisations & Contributions !</small></h3>
+
+        <div class="row section scrollspy" id="projets">
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">Tag ton métier</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Application destinée aux visiteurs du Mondial des Métiers leur permettant de renseigner des mots-clés et impression après une rencontre avec un des profesionnels du salon.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/the-booster-2.png') }}">
+                        <span class="card-title">The Booster</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Plateforme de crowfunding de compètences..</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/jekyll-1.png') }}">
+                        <span class="card-title">Restaurant Jekyll</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Projet fictif : Création d'un site vitrine pour un restaurant spécialisé dans la ratatouille.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Jekylls-Restaurant">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>Hackatons</h2>
+        <h3><small>Les sessions de codage intensif !</small></h3>
+
+        <div class="row section scrollspy" id="hackaton">
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">JustAsk</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Application déstinés aux touristes / résidents étranger permettant la mise en relation avec un "local" qui pourra aider dans des démarches et situations complexes en servant d'intermédiaire et traducteur. Basé sur une idée d'un groupe d'étudiant de l'INSEAD.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 {% endblock %}
 

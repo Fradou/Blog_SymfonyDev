@@ -211,3 +211,8 @@ footer .row {
 #logcom_header h3 {
     line-height: 100%;
 }
+
+.card-image img {
+    width:100%;
+    height:auto;
+}
