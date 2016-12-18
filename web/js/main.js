@@ -49,5 +49,8 @@ $(document).ready(function () {
     $(".button-collapse2").sideNav();
     $('.collapsible').collapsible();
 
+    // Initialize scrollspy
+    $('.scrollspy').scrollSpy();
+
 
 });
