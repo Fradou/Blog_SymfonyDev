@@ -37,12 +37,12 @@ $(document).ready(function () {
         $('.carousel').carousel('next');
         setTimeout(autoplay, 2500);
     }
- //   autoplay();
+    //   autoplay();
 
     //  Materialize mobile menu
     $(".button-collapse").sideNav({
-            menuWidth: 100
-        }
+        menuWidth: 175
+    }
     );
 
     //  Initialize collapse button
@@ -50,7 +50,9 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
 
     // Initialize scrollspy
-    $('.scrollspy').scrollSpy();
+    $('.scrollspy').scrollSpy({
+        scrollOffset: 20
+    });
 
 
 });

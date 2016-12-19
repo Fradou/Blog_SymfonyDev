@@ -5,3 +5,33 @@
 {% block body %}
 <h1>Welcome to the Main:contact page</h1>
 {% endblock %}
+
+
+<div class="nav-wrapper wrapper">
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    <ul id="nav-mobile" class="left hide-on-med-and-down home_bloc_btn valign">
+        <li><a href="{{ path('index') }}" class="waves-effect">Home</a></li>
+        <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
+        <li><a href="{{ path('project') }}" class="waves-effect waves-light">Projets</a></li>
+        <li><a href="{{ path('logbook') }}" class="waves-effect">Logbook</a></li>
+        <li><a href="{{ path('blog') }}" class="disable waves-effect">Blog</a></li>
+    </ul>
+
+    <ul class="side-nav" id="mobile-demo">
+        <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
+        <li><a href="{{ path('project') }}">Projets</a></li>
+        <li><a href="{{ path('logbook') }}">Logbook</a></li>
+        <li><a class="disable" href="{{ path('blog') }}">Blog</a></li>
+    </ul>
+</div>
+
+
+<div class="col hide-on-small-only m2">
+    <ul class="section table-of-contents pinned">
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#skills">Compètences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#hackatons">Hackatons</a></li>
+    </ul>
+</div>

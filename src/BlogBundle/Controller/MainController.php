@@ -39,6 +39,13 @@ class MainController extends Controller
         ));
     }
 
+    public function resumeAction()
+    {
+        return $this->render('Main/resume.html.twig', array(
+            // ...
+        ));
+    }
+
     public function settingsAction()
     {
         return $this->render('Main/settings.html.twig', array(
