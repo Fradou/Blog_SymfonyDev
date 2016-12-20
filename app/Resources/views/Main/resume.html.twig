@@ -7,6 +7,8 @@
     <header>
         <nav class="green darken-3 z-depth-5">
             <div class="container">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
             </div>
         </nav>
 
@@ -16,7 +18,7 @@
                     <img src="{{ asset('img/logo_perso-white.png') }}" alt="logo">
                 </a>
             </li>
-            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#presentation">A propos</a></li>
             <li><a href="#skills">Compètences</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#hackatons">Hackatons</a></li>
@@ -32,8 +34,6 @@
 
 
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-
     </header>
 
 {%  endblock %}
@@ -49,13 +49,15 @@
 
         <div class="row resume-title section scrollspy" id="presentation">
             <h2>A propos</h2>
-            <h3><small>Petite présentation</small></h3>
+            <h3><small>Présentation en quelques mots</small></h3>
 
         </div>
         <div class="row">
+            <div class="col offset-s1 s10 offset-m2 m8">
             <p>Ancien de la relation client, je suis actuellement en reconversion au métier de développeur web à la Wild Code School.<br>
                 A l'issu de la formation, je passerai l'epreuve pour devenir officiellement développeur web, et serai donc en recherche de stage/contrat pour début février afin de pouvoir présenter l'épreuve.
             </p>
+            </div>
         </div>
 
         <div class="row resume-title section scrollspy" id="skills">
@@ -64,7 +66,7 @@
 
         </div>
 
-        <div class="row project-tile">
+        <div class="row skills-tile">
             <div class="col offset-s1 s10 m6">
                 <div class="card light-green z-depth-4">
                     <div class="card-content green-text text-darken-4">
@@ -157,7 +159,7 @@
             <h3><small>Réalisations & Contributions !</small></h3>
         </div>
 
-        <div class="row">
+        <div class="row projects-tile">
             <div class="col offset-s1 s10 m4">
                 <div class="card">
                     <div class="card-image">
@@ -206,50 +208,50 @@
             <h2>Hackatons</h2>
             <h3><small>Les sessions de codage intensif !</small></h3>
         </div>
-        <div class="row">
+        <div class="row hackatons-tile">
             <div class="col offset-s1 s10 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{ asset('img/Hackaton36-1.png') }}">
-                <span class="card-title">JustAsk</span>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">JustAsk</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Application déstinés aux touristes / résidents étranger permettant la mise en relation avec un "local" qui pourra aider dans des démarches et situations complexes en servant d'intermédiaire et traducteur. Basé sur une idée d'un groupe d'étudiant de l'INSEAD.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <p>Application déstinés aux touristes / résidents étranger permettant la mise en relation avec un "local" qui pourra aider dans des démarches et situations complexes en servant d'intermédiaire et traducteur. Basé sur une idée d'un groupe d'étudiant de l'INSEAD.</p>
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-action">
-                <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
+            <div class="col offset-s1 s10 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-    <div class="col offset-s1 s10 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{ asset('img/Hackaton36-1.png') }}">
-                <span class="card-title">Lyon à la carte</span>
-            </div>
-            <div class="card-content">
-                <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
-            </div>
-            <div class="card-action">
-                <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
-            </div>
-        </div>
-    </div>
-    <div class="col offset-s1 s10 m4">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{ asset('img/Hackaton36-1.png') }}">
-                <span class="card-title">Lyon à la carte</span>
-            </div>
-            <div class="card-content">
-                <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
-            </div>
-            <div class="card-action">
-                <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
-            </div>
-        </div>
-    </div>
-    </div>
 
 
     </div>

@@ -1,6 +1,6 @@
 /* Colors from light to dark  #00e500  #00b200  #009900  #007f00  #006600  #003300 */
 
-/* Titres et polices */
+/* Titles */
 h1, h2, h3, h4, h5, h6 {
     text-align:center
 }
@@ -25,19 +25,14 @@ h4 {
     font-size: 1.25rem;
 }
 
-h5 {
-    font-size: 1.15rem;
-}
 
-
-/* */
+/* HTML selectors */
 ul {
     text-align: left;
 }
 
 body {
     text-align:center;
-    background-image: url('../img/background-greyzz.png');
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -50,10 +45,6 @@ main {
 .disable{
     pointer-events: none;
     opacity: 0.35;
-}
-
-.logbook h4 {
-    font-style: oblique;
 }
 
 .divider {
@@ -81,14 +72,6 @@ main {
 
 .bl_sp_lg {
     height: 10vh;
-
-}
-
-#logbook_articles {
-    text-align: justify;
-}
-
-#logbook_obj {
 
 }
 
@@ -123,10 +106,6 @@ main {
 .construction {
     height: 32px;
     width: 32px;
-}
-
-#logdate {
-    margin-top: -5.25vh;
 }
 
 
@@ -171,40 +150,16 @@ main {
     display: inline;
 }
 
-.log_article h2 {
-    background-image:none;
+.projects-tile .card, .hackatons-tile .card {
+    background-image: url('../img/background-greyzz.png');
 }
 
 footer .row {
     margin-bottom: 0px;
 }
 
-.project-tile li {
+.skills-tile li {
     font-size: 1.25rem;
-}
-
-/**
-#action-button-2 {
-    top: 15px;
-
-}
-
-#action-button-2 ul {
-    top: 45px;
-}
-
-**/
-
-#logbook_comment span {
-    font-weight: bold;
-}
-
-#logcom_header {
-    margin-top: 12.5vh;
-}
-
-#logcom_header h3 {
-    line-height: 100%;
 }
 
 .card-image img {
@@ -228,4 +183,13 @@ header, main, footer {
 .brand-logo img {
     height:100%;
     width:auto;
+}
+
+#slide-out {
+    background-image: url('../img/background-greyzz.png');
+
+}
+
+.table-of-contents a.active {
+    border-left: 4px solid #009900;
 }
