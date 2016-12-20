@@ -41,9 +41,7 @@ $(document).ready(function () {
 
     //  Materialize mobile menu
     $(".button-collapse").sideNav({
-        menuWidth: 175
-    }
-    );
+    });
 
     //  Initialize collapse button
     $(".button-collapse2").sideNav();

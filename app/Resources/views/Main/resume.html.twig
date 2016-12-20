@@ -5,10 +5,9 @@
 
 {% block menu %}
     <header>
-        <nav class="green darken-3 z-depth-5">
+        <nav class="green darken-3 z-depth-1">
             <div class="container">
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-
+                <a href="#" data-activates="slide-out" class="button-collapse hide-on-med-and-up"><i class="material-icons">menu</i></a>
             </div>
         </nav>
 
@@ -22,20 +21,12 @@
             <li><a href="#skills">Compètences</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#hackatons">Hackatons</a></li>
-
+            <li class="navbar-sp"></li>
+            <li>Contact</li>
+            <li class="navbar-sp"></li>
             <li><a href="{{ asset('download/Notice_test.pdf')}}" download="">Mon CV</a></li>
-
-            <li><p>Me retrouver :</p></li>
-            <li><a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a></li>
-            <li><a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a></li>
-            <li><a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
-            <li><a href="mailto:{{ mail}}"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
-            <li><a href="{{ asset('download/')}}" download="">Mon CV</a></li>
-
-
         </ul>
     </header>
-
 {%  endblock %}
 
 {% block body %}
@@ -54,9 +45,9 @@
         </div>
         <div class="row">
             <div class="col offset-s1 s10 offset-m2 m8">
-            <p>Ancien de la relation client, je suis actuellement en reconversion au métier de développeur web à la Wild Code School.<br>
-                A l'issu de la formation, je passerai l'epreuve pour devenir officiellement développeur web, et serai donc en recherche de stage/contrat pour début février afin de pouvoir présenter l'épreuve.
-            </p>
+                <p>Ancien de la relation client, je suis actuellement en reconversion au métier de développeur web à la Wild Code School.<br>
+                    A l'issu de la formation, je passerai l'epreuve pour devenir officiellement développeur web, et serai donc en recherche de stage/contrat pour début février afin de pouvoir présenter l'épreuve.
+                </p>
             </div>
         </div>
 
@@ -161,9 +152,9 @@
 
         <div class="row projects-tile">
             <div class="col offset-s1 s10 m4">
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="tag-ton-metier">
                         <span class="card-title">Tag ton métier</span>
                     </div>
                     <div class="card-content">
@@ -175,9 +166,9 @@
                 </div>
             </div>
             <div class="col offset-s1 s10 m4">
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/the-booster-2.png') }}">
+                        <img src="{{ asset('img/the-booster-2.png') }}" alt="the-booster">
                         <span class="card-title">The Booster</span>
                     </div>
                     <div class="card-content">
@@ -189,9 +180,9 @@
                 </div>
             </div>
             <div class="col offset-s1 s10 m4">
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/jekyll-1.png') }}">
+                        <img src="{{ asset('img/jekyll-1.png') }}" alt="jekyll">
                         <span class="card-title">Restaurant Jekyll</span>
                     </div>
                     <div class="card-content">
@@ -210,9 +201,9 @@
         </div>
         <div class="row hackatons-tile">
             <div class="col offset-s1 s10 m4">
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-insead">
                         <span class="card-title">JustAsk</span>
                     </div>
                     <div class="card-content">
@@ -224,9 +215,9 @@
                 </div>
             </div>
             <div class="col offset-s1 s10 m4">
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-36h">
                         <span class="card-title">Lyon à la carte</span>
                     </div>
                     <div class="card-content">
@@ -238,9 +229,9 @@
                 </div>
             </div>
             <div class="col offset-s1 s10 m4">
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-24h">
                         <span class="card-title">Lyon à la carte</span>
                     </div>
                     <div class="card-content">
