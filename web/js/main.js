@@ -37,20 +37,20 @@ $(document).ready(function () {
         $('.carousel').carousel('next');
         setTimeout(autoplay, 2500);
     }
- //   autoplay();
+    //   autoplay();
 
     //  Materialize mobile menu
     $(".button-collapse").sideNav({
-            menuWidth: 100
-        }
-    );
+    });
 
     //  Initialize collapse button
     $(".button-collapse2").sideNav();
     $('.collapsible').collapsible();
 
     // Initialize scrollspy
-    $('.scrollspy').scrollSpy();
+    $('.scrollspy').scrollSpy({
+        scrollOffset: 20
+    });
 
 
 });

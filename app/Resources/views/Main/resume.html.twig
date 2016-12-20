@@ -1,7 +1,249 @@
-{% extends "::base.html.twig" %}
+{% extends "base.html.twig" %}
 
-{% block title %}BlogBundle:Main:settings{% endblock %}
+{% block title %}BlogBundle:Main:settings
+{% endblock %}
+
+{% block menu %}
+    <header>
+        <nav class="green darken-3 z-depth-1">
+            <div class="container">
+                <a href="#" data-activates="slide-out" class="button-collapse hide-on-med-and-up"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        <ul id="slide-out" class="side-nav fixed section table-of-contents">
+            <li>
+                <a id="logo-container" href="{{ path('index') }}" class="brand-logo">
+                    <img src="{{ asset('img/logo_perso-white.png') }}" alt="logo">
+                </a>
+            </li>
+            <li><a href="#presentation">A propos</a></li>
+            <li><a href="#skills">Compètences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#hackatons">Hackatons</a></li>
+            <li class="navbar-sp"></li>
+            <li>Contact</li>
+            <li class="navbar-sp"></li>
+            <li><a href="{{ asset('download/Notice_test.pdf')}}" download="">Mon CV</a></li>
+        </ul>
+    </header>
+{%  endblock %}
 
 {% block body %}
-<h1>Welcome to the Main:resume page</h1>
+
+
+    <div class="container">
+        <div class="row resume-title">
+            <h1>Alexandre Fradet, Développeur Web</h1>
+
+        </div>
+
+        <div class="row resume-title section scrollspy" id="presentation">
+            <h2>A propos</h2>
+            <h3><small>Présentation en quelques mots</small></h3>
+
+        </div>
+        <div class="row">
+            <div class="col offset-s1 s10 offset-m2 m8">
+                <p>Ancien de la relation client, je suis actuellement en reconversion au métier de développeur web à la Wild Code School.<br>
+                    A l'issu de la formation, je passerai l'epreuve pour devenir officiellement développeur web, et serai donc en recherche de stage/contrat pour début février afin de pouvoir présenter l'épreuve.
+                </p>
+            </div>
+        </div>
+
+        <div class="row resume-title section scrollspy" id="skills">
+            <h2>Compètences techniques</h2>
+            <h3><small>Stack technique perso !</small></h3>
+
+        </div>
+
+        <div class="row skills-tile">
+            <div class="col offset-s1 s10 m6">
+                <div class="card light-green z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                        <span class="card-title"><strong>PHP</strong></span>
+                        <ul>
+                            <li>En formation <strong>Développeur PHP</strong> à la <strong>@WildCodeSchool</strong>.</li>
+                            <li>Spécialisé <strong>Symfony 2</strong>. Site réalisé avec ce framework.</li>
+                            <li>Développement en <strong>POO</strong> et structure <strong>MVC</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://www.wildcodeschool.fr/" class="white-text">Wild Code School</a>
+                        <a href="https://symfony.com" target="_blank" class="white-text">Symfony</a>
+                    </div>
+                </div>
+
+                <div class="card lime darken-1 z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                        <span class="card-title"><strong>JavaScript</strong></span>
+                        <ul>
+                            <li>Site réalisé avec <strong>jQuery</strong>, librairie avec laquelle je travaille.</li>
+                            <li>J'envisage <strong>NodeJS</strong> comme prochaine techno.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://jquery.com/" class="white-text">jQuery</a>
+                    </div>
+                </div>
+
+                <div class="card green accent-2 z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                            <span class="card-title"><small>
+                            Je travaille principalement avec <strong>PHP Storm</strong>.
+                            </small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m6">
+                <div class="card lime lighten-2 z-depth-2">
+                    <div class="card-content green-text text-darken-4">
+                            <span class="card-title">
+                                    <strong>HTML 5</strong>
+                            </span>
+                    </div>
+                </div>
+
+                <div class="card green lighten-2 z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                        <span class="card-title"><strong>CSS 3</strong></span>
+                        <ul>
+                            <li>Je travaille sur <strong>Bootstrap</strong>.</li>
+                            <li>Site réalisé en <strong>Materializecss</strong>.</li>
+                            <li>J'hésite entre <strong>Foundation</strong> et <strong>Sass</strong> pour mon prochain projet.</li>
+                        </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://getbootstrap.com/" class="white-text">Bootstrap</a>
+                        <a href="http://materializecss.com/" class="white-text">Materialize</a>
+                    </div>
+                </div>
+
+                <div class="card green accent-4 z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                            <span class="card-title">
+                                    Utilisation de la méthode <strong>SCRUM</strong>
+                            </span>
+                    </div>
+                </div>
+
+                <div class="card green accent-5 z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                        <span class="card-title">Autres <strong>outils</strong>
+                        </span>
+                        <ul style="text-align: center">
+                            <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
+                            <li>Base de données <strong>MySQL</strong>.</li>
+                            <li>Serveur <strong>Apache2</strong>.</li>
+                            <li>Linux <strong>Ubuntu</strong></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row resume-title section scrollspy" id="projects">
+            <h2>Projets</h2>
+            <h3><small>Réalisations & Contributions !</small></h3>
+        </div>
+
+        <div class="row projects-tile">
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="tag-ton-metier">
+                        <span class="card-title">Tag ton métier</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Application destinée aux visiteurs du Mondial des Métiers leur permettant de renseigner des mots-clés et impression après une rencontre avec un des profesionnels du salon.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/the-booster-2.png') }}" alt="the-booster">
+                        <span class="card-title">The Booster</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Plateforme de crowfunding de compètences..</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/jekyll-1.png') }}" alt="jekyll">
+                        <span class="card-title">Restaurant Jekyll</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Projet fictif : Création d'un site vitrine pour un restaurant spécialisé dans la ratatouille.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Jekylls-Restaurant">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row resume-title section scrollspy" id="hackatons">
+            <h2>Hackatons</h2>
+            <h3><small>Les sessions de codage intensif !</small></h3>
+        </div>
+        <div class="row hackatons-tile">
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-insead">
+                        <span class="card-title">JustAsk</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Application déstinés aux touristes / résidents étranger permettant la mise en relation avec un "local" qui pourra aider dans des démarches et situations complexes en servant d'intermédiaire et traducteur. Basé sur une idée d'un groupe d'étudiant de l'INSEAD.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-36h">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-24h">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 {% endblock %}
