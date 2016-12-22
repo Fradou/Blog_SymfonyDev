@@ -233,3 +233,7 @@ nav,footer {
     border:none;
     padding:0 10px;
 }
+
+#presentation {
+    padding: 0;
+}
