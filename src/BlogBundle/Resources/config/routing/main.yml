@@ -10,9 +10,9 @@ index:
   #  path:     /settings
    # defaults: { _controller: BlogBundle:Main:settings }
 
-#resume:
- #   path:     /resume
-  #  defaults: { _controller: BlogBundle:Main:resume }
+resume:
+    path:     /resume
+    defaults: { _controller: BlogBundle:Main:resume }
 
 # project:
   #  path:     /project
