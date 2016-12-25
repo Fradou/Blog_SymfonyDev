@@ -1,0 +1,81 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accueil - Home | {{ site_name }} {% endblock %}
+{% block menu %}{% endblock %}
+{% block content %}
+    <div class="row">
+
+        <h1>Bienvenue sur {{ site_name }}</h1>
+        <div class="col offset-s2 s8">
+            <p>Le site est actuellement en construction, les différentes sections ouvreront au fur et à mesure de mon avancement et apprentissage !</p>
+            <p>Vous pouvez d'ores et déjà retrouver mes objectifs, difficultés et avancées sur le développement du site <a href="{{ path('logbook') }}">dans mon logbook</a></p>
+        </div>
+    </div>
+    <div class="row">
+
+        <a href="#" data-activates="slide-out" class="button-collapse2">
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/profile-black.png')}}" alt="profil">
+                <h2>Profil</h2>
+                <p>Présentation générale.<br>Parcours, mes attentes, mes envies.</p>
+            </div>
+        </a>
+
+        <a href="{{ path('logbook') }}">
+            <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/logbook-black.png')}}" alt="logbook">
+                <h2>Logbook</h2>
+                <p>Journal de développement du site.<br> A terme, incluera flux github et tweeter.</p>
+            </div>
+        </a>
+
+        <a href="{{ path('project') }}">
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/settings-black.png')}}" alt="projets">
+                <h2>Projets</h2>
+                <p>Mes réalisations.<br>Stack technique perso.</p>
+            </div>
+        </a>
+
+            <div class="col offset-s1 s10 offset-m2 m4 offset-l2 l2 home_bloc_tile hoverable">
+                <img src="{{ asset('/img/feed_black.png')}}" alt="actualité">
+                <h2>Actualité</h2>
+                <p>Formation : Application de saisie de tag pour le <a href="http://www.mondial-metiers.com/">mondial des métiers.</a></p>
+                <p>Personnel : Développement de mon site.</p>
+                <div class="bl_sp_xs"></div>
+            </div>
+
+        <div class="col offset-s1 s10 offset-m1 m4 offset-l1 l2 home_bloc_tile hoverable">
+            <img src="{{ asset('/img/blog-black.png')}}" alt="blog">
+            <h2>Blog</h2>
+            <p>De la tech et des idées.<br>En construction.</p>
+            <div class="bl_sp_xs"></div>
+            <img src="{{ asset('/img/construction.png')}}" alt="section en construction" class="construction">
+        </div>
+
+        <div class="col offset-s1 s10 offset-m2 m4 offset-l1 l2 home_bloc_tile hoverable">
+            <img src="{{ asset('/img/social-black.png')}}" alt="social">
+            <h2>Contact</h2>
+            <p><span id="maillink">Me contacter</span><span id="mailelem">{{ mail }} <a href="mailto:alex.fradet.1@gmail.com"><img src="{{ asset('/img/mail-black.png')}}"/></a></span><br>
+                Me retrouver sur le web :</p>
+            <div class="tile" id="socialnet_tile">
+                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github"></a>
+                <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"></a>
+                <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
+            </div>
+        </div>
+        <a href="" id="winning_star">*</a>
+    </div>
+{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script type="text/javascript" src="{{ asset('js/index.js') }}" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('js/index.js') }}" ></script>
+
+{% endblock %}

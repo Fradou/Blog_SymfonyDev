@@ -2,33 +2,36 @@
 <html lang="fr">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- SEO -->
+    <meta name="description" content="Site personnel d’Alexandre Fradet, Développeur Web PHP Symfony 2 sur Lyon. Web Developer. CV, blog, tutos et plus encore.">
+    <meta name="keywords" content="Symfony2, Symfony, PHP, HTML, CSS, JavaScript, Jquery, Mysql, developpeur web, web developper, site web">
+    <meta name="author" content="Alexandre Fradet">
 
 
-    <title>{% block title %}{{ site_name }} par Alexandre Fradet !{% endblock %}</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+    <title>{% block title %}{{ site_name }}{% endblock %}</title>
 
     <!-- Compiled and minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <!-- Materialize icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
-    {% block stylesheets %}
-    {% endblock %}
 
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    {% block stylesheets %}{% endblock %}
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('img/logo_perso-white.png')}}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/img/logo_perso-white.ico') }}" />
 
 </head>
 
 <body>
+{% block body %}
 {% block menu %}
+    {##}
     <header id="head">
         <nav class="green darken-3 z-depth-5">
             <div class="nav-wrapper wrapper">
@@ -53,24 +56,7 @@
     </header>
 {%  endblock %}
 <main>
-
-{# Bottom fixed button #}
-
-    <div class="fixed-action-btn">
-        <a href="#" data-activates="slide-out" class="button-collapse2 btn-floating btn-large green darken-3">
-
- {#       <a href="#head" class="btn-floating btn-large green darken-3"> #}
-            <img src="{{ asset('/img/profile-black.png') }}" alt="profile">
-        </a>
-        <ul>
-            <li><a href="https://twitter.com/{{ twitter }}" target="_blank" class="btn-floating yellow darken-1"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a></li>
-            <li><a href="https://github.com/{{ github }}" target="_blank" class="btn-floating green"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a></li>
-            <li><a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank" class="btn-floating blue"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a></li>
-            <li><a href="mailto:{{ mail}}" class="btn-floating red"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
-        </ul>
-    </div>
-
-{% block body %}{% endblock %}
+{% block content %}{% endblock %}
 </main>
 
 
@@ -85,9 +71,6 @@
                 <div class="col l4 offset-l2 s12">
                     <ul>
                         <li><a href="#" data-activates="slide-out" class="button-collapse2 white-text">Profil</a></li>
-                        <li><a href="{{ path('project') }}" class="white-text">Projets</a></li>
-                        <li><a href="{{ path('logbook') }}" class="white-text">Logbook</a></li>
-                        <li><a href="{{ path('blog') }}" class="disable white-text">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -103,7 +86,7 @@
     <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
 
 {% endblock %}
-
+{% endblock %}
 </body>
 
 </html>
