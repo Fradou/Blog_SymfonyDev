@@ -26,10 +26,15 @@
             <li><a href="{{ asset('download/Notice_test.pdf')}}" download="">Mon CV</a></li>
             <li class="navbar-sp"></li>
             <li>Contact :</li>
-            <li class="contact"><a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a>
-                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a></li>
-            <li class="contact"><a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
-                <a href="mailto:{{ mail}}"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
+            <li class="contact">
+                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a>
+                <a href="mailto:{{ mail}}"><img src="{{ asset('/img/mail-black.png')}}" alt="mail"/></a>
+
+            </li>
+            <li class="contact">
+                <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
+                <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a>
+            </li>
 
         </ul>
     </header>
@@ -42,6 +47,8 @@
         <div class="row resume-title">
             <h1>Alexandre Fradet, Développeur Web Jr</h1>
         </div>
+
+        <!-- Presentation -->
 
         <div class="row resume-title section scrollspy" id="presentation">
             <h2>A propos</h2>
@@ -56,10 +63,11 @@
             </div>
         </div>
 
+        <!-- Competences -->
+
         <div class="row resume-title section scrollspy" id="skills">
             <h2>Compètences techniques</h2>
             <h3><small>Stack technique perso !</small></h3>
-
         </div>
 
         <div class="row skills-tile">
@@ -68,14 +76,10 @@
                     <div class="card-content green-text text-darken-4">
                         <span class="card-title"><strong>PHP</strong></span>
                         <ul>
-                            <li>En formation <strong>Développeur PHP</strong> à la <strong>@WildCodeSchool</strong>.</li>
-                            <li>Spécialisé <strong>Symfony 2</strong>. Site réalisé avec ce framework.</li>
-                            <li>Développement en <strong>POO</strong> et structure <strong>MVC</strong>.</li>
+                            <li>En formation <strong>Développeur PHP</strong>.</li>
+                            <li>Spécialisé <strong>Symfony 2</strong>.</li>
+                            <li>Développement en <strong>POO</strong> et <strong>MVC</strong>.</li>
                         </ul>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://www.wildcodeschool.fr/" class="white-text">Wild Code School</a>
-                        <a href="https://symfony.com" target="_blank" class="white-text">Symfony</a>
                     </div>
                 </div>
 
@@ -83,19 +87,25 @@
                     <div class="card-content green-text text-darken-4">
                         <span class="card-title"><strong>JavaScript</strong></span>
                         <ul>
-                            <li>Site réalisé avec <strong>jQuery</strong>, librairie avec laquelle je travaille.</li>
+                            <li>Site réalisé avec <strong>jQuery</strong> avec lequel je travaille.</li>
                             <li>J'envisage <strong>NodeJS</strong> comme prochaine techno.</li>
+                            <li>Je suis interessé par <strong>MEAN</strong>.</li>
                         </ul>
                     </div>
-                    <div class="card-action">
-                        <a href="https://jquery.com/" class="white-text">jQuery</a>
+                </div>
+
+                <div class="card green accent-4 z-depth-4">
+                    <div class="card-content green-text text-darken-4">
+                            <span class="card-title">
+                                    Méthode <strong>SCRUM</strong>
+                            </span>
                     </div>
                 </div>
 
                 <div class="card green accent-2 z-depth-4">
                     <div class="card-content green-text text-darken-4">
                             <span class="card-title"><small>
-                            Je travaille principalement avec <strong>PHP Storm</strong>.
+                            Je travaille avec <strong>PHP Storm</strong>.
                             </small></span>
                     </div>
                 </div>
@@ -115,20 +125,8 @@
                         <ul>
                             <li>Je travaille sur <strong>Bootstrap</strong>.</li>
                             <li>Site réalisé en <strong>Materializecss</strong>.</li>
-                            <li>J'hésite entre <strong>Foundation</strong> et <strong>Sass</strong> pour mon prochain projet.</li>
+                            <li>J'envisage <strong>Foundation</strong> pour mon prochain projet.</li>
                         </ul>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://getbootstrap.com/" class="white-text">Bootstrap</a>
-                        <a href="http://materializecss.com/" class="white-text">Materialize</a>
-                    </div>
-                </div>
-
-                <div class="card green accent-4 z-depth-4">
-                    <div class="card-content green-text text-darken-4">
-                            <span class="card-title">
-                                    Utilisation de la méthode <strong>SCRUM</strong>
-                            </span>
                     </div>
                 </div>
 
@@ -136,10 +134,11 @@
                     <div class="card-content green-text text-darken-4">
                         <span class="card-title">Autres <strong>outils</strong>
                         </span>
-                        <ul style="text-align: center">
-                            <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
+                        <ul>
                             <li>Base de données <strong>MySQL</strong>.</li>
+                            <li>CMS <strong>Drupal</strong></li>
                             <li>Serveur <strong>Apache2</strong>.</li>
+                            <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
                             <li>Linux <strong>Ubuntu</strong></li>
                         </ul>
 
@@ -149,6 +148,8 @@
 
             </div>
         </div>
+
+        <!-- Projets -->
 
         <div class="row resume-title section scrollspy" id="projects">
             <h2>Projets</h2>
@@ -177,10 +178,11 @@
                         <span class="card-title">The Booster</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Plateforme de crowfunding de compètences..</p>
+                        <p class="valign">Plateforme de crowfunding de compètences.<br>
+                            Création du site vitrine présentant le concept et permettant la pré-inscription.</p>
                     </div>
                     <div class="card-action">
-                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                        <a href="https://the-booster.com/">The Booster</a>
                     </div>
                 </div>
             </div>
@@ -199,6 +201,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Hackatons -->
 
         <div class="row resume-title section scrollspy" id="hackatons">
             <h2>Hackatons</h2>
@@ -248,7 +252,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 {% endblock %}
