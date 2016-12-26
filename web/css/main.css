@@ -27,9 +27,6 @@ h4 {
 
 
 /* HTML selectors */
-ul {
-    text-align: left;
-}
 
 body {
     text-align:center;
@@ -197,10 +194,6 @@ header, main, footer {
 
 .table-of-contents a:hover {
     border-left: 3px solid #00b200;
-}
-
-.side-nav li {
-    text-align:center;
 }
 
 nav,footer {
