@@ -26,10 +26,15 @@
             <li><a href="{{ asset('download/Notice_test.pdf')}}" download="">Mon CV</a></li>
             <li class="navbar-sp"></li>
             <li>Contact :</li>
-            <li class="contact"><a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a>
-                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a></li>
-            <li class="contact"><a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
-                <a href="mailto:{{ mail}}"><img src="{{ asset('/img/mail-black.png')}}"/></a></li>
+            <li class="contact">
+                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a>
+                <a href="mailto:{{ mail}}"><img src="{{ asset('/img/mail-black.png')}}"/></a>
+
+            </li>
+            <li class="contact">
+                <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
+                <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a>
+            </li>
 
         </ul>
     </header>
@@ -76,10 +81,6 @@
                             <li>Développement en <strong>POO</strong> et structure <strong>MVC</strong>.</li>
                         </ul>
                     </div>
-                    <div class="card-action">
-                        <a href="http://www.wildcodeschool.fr/" class="white-text">Wild Code School</a>
-                        <a href="https://symfony.com" target="_blank" class="white-text">Symfony</a>
-                    </div>
                 </div>
 
                 <div class="card lime darken-1 z-depth-4">
@@ -89,9 +90,6 @@
                             <li>Site réalisé avec <strong>jQuery</strong>, librairie avec laquelle je travaille.</li>
                             <li>J'envisage <strong>NodeJS</strong> comme prochaine techno.</li>
                         </ul>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://jquery.com/" class="white-text">jQuery</a>
                     </div>
                 </div>
 
@@ -120,10 +118,6 @@
                             <li>Site réalisé en <strong>Materializecss</strong>.</li>
                             <li>J'hésite entre <strong>Foundation</strong> et <strong>Sass</strong> pour mon prochain projet.</li>
                         </ul>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://getbootstrap.com/" class="white-text">Bootstrap</a>
-                        <a href="http://materializecss.com/" class="white-text">Materialize</a>
                     </div>
                 </div>
 
@@ -183,7 +177,7 @@
                     </div>
                     <div class="card-content valign-wrapper">
                         <p class="valign">Plateforme de crowfunding de compètences.<br>
-                        Création du site vitrine présentant le concept et permettant la pré-inscription.</p>
+                            Création du site vitrine présentant le concept et permettant la pré-inscription.</p>
                     </div>
                     <div class="card-action">
                         <a href="https://the-booster.com/">The Booster</a>
