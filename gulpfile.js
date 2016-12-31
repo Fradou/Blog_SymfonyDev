@@ -1,9 +1,9 @@
 const gulp = require('gulp');
-const cssmin = require('gulp-cssmin');
+const clean = require('gulp-clean-css');
 const rename = require('gulp-rename');
-const jsmin = require('gulp-jsmin');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
+const ugly = require('gulp-uglify');
 
 var paths = {
   materialize: 'node_modules/materialize-css/dist/',
@@ -11,22 +11,22 @@ var paths = {
   scripts: ['web-src/js/*.js', '!web-src/js/main.js']
 };
 
-gulp.task('jsmin', function(){
+gulp.task('ugly', function(){
     gulp.src(paths.scripts)
-        .pipe(jsmin())
+        .pipe(ugly())
         .pipe(gulp.dest('web/js'));
     gulp.src([paths.materialize+'js/materialize.js','web-src/js/main.js'])
-        .pipe(jsmin())
+        .pipe(ugly())
         .pipe(concat('main.js'))
         .pipe(gulp.dest('web/js'));
  });
 
-gulp.task('cssmin', function () {
+gulp.task('clean', function () {
     gulp.src(paths.styles)
-        .pipe(cssmin())
+        .pipe(clean())
         .pipe(gulp.dest('web/css'));
     gulp.src([paths.materialize+'css/materialize.css','web-src/css/main.css'])
-        .pipe(cssmin())
+        .pipe(clean())
         .pipe(concat('main.css'))
         .pipe(gulp.dest('web/css'));
 });
@@ -45,8 +45,9 @@ gulp.task('font', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.scripts, ['scripts']);
-    gulp.watch(paths.images, ['images']);
+    gulp.watch(paths.scripts, ['ugly']);
+    gulp.watch(paths.styles, ['clean']);
+    gulp.watch('web-src/img/*', ['imagemin'])
 });
 
-gulp.task('default', ['cssmin', 'jsmin','imagemin','font']);
+gulp.task('default', ['clean', 'ugly','imagemin','font']);
