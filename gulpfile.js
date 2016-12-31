@@ -1,33 +1,52 @@
-var gulp = require('gulp');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
-var jsmin = require('gulp-jsmin');
-var imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
+const cssmin = require('gulp-cssmin');
+const rename = require('gulp-rename');
+const jsmin = require('gulp-jsmin');
+const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat');
 
+var paths = {
+  materialize: 'node_modules/materialize-css/dist/',
+  styles: ['web-src/css/*.css', '!web-src/css/main.css'],
+  scripts: ['web-src/js/*.js', '!web-src/js/main.js']
+};
 
-gulp.task('default', ['cssmin', 'jsmin','imagemin']);
-
- /*   gulp.src('web/css/*')
-            .pipe(cleancs())
-            .pipe(gulp.dest('web/cssmini'));
-    gulp.task('miniplz');
-*/
 gulp.task('jsmin', function(){
-    gulp.src('web-src/js/*.js')
+    gulp.src(paths.scripts)
         .pipe(jsmin())
-   //     .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('web/js/'));
+        .pipe(gulp.dest('web/js'));
+    gulp.src([paths.materialize+'js/materialize.js','web-src/js/main.js'])
+        .pipe(jsmin())
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('web/js'));
  });
 
 gulp.task('cssmin', function () {
-    gulp.src('web-src/css/*.css')
+    gulp.src(paths.styles)
         .pipe(cssmin())
-        //       .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('web/css/'));
+        .pipe(gulp.dest('web/css'));
+    gulp.src([paths.materialize+'css/materialize.css','web-src/css/main.css'])
+        .pipe(cssmin())
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('web/css'));
 });
 
 gulp.task('imagemin', function(){
     gulp.src('web-src/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('web/img/'))
+        .pipe(gulp.dest('web/img'))
+
 });
+
+gulp.task('font', function() {
+    return gulp.src(paths.materialize+'fonts/**/*')
+        .pipe(gulp.dest('web/fonts'))
+
+});
+
+gulp.task('watch', function() {
+    gulp.watch(paths.scripts, ['scripts']);
+    gulp.watch(paths.images, ['images']);
+});
+
+gulp.task('default', ['cssmin', 'jsmin','imagemin','font']);
