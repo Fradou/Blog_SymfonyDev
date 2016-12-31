@@ -33,6 +33,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: url('../img/background-greyzz.png');
 }
 
 main {
@@ -147,8 +148,9 @@ main {
     display: inline;
 }
 
+/* memo background */
 .projects-tile .card, .hackatons-tile .card {
-    background-image: url('../img/background-greyzz.png');
+
 }
 
 footer .row {
@@ -173,8 +175,8 @@ footer .row {
     width:auto;
 }
 
+/* memo background */
 #slide-out {
-    background-image: url('../img/background-greyzz.png');
 
 }
 
@@ -187,7 +189,7 @@ footer .row {
 }
 
 nav,footer {
-    background-image: url('../img/background-greyzz.png');
+    background-color:#009900;
 
 }
 
