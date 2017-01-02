@@ -6,10 +6,8 @@
 
 {% block menu %}
     <header>
-        <nav class="hide-on-large-only z-depth-1">
-            <div class="container">
-                <a href="#" data-activates="slide-out" class="button-collapse green-text pinned left"><i class="material-icons">menu</i></a>
-            </div>
+        <nav class="hide-on-large-only z-depth-5 pinned">
+                <a href="#" data-activates="slide-out" class="button-collapse white-text left"><i class="material-icons">menu</i></a>
         </nav>
 
         <ul id="slide-out" class="side-nav fixed section table-of-contents">
@@ -56,12 +54,21 @@
 
         </div>
         <div class="row">
-            <div class="col offset-s1 s10">
-                <p>Ancien de la relation client, je suis actuellement en reconversion au métier de développeur web à la Wild Code School.<br>
-                    A l'issu de la formation, je passerai l'epreuve pour devenir officiellement développeur web, et serai donc en recherche de stage/contrat pour début février afin de pouvoir présenter l'épreuve.
+            <div class="col offset-s3 s6 offset-m1 m3">
+                <img src="{{ asset('img/portrait_alexandrefradet.jpg') }}" alt="portrait" class="responsive-img circle">
+            </div>
+            <div class="col offset-s1 s10 m7">
+                <p style="text-align: justify">Ancien de la relation client et du télémarketing, je suis actuellement en reconversion au métier de Développeur Web.<br><br>
+                    En formation sur les technos PHP / Symfony2, je suis actuellement en recherche de stage / autres pour février 2017 !<br><br>
+                    Plutôt attiré par la partie back-end des applications, j'aspire à rejoindre une entreprise qui me permettra de travailler
+                    sur des projets complexes et me soutiendra dans ma montée en compétences. Actuellement formé en Symfony 2, je préférerais dans
+                    un premier temps solidifier mes bases
+                    dessus mais reste ouvert aux autres technos avec une attirance particulière pour MEAN.<br><br>
+                    Pour l'instant sur Lyon mais habitué à bouger, je suis mobile.
                 </p>
             </div>
         </div>
+        <div class="bl_sp_sm"></div>
 
         <!-- Competences -->
 
@@ -136,18 +143,18 @@
                         </span>
                         <ul>
                             <li>Base de données <strong>MySQL</strong>.</li>
-                            <li>CMS <strong>Drupal</strong></li>
+                            <li>Dépendances <strong>Composer</strong> / <strong>Gulp</strong></li>
                             <li>Serveur <strong>Apache2</strong></li>
+                            <li>CMS <strong>Drupal</strong></li>
                             <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
                             <li>Linux <strong>Ubuntu</strong></li>
                         </ul>
 
                     </div>
                 </div>
-
-
             </div>
         </div>
+        <div class="bl_sp_sm"></div>
 
         <!-- Projets -->
 
@@ -160,11 +167,15 @@
             <div class="col offset-s1 s10 m4">
                 <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="tag-ton-metier">
+                        <img src="{{ asset('img/mondial-1.png') }}" alt="tag-ton-metier">
                         <span class="card-title">Tag ton métier</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Application destinée aux visiteurs du Mondial des Métiers leur permettant de renseigner des mots-clés et impression après une rencontre avec un des profesionnels du salon.</p>
+                        <p class="valign">Création d'une application de vote en Symfony2.<br><br>
+                            Destinée aux visiteurs du Mondial des Métiers, elle leur permettra de saisir, sous forme de tags, des mot-clés
+                            qualifiant le métier après chaque rencontre avec un professionnel du salon.
+                            Chaque participant pourra également évaluer le salon.
+                           </p>
                     </div>
                     <div class="card-action">
                         <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
@@ -178,8 +189,10 @@
                         <span class="card-title">The Booster</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Plateforme de crowfunding de compètences.<br>
-                            Création du site vitrine présentant le concept et permettant la pré-inscription.</p>
+                        <p class="valign">
+                            Développement v1 du site en Symfony2.<br><br>
+                            Mise en place du site présentant le concept et permettant aux futurs boosteurs et boostés de se préinscrire en prévision du lancement officiel.
+                            Création d'une interface backoffice de gestion des utilisateurs.</p>
                     </div>
                     <div class="card-action">
                         <a href="https://the-booster.com/">The Booster</a>
@@ -193,7 +206,8 @@
                         <span class="card-title">Restaurant Jekyll</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Projet fictif : Création d'un site vitrine pour un restaurant spécialisé dans la ratatouille.</p>
+                        <p class="valign">Projet fictif réalisé en PHP procédural :<br><br>
+                            Création d'un site vitrine pour un restaurant spécialisé dans la ratatouille.</p>
                     </div>
                     <div class="card-action">
                         <a href="https://github.com/Fradou/Jekylls-Restaurant">Github</a>
@@ -201,6 +215,8 @@
                 </div>
             </div>
         </div>
+        <div class="bl_sp_sm"></div>
+
 
         <!-- Hackatons -->
 
@@ -212,12 +228,15 @@
             <div class="col offset-s1 s10 m4">
                 <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-insead">
+                        <img src="{{ asset('img/Hackaton48-1.png') }}" alt="hackaton-insead">
                         <span class="card-title">JustAsk</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Application déstinés aux touristes / résidents étranger permettant la mise en relation avec un "local" qui pourra aider dans des démarches et situations complexes en servant d'intermédiaire et traducteur. Basé sur une idée d'un groupe d'étudiant de l'INSEAD.</p>
-                    </div>
+                        <p class="valign">
+                            48h - Symfony 2<br>
+                            Projet conjoint WCS et INSEAD, réalisation d'une application basée sur une idée des élèves INSEAD.
+                            Elle permet à des visiteurs ou résidents étrangers de se mettre en relation avec un "local" qui va leur servir d'intermédiaire dans le cadre
+                            de démarches administratives ou autres.</div>
                     <div class="card-action">
                         <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
                     </div>
@@ -230,7 +249,10 @@
                         <span class="card-title">Lyon à la carte</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                        <p class="valign">36h - Symfony2<br>
+                            Création d'un générateur de circuits touristiques.<br>
+                            En utilisant une base de points d’intérêt lyonnais (Data Grand Lyon), création de circuits touristiques avec pour paramètres une thématique et un nombre d'étapes.
+                            Le circuit s'affiche ensuite sur une carte via l'API Google Map.</p>
                     </div>
                     <div class="card-action">
                         <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
@@ -240,11 +262,13 @@
             <div class="col offset-s1 s10 m4">
                 <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-24h">
-                        <span class="card-title">Lyon à la carte</span>
+                        <img src="{{ asset('img/Hackaton24-1.png') }}" alt="hackaton-24h">
+                        <span class="card-title">La fête à la chaussette</span>
                     </div>
                     <div class="card-content valign-wrapper">
-                        <p class="valign">Site de création de circuits touristiques développé au cours d'un hackaton d'environ 30h dans le cadre de la formation Wild Code School.</p>
+                        <p class="valign">24h - PHP procédural<br>
+                            Création d'un site de vote pour la soirée d'inauguration de la WCS Lyon.
+                            Site permettant l'upload de photos puis le vote de la plus belle paire de chaussettes de la soirée.</p>
                     </div>
                     <div class="card-action">
                         <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
@@ -252,6 +276,7 @@
                 </div>
             </div>
         </div>
+        <div class="bl_sp_sm"></div>
 
     </div>
 {% endblock %}
