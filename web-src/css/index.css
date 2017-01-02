@@ -1,0 +1,17 @@
+main {
+    padding-left: 0;
+}
+
+.row {
+    height: 95vh;
+}
+
+.col {
+    height: 35%;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    width:auto;
+}

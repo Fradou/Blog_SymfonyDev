@@ -1,0 +1,224 @@
+/* Colors from light to dark  #00e500  #00b200  #009900  #007f00  #006600  #003300 */
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    text-align:center
+}
+
+h1 {
+    color: #006600;
+    font-size: 2.05rem;
+}
+
+h2 {
+    font-size: 1.70rem;
+    color:#007f00;
+}
+
+h3 {
+    color: #009900;
+    font-size: 1.35rem;
+}
+
+h4 {
+    color: #00b200;
+    font-size: 1.25rem;
+}
+
+
+/* HTML selectors */
+
+body {
+    text-align:center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('../img/background-greyzz.png');
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.disable{
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.divider {
+    color: #006600;
+    border-color: #006600;
+    background-color: #006600;
+}
+
+/* Empty blocs to help layout */
+
+.bl_sp_xs {
+    height: 2.5vh;
+
+}
+
+.bl_sp_sm {
+    height: 5vh;
+
+}
+
+.bl_sp_md {
+    height: 7.5vh;
+
+}
+
+.bl_sp_lg {
+    height: 10vh;
+
+}
+
+.home_bloc_btn {
+}
+
+.home_bloc_tile {
+    height: 25vh;
+    margin-top: 7.5vh;
+ /**   border-bottom: 1px solid #006600;
+    border-left: 1px solid #006600;
+    box-shadow: 2px 2px 0 0 #009900; **/
+    width: 300px;
+    background-color: #FFFFFF;
+    position: relative;
+    box-shadow: -0.5em 0.5em 0.75em #007f00;
+}
+
+.home_bloc_tile p {
+}
+
+.hoverable img {
+    margin-top: -2.5vh;
+}
+
+#socialnet_tile img {
+    height: 32px;
+    width: 32px;
+    margin:0 8px 0 8px;
+}
+
+.construction {
+    height: 32px;
+    width: 32px;
+}
+
+
+#maillink {
+    cursor:pointer;
+    color: #039be5;
+}
+#mailelem {
+    display:none;
+}
+
+#mailelem img {
+    height: 20px;
+    width: 20px;
+}
+
+#winning_star {
+
+}
+
+.collapsible-body p {
+    text-align:justify;
+}
+
+.floating img {
+    margin-top: -15px;
+}
+
+.fixed-action-btn img {
+    width: 28px;
+    height: 28px;
+    margin: 6px;
+}
+
+.btn-large img {
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+}
+
+.card-action div {
+    display: inline;
+}
+
+/* memo background */
+.projects-tile .card, .hackatons-tile .card {
+
+}
+
+footer .row {
+    margin-bottom: 0px;
+}
+
+.skills-tile li {
+    font-size: 1.25rem;
+}
+
+.card-image img {
+    width:100%;
+    height:auto;
+}
+
+#logo-container {
+    height:120px;
+    margin-bottom: 35px;
+}
+.brand-logo img {
+    height:100%;
+    width:auto;
+}
+
+/* memo background */
+#slide-out {
+
+}
+
+.table-of-contents a.active {
+    border-left: 5px solid #009900;
+}
+
+.table-of-contents a:hover {
+    border-left: 3px solid #00b200;
+}
+
+nav,footer {
+    background-color:#009900;
+
+}
+
+.side-nav {
+    width:175px;
+}
+
+.navbar-sp {
+    height:25px;
+}
+
+#sidenav .contact {
+    line-height: 25px;
+}
+.contact a {
+    display:inline-block;
+    height:35px;
+    padding:0 10px;
+}
+.contact a img {
+    height:25px;
+    width:25px;
+}
+
+.contact a:hover {
+    border:none;
+    padding:0 10px;
+}
+
+#presentation {
+    padding: 0;
+}
