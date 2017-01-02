@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     // Initialize scrollspy
     $('.scrollspy').scrollSpy({
-        scrollOffset: 20
+        scrollOffset: 35
     });
 
 

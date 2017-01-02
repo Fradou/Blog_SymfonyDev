@@ -45,8 +45,8 @@ gulp.task('font', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.scripts, ['ugly']);
-    gulp.watch(paths.styles, ['clean']);
+    gulp.watch('web-src/js/*', ['ugly']);
+    gulp.watch('web-src/css/*', ['clean']);
     gulp.watch('web-src/img/*', ['imagemin'])
 });
 

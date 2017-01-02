@@ -188,7 +188,7 @@ footer .row {
     border-left: 3px solid #00b200;
 }
 
-nav,footer {
+nav,footer.page-footer {
     background-color:#009900;
 
 }
