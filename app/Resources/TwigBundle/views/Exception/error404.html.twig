@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Oops, un petit problème est survenu - {{ site_name }} {% endblock %}
+{% block menu %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row valign-wrapper" style="height:80vh">
+            <div class="col offset-s1 s10 offset-l2 l8 valign">
+                <h1>Oops! Il semblerait qu'il y ait un petit problème !</h1>
+                <h2>Apparement la page vers laquelle vous souhaitiez aller n'existe pas, êtes vous sur de l'adresse ?</h2>
+
+                <div>
+                    Si vous êtes sur de vous, rafraichissez on ne sait jamais !<br>
+                    Sinon, je vous recommande le retour à l'accueil, c'est <a href="{{ path('index') }}">par ici !</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
