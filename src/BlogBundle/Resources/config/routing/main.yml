@@ -11,7 +11,7 @@ index:
    # defaults: { _controller: BlogBundle:Main:settings }
 
 resume:
-    path:     /resume
+    path:     /CV
     defaults: { _controller: BlogBundle:Main:resume }
 
 # project:
