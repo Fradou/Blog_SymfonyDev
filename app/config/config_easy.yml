@@ -39,9 +39,13 @@ easy_admin:
             list:
                 fields:
                     - 'id'
+                    - { property: 'visible'}
                     - { property: 'title'}
+                    - { property: 'subtitle'}
+                    - { property: 'category'}
                     - { property: 'content', label: 'Contenu du post', type: 'raw' }
                     - { property: 'img', type: 'image'}
+                    - { property: 'url'}
         Comment:
             class: BlogBundle\Entity\Comment
             label: 'Comm blog'
