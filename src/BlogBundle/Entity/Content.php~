@@ -251,4 +251,33 @@ class Content
     {
         return $this->show;
     }
+    /**
+     * @var boolean
+     */
+    private $visible;
+
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     *
+     * @return Content
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
 }

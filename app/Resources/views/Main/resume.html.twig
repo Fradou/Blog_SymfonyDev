@@ -49,6 +49,7 @@
         <!-- Presentation -->
 
         <div class="row resume-title section scrollspy" id="presentation">
+            {# Presentation.1.0.0.title #}
             <h2>{{ Presentation.0.title }}</h2>
             <h3>{{ Presentation.0.subtitle }}</h3>
 
@@ -139,7 +140,6 @@
                             <li>Base de données <strong>MySQL</strong>.</li>
                             <li>Dépendances <strong>Composer</strong> / <strong>Gulp</strong></li>
                             <li>Serveur <strong>Apache2</strong></li>
-                            <li>CMS <strong>Drupal</strong></li>
                             <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
                             <li>Linux <strong>Ubuntu</strong></li>
                         </ul>
@@ -186,6 +186,8 @@
             <h3>Les sessions de codage intensif</h3>
         </div>
         <div class="row hackatons-tile">
+
+            {# for hacks in Hackaton.1 #}
             {% for hacks in Hackaton %}
             <div class="col offset-s1 s10 m4">
                 <div class="card z-depth-3">
@@ -205,5 +207,6 @@
             {% endfor %}
         </div>
         <div class="bl_sp_sm"></div>
+
     </div>
 {% endblock %}
