@@ -46,4 +46,11 @@ class MainController extends Controller
         ));
     }
 
+    public function resume2Action()
+    {
+        return $this->render('Main/resume2.html.twig', array(
+            // ...
+        ));
+    }
+
 }
