@@ -49,16 +49,22 @@
         <!-- Presentation -->
 
         <div class="row resume-title section scrollspy" id="presentation">
-            <h2>{{ Presentation.0.title }}</h2>
-            <h3>{{ Presentation.0.subtitle }}</h3>
+            <h2>A propos</h2>
+            <h3>Présentation en quelques mots</h3>
 
         </div>
         <div class="row">
             <div class="col offset-s3 s6 offset-m1 m3">
-                <img src="{{ asset( 'img/' ~ Presentation.0.img ) }}" alt="portrait" class="responsive-img circle">
+                <img src="{{ asset('img/portrait_alexandrefradet.jpg') }}" alt="portrait" class="responsive-img circle">
             </div>
             <div class="col offset-s1 s10 m7">
-                <p style="text-align: justify">{{ Presentation.0.content | raw }}
+                <p style="text-align: justify">Ancien de la relation client et du télémarketing, je suis actuellement en reconversion au métier de Développeur Web.<br><br>
+                    En formation sur les technos PHP / Symfony2, je suis actuellement en recherche de stage / autres pour février 2017 !<br><br>
+                    Plutôt attiré par la partie back-end des applications, j'aspire à rejoindre une entreprise qui me permettra de travailler
+                    sur des projets complexes et me soutiendra dans ma montée en compétences. Actuellement formé en Symfony 2, je préférerais dans
+                    un premier temps solidifier mes bases
+                    dessus mais reste ouvert aux autres technos avec une attirance particulière pour MEAN.<br><br>
+                    Pour l'instant sur Lyon mais habitué à bouger, je suis mobile.
                 </p>
             </div>
         </div>
@@ -158,23 +164,56 @@
         </div>
 
         <div class="row projects-tile">
-            {% for proj in Project %}
-                <div class="col offset-s1 s10 m4">
-                    <div class="card z-depth-3">
-                        <div class="card-image">
-                            <img src="{{ asset( 'img/'~ proj.img ) }}" alt="hackaton-{{ proj.title }}">
-                            <span class="card-title">{{ proj.title }}</span>
-                        </div>
-                        <div class="card-content valign-wrapper">
-                            <p class="valign">
-                                {{ proj.content | raw }}
-                        </div>
-                        <div class="card-action">
-                            <a href={{ proj.url }} >{{ proj.title }}</a>
-                        </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/mondial-1.png') }}" alt="tag-ton-metier">
+                        <span class="card-title">Tag ton métier</span>
+                    </div>
+                    <div class="card-content valign-wrapper">
+                        <p class="valign">Création d'une application de vote en Symfony2.<br><br>
+                            Destinée aux visiteurs du Mondial des Métiers, elle leur permettra de saisir, sous forme de tags, des mot-clés
+                            qualifiant le métier après chaque rencontre avec un professionnel du salon.
+                            Chaque participant pourra également évaluer le salon.
+                           </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/the-booster-2.png') }}" alt="the-booster">
+                        <span class="card-title">The Booster</span>
+                    </div>
+                    <div class="card-content valign-wrapper">
+                        <p class="valign">
+                            Développement v1 du site en Symfony2.<br><br>
+                            Mise en place du site présentant le concept et permettant aux futurs boosteurs et boostés de se préinscrire en prévision du lancement officiel.
+                            Création d'une interface backoffice de gestion des utilisateurs.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://the-booster.com/">The Booster</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/jekyll-1.png') }}" alt="jekyll">
+                        <span class="card-title">Restaurant Jekyll</span>
+                    </div>
+                    <div class="card-content valign-wrapper">
+                        <p class="valign">Projet fictif réalisé en PHP procédural :<br><br>
+                            Création d'un site vitrine pour un restaurant spécialisé dans la ratatouille.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/Fradou/Jekylls-Restaurant">Github</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="bl_sp_sm"></div>
 
@@ -186,23 +225,56 @@
             <h3>Les sessions de codage intensif</h3>
         </div>
         <div class="row hackatons-tile">
-            {% for hacks in Hackatons %}
             <div class="col offset-s1 s10 m4">
                 <div class="card z-depth-3">
                     <div class="card-image">
-                        <img src="{{ asset( 'img/'~ hacks.img ) }}" alt="hackaton-{{ hacks.title }}">
-                        <span class="card-title">{{ hacks.title }}</span>
+                        <img src="{{ asset('img/Hackaton48-1.png') }}" alt="hackaton-insead">
+                        <span class="card-title">JustAsk</span>
                     </div>
                     <div class="card-content valign-wrapper">
                         <p class="valign">
-                            {{ hacks.content | raw }}
-                    </div>
+                            48h - Symfony 2<br>
+                            Projet conjoint WCS et INSEAD, réalisation d'une application basée sur une idée des élèves INSEAD.
+                            Elle permet à des visiteurs ou résidents étrangers de se mettre en relation avec un "local" qui va leur servir d'intermédiaire dans le cadre
+                            de démarches administratives ou autres.</div>
                     <div class="card-action">
-                        <a href={{ hacks.url }} >{{ hacks.title }}</a>
+                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-36h">
+                        <span class="card-title">Lyon à la carte</span>
+                    </div>
+                    <div class="card-content valign-wrapper">
+                        <p class="valign">36h - Symfony2<br>
+                            Création d'un générateur de circuits touristiques.<br>
+                            En utilisant une base de points d’intérêt lyonnais (Data Grand Lyon), création de circuits touristiques avec pour paramètres une thématique et un nombre d'étapes.
+                            Le circuit s'affiche ensuite sur une carte via l'API Google Map.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col offset-s1 s10 m4">
+                <div class="card z-depth-3">
+                    <div class="card-image">
+                        <img src="{{ asset('img/Hackaton24-1.png') }}" alt="hackaton-24h">
+                        <span class="card-title">La fête à la chaussette</span>
+                    </div>
+                    <div class="card-content valign-wrapper">
+                        <p class="valign">24h - PHP procédural<br>
+                            Création d'un site de vote pour la soirée d'inauguration de la WCS Lyon.
+                            Site permettant l'upload de photos puis le vote de la plus belle paire de chaussettes de la soirée.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="bl_sp_sm"></div>
 
