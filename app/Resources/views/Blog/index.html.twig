@@ -50,12 +50,9 @@
                 {% for article in articles %}
                     <li class="log_article">
                         <div class="collapsible-header">
-                            <h3><small>{{ article.date | date("d/m") }} - {{ article.title }}</small></h3>
+                            <h3><small>{{ article.title }}</small></h3>
                         </div>
                         <div class="collapsible-body">
-                            {%  if article.other %}
-                                <p>{{ article.other }}</p>
-                            {%  endif %}
                             {%  if article.img %}
                                 <img src="{{ article.img }}"/>
                             {% endif %}

@@ -13,12 +13,12 @@ use Doctrine\ORM\EntityRepository;
 class ArticleRepository extends EntityRepository
 {
     public function getArticleSample($category, $number){
-        $qb= $this->createQueryBuilder('a')
+        $qb = $this->createQueryBuilder('a')
             ->select('a')
             ->where('a.visible = 1')
             ->andWhere('c.name = :category')
             ->innerJoin('a.categories', 'c')
-            ->setMaxResults(':number')
+            ->setMaxResults($number)
             ->orderBy('a.id', 'ASC')
             ->setParameter('category', $category)
             ->getQuery();
