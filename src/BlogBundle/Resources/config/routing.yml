@@ -5,3 +5,9 @@ site_main:
 blog_main:
     resource: "@BlogBundle/Resources/config/routing/blog.yml"
     prefix:   /blog
+
+blog_article:
+    resource: "@BlogBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+

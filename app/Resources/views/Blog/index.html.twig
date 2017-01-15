@@ -66,29 +66,5 @@
             </ul>
         </div>
 
-        <div class="col s12 m2 l3">
-            <div class="col offset-s2 s8" id="logbook_comment">
-                <div id="logcom_header">
-                    <h2>Vos petits com</h2>
-                    <p>Ce qu'ils ont pensés du logbook</p>
-                </div>
-
-                {% for comment in comments %}
-
-                        <h3><small>{{ comment.user }}</small></h3>
-                    <p><span>{{ comment.subject }}</span><br>
-                        {{ comment.content }}</p>
-
-                {% endfor %}
-
-
-            </div>
-        </div>
-
     </div>
 {% endblock %}
-
-{# <td><a href="{{ path('logbook_show', { 'id': logbook.id }) }}">{{ logbook.id }}</a></td>
-                                <a href="{{ path('logbook_show', { 'id': logbook.id }) }}">show</a>
-                                <a href="{{ path('logbook_edit', { 'id': logbook.id }) }}">edit</a>
-#}
