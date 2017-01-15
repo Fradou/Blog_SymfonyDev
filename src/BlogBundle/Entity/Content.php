@@ -164,4 +164,120 @@ class Content
     {
         return $this->img;
     }
+    /**
+     * @var string
+     */
+    private $subtitle;
+
+    /**
+     * @var string
+     */
+    private $url;
+
+
+    /**
+     * Set subtitle
+     *
+     * @param string $subtitle
+     *
+     * @return Content
+     */
+    public function setSubtitle($subtitle)
+    {
+        $this->subtitle = $subtitle;
+
+        return $this;
+    }
+
+    /**
+     * Get subtitle
+     *
+     * @return string
+     */
+    public function getSubtitle()
+    {
+        return $this->subtitle;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return Content
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+    /**
+     * @var boolean
+     */
+    private $show;
+
+
+    /**
+     * Set show
+     *
+     * @param boolean $show
+     *
+     * @return Content
+     */
+    public function setShow($show)
+    {
+        $this->show = $show;
+
+        return $this;
+    }
+
+    /**
+     * Get show
+     *
+     * @return boolean
+     */
+    public function getShow()
+    {
+        return $this->show;
+    }
+    /**
+     * @var boolean
+     */
+    private $visible;
+
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     *
+     * @return Content
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
 }

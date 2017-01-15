@@ -29,32 +29,22 @@ easy_admin:
                     - { property: 'name', label: 'Nom' }
                     - { property: 'articles', label: 'Articles liés' }
 
-        Logbook:
-            class: BlogBundle\Entity\Logbook
-            list:
-                fields: ['title', { property: 'content', label: 'Contenu du post', type: 'raw' }, 'date']
         Content:
             class: BlogBundle\Entity\Content
             label: 'Contenus divers'
             list:
                 fields:
                     - 'id'
+                    - { property: 'visible'}
                     - { property: 'title'}
+                    - { property: 'subtitle'}
+                    - { property: 'category'}
                     - { property: 'content', label: 'Contenu du post', type: 'raw' }
                     - { property: 'img', type: 'image'}
+                    - { property: 'url'}
         Comment:
             class: BlogBundle\Entity\Comment
             label: 'Comm blog'
-            list:
-                fields:
-                    - 'id'
-                    - { property: 'subject'}
-                    - { property: 'content'}
-                    - { property: 'visible', label: "Visible" }
-
-        Logcom:
-            class: BlogBundle\Entity\Logcom
-            label: 'Comm logbook'
             list:
                 fields:
                     - 'id'
@@ -75,10 +65,8 @@ easy_admin:
             - { label: 'Gestion DB'}
             - Article
             - Category
-            - Logbook
             - Content
             - Comment
-            - Logcom
             - { label: 'Retour au site'}
             - { label: 'Accueil', route: 'index' }
             - { label: 'Log', route: 'logbook' }
