@@ -27,7 +27,7 @@ class MainController extends Controller
 
         $logbooks = $em->getRepository('BlogBundle:Logbook')->findBy(array(),array('date' => 'desc'));
 
-        return $this->render('Main/logbook.html.twig', array(
+        return $this->render('Main/index.html.twig', array(
             'logbooks' => $logbooks,
             'logcoms' => $logcoms,
         ));

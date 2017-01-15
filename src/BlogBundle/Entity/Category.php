@@ -2,15 +2,13 @@
 
 namespace BlogBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Category
  */
 class Category
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -19,11 +17,23 @@ class Category
      */
     private $name;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $articles;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -34,6 +44,7 @@ class Category
      * Set name
      *
      * @param string $name
+     *
      * @return Category
      */
     public function setName($name)
@@ -46,23 +57,11 @@ class Category
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
         return $this->name;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $articles;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -101,6 +100,6 @@ class Category
 
     public function __toString()
     {
-        return strval($this->name);
+        return strval($this->id);
     }
 }

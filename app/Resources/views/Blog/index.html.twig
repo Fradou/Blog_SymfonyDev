@@ -47,19 +47,19 @@
                     </div>
 
                 </li>
-                {% for logbook in logbooks %}
+                {% for article in articles %}
                     <li class="log_article">
                         <div class="collapsible-header">
-                            <h3><small>{{ logbook.date | date("d/m") }} - {{ logbook.title }}</small></h3>
+                            <h3><small>{{ article.date | date("d/m") }} - {{ article.title }}</small></h3>
                         </div>
                         <div class="collapsible-body">
-                            {%  if logbook.other %}
-                                <p>{{ logbook.other }}</p>
+                            {%  if article.other %}
+                                <p>{{ article.other }}</p>
                             {%  endif %}
-                            {%  if logbook.img %}
-                                <img src="{{ logbook.img }}"/>
+                            {%  if article.img %}
+                                <img src="{{ article.img }}"/>
                             {% endif %}
-                            <p>{{ logbook.content | raw }}</p>
+                            <p>{{ article.content | raw }}</p>
                         </div>
                     </li>
                 {% endfor %}
@@ -73,11 +73,11 @@
                     <p>Ce qu'ils ont pensés du logbook</p>
                 </div>
 
-                {% for logcom in logcoms %}
+                {% for comment in comments %}
 
-                        <h3><small>{{ logcom.user }}</small></h3>
-                    <p><span>{{ logcom.subject }}</span><br>
-                        {{ logcom.content }}</p>
+                        <h3><small>{{ comment.user }}</small></h3>
+                    <p><span>{{ comment.subject }}</span><br>
+                        {{ comment.content }}</p>
 
                 {% endfor %}
 

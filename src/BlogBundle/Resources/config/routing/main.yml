@@ -1,22 +1,19 @@
 index:
     path:     /
-    defaults: { _controller: BlogBundle:Main:index }
+    defaults: { _controller: "BlogBundle:Main:index" }
+    methods:  GET
+
 
 logbook:
     path:     /logbook
-    defaults: { _controller: BlogBundle:Main:logbook }
-
-settings:
-    path:     /settings
-    defaults: { _controller: BlogBundle:Main:settings }
+    defaults: { _controller: "BlogBundle:Main:logbook" }
+    methods:  GET
 
 resume:
     path:     /CV
-    defaults: { _controller: BlogBundle:Main:resume }
+    defaults: { _controller: "BlogBundle:Main:resume" }
+    methods:  GET
 
-project:
-    path:     /project
-    defaults: { _controller: BlogBundle:Main:project }
-
-blog:
-    path:     /blog
+#project:
+ #   path:     /project
+  #  defaults: { _controller: BlogBundle:Main:project }

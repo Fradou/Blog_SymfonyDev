@@ -1,0 +1,58 @@
+-- MySQL dump 10.13  Distrib 5.7.16, for Linux (x86_64)
+--
+-- Host: localhost    Database: BlogMain
+-- ------------------------------------------------------
+-- Server version	5.7.16-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `content`
+--
+
+DROP TABLE IF EXISTS `content`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `category` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `content` longtext COLLATE utf8_unicode_ci,
+  `other` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `subtitle` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `visible` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `content`
+--
+
+LOCK TABLES `content` WRITE;
+/*!40000 ALTER TABLE `content` DISABLE KEYS */;
+INSERT INTO `content` VALUES (1,'A propos','Presentation','Ancien de la relation client et du télémarketing, je suis actuellement en reconversion au métier de Développeur Web.<br><br>\r\n                    En formation sur les technos PHP / Symfony2, je suis actuellement en recherche de stage / autres pour février 2017 !<br><br>\r\n                    Plutôt attiré par la partie back-end des applications, j\'aspire à rejoindre une entreprise qui me permettra de travailler\r\n                    sur des projets complexes et me soutiendra dans ma montée en compétences. Actuellement formé en Symfony 2, je préférerais dans\r\n                    un premier temps solidifier mes bases\r\n                    dessus mais reste ouvert aux autres technos avec une attirance particulière pour MEAN.<br><br>\r\n                    Pour l\'instant sur Lyon mais habitué à bouger, je suis mobile.\r\n                ',NULL,'portrait_alexandrefradet.jpg','Présentation en quelques mots',NULL,1),(2,'Tag ton métier','Project','Destinée aux visiteurs du Mondial des Métiers, elle leur permettra de saisir, sous forme de tags, des mot-clés\r\n                            qualifiant le métier après chaque rencontre avec un professionnel du salon.\r\n                            Chaque participant pourra également évaluer le salon.',NULL,'mondial-1.png',NULL,'https://github.com/WildCodeSchool/lyon_1116_mondial_des_metiers',1),(3,'The Booster','Project','Développement v1 du site en Symfony2.<br><br>\r\n                            Mise en place du site présentant le concept et permettant aux futurs boosteurs et boostés de se préinscrire en prévision du lancement officiel.\r\n                            Création d\'une interface backoffice de gestion des utilisateurs.',NULL,'the-booster-2.png',NULL,'https://the-booster.com/',1),(4,'Restaurant Jekyll','Project','Projet fictif réalisé en PHP procédural :<br><br>\r\n                            Création d\'un site vitrine pour un restaurant spécialisé dans la ratatouille.',NULL,'jekyll-1.png',NULL,'https://github.com/Fradou/Jekylls-Restaurant',1),(5,'JustAsk','Hackaton','48h - Symfony 2<br>\r\n                            Projet conjoint WCS et INSEAD, réalisation d\'une application basée sur une idée des élèves INSEAD.\r\n                            Elle permet à des visiteurs ou résidents étrangers de se mettre en relation avec un \"local\" qui va leur servir d\'intermédiaire dans le cadre\r\n                            de démarches administratives ou autres.',NULL,'Hackaton48-1.png',NULL,'https://github.com/Fradou/Hackaton_INSEAD-WCS',1),(6,'Lyon à la carte','Hackaton','36h - Symfony2<br>\r\n                            Création d\'un générateur de circuits touristiques.<br>\r\n                            En utilisant une base de points d’intérêt lyonnais (Data Grand Lyon), création de circuits touristiques avec pour paramètres une thématique et un nombre d\'étapes.\r\n                            Le circuit s\'affiche ensuite sur une carte via l\'API Google Map.',NULL,'Hackaton36-1.png',NULL,'https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad',1),(7,'La fête à la chaussette','Hackaton','24h - PHP procédural<br>\r\n                            Création d\'un site de vote pour la soirée d\'inauguration de la WCS Lyon.\r\n                            Site permettant l\'upload de photos puis le vote de la plus belle paire de chaussettes de la soirée.',NULL,'Hackaton24-1.png',NULL,'https://github.com/WildCodeSchool/lyon_hack_102016_florent_alexandre',1);
+/*!40000 ALTER TABLE `content` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-01-15 11:19:03

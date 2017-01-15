@@ -1,0 +1,9 @@
+blog_index:
+    path:     /
+    defaults: { _controller: "BlogBundle:Blog:index" }
+    methods:  GET
+
+blog_article:
+    path:     /blog_article
+    defaults: { _controller: BlogBundle:Blog:article }
+    methods:  GET

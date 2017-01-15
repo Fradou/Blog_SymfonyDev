@@ -12,4 +12,16 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
+    public function getContent($category, $number){
+        $qb= $this->createQueryBuilder('a')
+            ->select('a')
+            ->where('a.visible = 1')
+            ->andWhere('a.category = :category')
+            ->setMaxResults(':number')
+            ->orderBy('c.id', 'ASC')
+            ->setParameters(['category' => $category, 'number' => $number])
+            ->getQuery();
+        return $qb->getResult();
+    }
+
 }
