@@ -2,6 +2,7 @@
 
 namespace BlogBundle\Controller;
 
+use BlogBundle\Repository\ContentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class MainController extends Controller
@@ -41,9 +42,18 @@ class MainController extends Controller
 
     public function resumeAction()
     {
-        return $this->render('Main/resume.html.twig', array(
-            // ...
-        ));
+        $em = $this->getDoctrine()->getManager();
+        $sections = ['Presentation','Hackaton', 'Project' ];
+        $twigcontent = [];
+
+        /**
+         * @var $repository ContentRepository
+         */
+        foreach ($sections as $value) {
+            $twigcontent[$value]= $em->getRepository('BlogBundle:Content')->getContent($value);
+        }
+
+        return $this->render('Main/resume.html.twig', $twigcontent);
     }
 
 }

@@ -7,10 +7,6 @@ BlogBundle\Entity\User:
             generator:
                 strategy: AUTO
     oneToMany:
-        logcoms:
-            targetEntity: Logcom
-            mappedBy: user
-
         comments:
             targetEntity: Comment
             mappedBy: user
