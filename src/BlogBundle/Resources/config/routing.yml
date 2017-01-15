@@ -7,7 +7,7 @@ blog_main:
     prefix:   /blog
 
 blog_article:
-    resource: "@BlogBundle/Resources/config/routing/article.yml"
-    prefix:   /article
+        resource: "@BlogBundle/Resources/config/routing/article.yml"
+        prefix:   /article
 
 
