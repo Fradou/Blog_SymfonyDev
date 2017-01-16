@@ -4,6 +4,7 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/logbook.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/blogindex.css') }}" />
 {% endblock %}
 {% block content %}
 
@@ -18,7 +19,7 @@
     <div class="row">
         <div class="col s12 offset-m2 m8 offset-l3 l6 section_articles">
             {% for article in articles %}
-                <h3><small>{{ article.title }}</small></h3>
+                <h3>{{ article.title }}</h3>
                 {%  if article.img %}
                     <img src="{{ asset('img/'~ article.img )}}"/>
                 {% endif %}

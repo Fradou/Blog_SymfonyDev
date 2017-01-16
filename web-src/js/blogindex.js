@@ -16,7 +16,7 @@ $(document).ready(function () {
                     + articles[i].title
                     + '</small></h3>'
                     + ( typeof articles[i].img  !== 'object' ?  '<img src="../img/' + articles[i].img + '"/>' : "")
-                    + '<p>' +articles[i].content + '</p>';
+                    + '<p>' + articles[i].content + '</p>';
                 }
                 $('.section_articles').html(html);
             },
