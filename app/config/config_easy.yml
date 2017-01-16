@@ -40,7 +40,7 @@ easy_admin:
                     - { property: 'subtitle'}
                     - { property: 'category'}
                     - { property: 'content', label: 'Contenu du post', type: 'raw' }
-                    - { property: 'img', type: 'image'}
+                    - { property: 'img', type: 'image', base_path: 'img/'}
                     - { property: 'url'}
         Comment:
             class: BlogBundle\Entity\Comment
@@ -69,5 +69,4 @@ easy_admin:
             - Comment
             - { label: 'Retour au site'}
             - { label: 'Accueil', route: 'index' }
-            - { label: 'Log', route: 'logbook' }
 #            - { label: 'Other Task', route: 'other_task', params: { max: 7 } }

@@ -1,0 +1,12 @@
+article_index:
+    path:     /
+    defaults: { _controller: "BlogBundle:Article:index" }
+    methods:  GET
+
+article_show:
+    path:     /{id}/show
+    defaults: { _controller: "BlogBundle:Article:show" }
+    methods:  GET
+
+
+

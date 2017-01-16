@@ -39,16 +39,10 @@
                 <ul id="nav-mobile" class="left hide-on-med-and-down home_bloc_btn valign">
                     <li><a href="{{ path('index') }}" class="waves-effect">Home</a></li>
                     <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
-                    <li><a href="{{ path('project') }}" class="waves-effect waves-light">Projets</a></li>
-                    <li><a href="{{ path('logbook') }}" class="waves-effect">Logbook</a></li>
-                    <li><a href="{{ path('blog') }}" class="disable waves-effect">Blog</a></li>
                 </ul>
 
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="#" data-activates="slide-out" class="button-collapse2">Profil</a></li>
-                    <li><a href="{{ path('project') }}">Projets</a></li>
-                    <li><a href="{{ path('logbook') }}">Logbook</a></li>
-                    <li><a class="disable" href="{{ path('blog') }}">Blog</a></li>
                 </ul>
             </div>
         </nav>
@@ -76,6 +70,16 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified Materialize JavaScript -->
     <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-89858023-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
 {% endblock %}
 

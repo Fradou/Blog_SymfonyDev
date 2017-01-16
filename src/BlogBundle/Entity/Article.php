@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Article
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -35,9 +35,28 @@ class Article
     private $visible;
 
     /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $comments;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $categories;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -48,6 +67,7 @@ class Article
      * Set title
      *
      * @param string $title
+     *
      * @return Article
      */
     public function setTitle($title)
@@ -60,7 +80,7 @@ class Article
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -71,6 +91,7 @@ class Article
      * Set content
      *
      * @param string $content
+     *
      * @return Article
      */
     public function setContent($content)
@@ -83,7 +104,7 @@ class Article
     /**
      * Get content
      *
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
@@ -94,6 +115,7 @@ class Article
      * Set img
      *
      * @param string $img
+     *
      * @return Article
      */
     public function setImg($img)
@@ -106,13 +128,12 @@ class Article
     /**
      * Get img
      *
-     * @return string 
+     * @return string
      */
     public function getImg()
     {
         return $this->img;
     }
-
 
     /**
      * Set visible
@@ -137,17 +158,39 @@ class Article
     {
         return $this->visible;
     }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $categories;
 
     /**
-     * Constructor
+     * Add comment
+     *
+     * @param \BlogBundle\Entity\Comment $comment
+     *
+     * @return Article
      */
-    public function __construct()
+    public function addComment(\BlogBundle\Entity\Comment $comment)
     {
-        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \BlogBundle\Entity\Comment $comment
+     */
+    public function removeComment(\BlogBundle\Entity\Comment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
     }
 
     /**
@@ -186,45 +229,6 @@ class Article
 
     public function __toString()
     {
-        return strval($this->title);
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $comments;
-
-
-    /**
-     * Add comment
-     *
-     * @param \BlogBundle\Entity\Comment $comment
-     *
-     * @return Article
-     */
-    public function addComment(\BlogBundle\Entity\Comment $comment)
-    {
-        $this->comments[] = $comment;
-
-        return $this;
-    }
-
-    /**
-     * Remove comment
-     *
-     * @param \BlogBundle\Entity\Comment $comment
-     */
-    public function removeComment(\BlogBundle\Entity\Comment $comment)
-    {
-        $this->comments->removeElement($comment);
-    }
-
-    /**
-     * Get comments
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getComments()
-    {
-        return $this->comments;
+        return strval($this->id);
     }
 }
