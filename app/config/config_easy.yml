@@ -15,7 +15,7 @@ easy_admin:
                 fields:
                     - 'id'
                     - { property: 'title', label: 'Titre' }
-                    - { property: 'img', label: 'Adresse image', type: 'image', base_path: '' }
+                    - { property: 'img', label: 'Adresse image', type: 'image', base_path: 'img/' }
                     - { property: 'content', label: "Contenu" }
                     - { property: 'visible', label: "Visible" }
                     - { property: 'categories', label: "Categories associées" }

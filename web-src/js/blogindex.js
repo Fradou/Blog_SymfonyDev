@@ -12,8 +12,11 @@ $(document).ready(function () {
                 var articles = JSON.parse(response.data);
                 html = "";
                 for (i = 0; i < articles.length; i++) {
-                html+= '<h3><small>' + articles[i].title + '</small></h3>' +
-                    /*+'<img src="' + articles[i].img + '"/>*/ '<p>' +articles[i].content + '</p>';
+                html+= '<h3><small>'
+                    + articles[i].title
+                    + '</small></h3>'
+                    + ( typeof articles[i].img  !== 'object' ?  '<img src="../img/' + articles[i].img + '"/>' : "")
+                    + '<p>' +articles[i].content + '</p>';
                 }
                 $('.section_articles').html(html);
             },

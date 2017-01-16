@@ -20,7 +20,7 @@
             {% for article in articles %}
                 <h3><small>{{ article.title }}</small></h3>
                 {%  if article.img %}
-                    <img src="{{ article.img }}"/>
+                    <img src="{{ asset('img/'~ article.img )}}"/>
                 {% endif %}
                 <p>{{ article.content | raw }}</p>
             {% endfor %}
