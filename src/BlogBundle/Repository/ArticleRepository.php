@@ -12,17 +12,18 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
-    public function getArticleSample($category, $number){
-        $qb = $this->createQueryBuilder('a')
-            ->select('a')
-            ->where('a.visible = 1')
-            ->andWhere('c.name = :category')
-            ->innerJoin('a.categories', 'c')
-            ->setMaxResults($number)
-            ->orderBy('a.id', 'ASC')
-            ->setParameter('category', $category)
-            ->getQuery();
-        return $qb->getResult();
+    public function getArticleSample($category = NULL, $number){
+        $qb = $this->createQueryBuilder('a');
+        $qb->select('a.id', 'a.title', 'a.img', 'a.content');
+        $qb->where('a.visible = 1');
+            if($category != NULL) {
+                $qb->andWhere('c.name = :category');
+                    $qb->setParameter('category', $category);
+                    $qb->innerJoin('a.categories', 'c');
+            };
+        $qb->setMaxResults($number);
+        $qb->orderBy('a.id', 'ASC');
+        return $qb->getQuery()->getResult();
     }
 
 }

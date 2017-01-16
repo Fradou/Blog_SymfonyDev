@@ -7,3 +7,8 @@ blog_article:
     path:     /blog_article
     defaults: { _controller: BlogBundle:Blog:article }
     methods:  GET
+
+blog_tagindex:
+    path:     /tagindex/{tag}
+    defaults: { _controller: BlogBundle:Blog:tagindex }
+    methods: [POST, GET]

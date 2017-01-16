@@ -31,14 +31,6 @@ $(document).ready(function () {
      *      MATERIALIZE
      **/
 
-    //   Activate carousel
-    $('.carousel').carousel({indicators: true, dist: -100, time_constant: 500});
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 2500);
-    }
-    //   autoplay();
-
     //  Materialize mobile menu
     $(".button-collapse").sideNav({
     });

@@ -9,59 +9,29 @@
 
     <div class="row">
         <div class="col s12 offset-m2 m8 offset-l3 l6">
-            <div class="logbook_title">
-                <h1>Journal de développement - Logbook</h1>
-                <p>Ici vous trouverez des postes courts sur les avancées et difficultés rencontrées en développant mon site perso.</p>
-            </div>
-            <ul class="collapsible logbook" data-collapsible="accordion">
-                <li class="logbook_article">
-                    <div class="collapsible-header active">
-                        <h2>Objectifs</h2>
-                    </div>
-                    <div class="collapsible-body">
-                        <h3><small>Axes de développement sur lesquels je souhaite travailler pour mon site :</small></h3>
-                        <ul>
-                            <li>Développement de toutes les sections du site</li>
-                            <li>Tenue du logbook de développement</li>
-                            <li>Création d'une partie blog avec backoffice permettant la mise en ligne simple de postes.</li>
-                        </ul>
-                        <br>
-
-                        <h3><small>Optionnel :</small></h3>
-                        <ul>
-                            <li>Commencer à créer une chatbot</li>
-                            <li>Intégrer API Github / créer script pour intégrer automatiquement mes de commit dans le logbook. </li>
-                        </ul>
-                        <div class="bl_sp_xs"></div>
-                    </div>
-                </li>
-
-
-                <!--   <div class="row logbook section" id="logbook_articles">
-
-
-                -->
-                <li>
-                    <div class="collapsible-header" id="log_title">
-                        <h2>Journal</h2>
-                    </div>
-
-                </li>
-                {% for article in articles %}
-                    <li class="log_article">
-                        <div class="collapsible-header">
-                            <h3><small>{{ article.title }}</small></h3>
-                        </div>
-                        <div class="collapsible-body">
-                            {%  if article.img %}
-                                <img src="{{ article.img }}"/>
-                            {% endif %}
-                            <p>{{ article.content | raw }}</p>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
+            {% for tag in tags %}
+            <a class="waves-effect waves-light btn tagbutton green accent-5" id="{{ tag }}">{{ tag }}</a>
+            {% endfor %}
         </div>
-
     </div>
+
+    <div class="row">
+        <div class="col s12 offset-m2 m8 offset-l3 l6 section_articles">
+            {% for article in articles %}
+                <h3><small>{{ article.title }}</small></h3>
+                {%  if article.img %}
+                    <img src="{{ article.img }}"/>
+                {% endif %}
+                <p>{{ article.content | raw }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('js/blogindex.js') }}" ></script>
+
 {% endblock %}
