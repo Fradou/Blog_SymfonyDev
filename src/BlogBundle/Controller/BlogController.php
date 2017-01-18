@@ -34,7 +34,7 @@ class BlogController extends Controller
 
     public function tagindexAction (Request $request, $tag)
     {
-
+        if ($request->isXmlHttpRequest()) {
             /**
              * @var $repository ArticleRepository
              */
@@ -42,5 +42,9 @@ class BlogController extends Controller
             $articles= $repository->getArticleSample($tag, 5);
             return new JsonResponse(array("data" => json_encode($articles)));
 
+        } else
+        {
+            throw new HttpException('500', 'Invalid call');
+        }
     }
 }

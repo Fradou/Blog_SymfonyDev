@@ -9,24 +9,27 @@
 {% block content %}
 
     <div class="row">
-        <div class="col s12 offset-m2 m8 offset-l3 l6">
+        <div class="col s12 offset-m2 m8 offset-l3 l6" id="tagbar">
             {% for tag in tags %}
-            <a class="waves-effect waves-light btn tagbutton green accent-5" id="{{ tag }}">{{ tag }}</a>
+                <a class="waves-effect waves-light btn tagbutton green accent-5" id="{{ tag }}">{{ tag }}</a>
             {% endfor %}
         </div>
     </div>
 
+    {% for article in articles %}
     <div class="row">
-        <div class="col s12 offset-m2 m8 offset-l3 l6 section_articles">
-            {% for article in articles %}
-                <h3>{{ article.title }}</h3>
-                {%  if article.img %}
-                    <img src="{{ asset('img/'~ article.img )}}"/>
-                {% endif %}
-                <p>{{ article.content | raw }}</p>
-            {% endfor %}
+    <div class="col s12">
+        <h3>{{ article.title }}</h3>
         </div>
+        {%  if article.img %}
+            <div class="col offset-s2 s8 offset-m3 m6 offset-l4 l4 blogindex_articles_img">
+                <img src="{{ asset('img/'~ article.img )}}"/>
+            </div>
+        {% endif %}
+        <div class="col s12 offset-m2 m8 offset-l3 l6 blogindex_art_cont">
+        <p>{{ article.content | raw }}</p>
     </div>
+    {% endfor %}
 {% endblock %}
 {% block javascripts %}
 
