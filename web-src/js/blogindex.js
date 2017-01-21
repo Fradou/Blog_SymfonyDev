@@ -12,11 +12,11 @@ $(document).ready(function () {
                 var articles = JSON.parse(response.data);
                 html = "";
                 for (i = 0; i < articles.length; i++) {
-                html+= '<h3><small>'
+                html+= '<div class="row"><div class="col s12"><h3>'
                     + articles[i].title
-                    + '</small></h3>'
-                    + ( typeof articles[i].img  !== 'object' ?  '<img src="../img/' + articles[i].img + '"/>' : "")
-                    + '<p>' + articles[i].content + '</p>';
+                    + '</h3></div>'
+                    + ( typeof articles[i].img  !== 'object' ?  '<div class="col offset-s2 s8 offset-m3 m6 offset-l4 l4 blogindex_articles_img"><img src="../img/' + articles[i].img + '"/></div>' : "")
+                    + '<div class="col s12 offset-m2 m8 offset-l3 l6 blogindex_art_cont"><p>' + articles[i].content + '</p></div></div>';
                 }
                 $('.section_articles').html(html);
             },

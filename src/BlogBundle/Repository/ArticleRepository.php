@@ -22,7 +22,7 @@ class ArticleRepository extends EntityRepository
                     $qb->innerJoin('a.categories', 'c');
             };
         $qb->setMaxResults($number);
-        $qb->orderBy('a.id', 'ASC');
+        $qb->orderBy('a.id', 'DESC');
         return $qb->getQuery()->getResult();
     }
 
