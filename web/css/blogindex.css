@@ -1,1 +1,1 @@
-.blogindex_art_cont{text-align:justify}#tagbar{text-align:center}
+.blogindex_art_cont>p{text-align:justify;min-height:5vh;max-height:10vh;overflow:hidden}#tagbar{text-align:center}.blogindex_articles_img>img{width:100%;height:auto}
