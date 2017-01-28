@@ -16,7 +16,7 @@ $(document).ready(function () {
                     + articles[i].title
                     + '</h3></div>'
                     + ( typeof articles[i].img  !== 'object' ?  '<div class="col offset-s2 s8 offset-m3 m6 offset-l4 l4 blogindex_articles_img"><img src="../img/' + articles[i].img + '"/></div>' : "")
-                    + '<div class="col s12 offset-m2 m8 offset-l3 l6 blogindex_art_cont"><p>' + articles[i].content + '</p></div></div>';
+                    + '<div class="col offset-s1 s10 offset-l2 l8 blogindex_art_cont"><p>' + articles[i].content + '</p></div></div>';
                 }
                 $('.section_articles').html(html);
             },
