@@ -28,6 +28,7 @@ easy_admin:
                     - 'id'
                     - { property: 'name', label: 'Nom' }
                     - { property: 'articles', label: 'Articles liés' }
+                    - 'contents'
 
         Content:
             class: BlogBundle\Entity\Content
@@ -42,6 +43,7 @@ easy_admin:
                     - { property: 'content', label: 'Contenu du post', type: 'raw' }
                     - { property: 'img', type: 'image', base_path: 'img/'}
                     - { property: 'url'}
+                    - { property: 'categories', label: "Categories associées" }
         Comment:
             class: BlogBundle\Entity\Comment
             label: 'Comm blog'
@@ -51,8 +53,17 @@ easy_admin:
                     - { property: 'subject'}
                     - { property: 'content'}
                     - { property: 'visible', label: "Visible" }
-
-
+        User:
+            class: BlogBundle\Entity\User
+            label: 'Utilisateurs'
+            list:
+                fields:
+                    - 'id'
+                    - 'username'
+                    - 'email'
+                    - 'last_login'
+                    - 'enabled'
+                    - 'roles'
 
     # Pour la page search, determine les champs ou faire la recherche
     list:
@@ -67,6 +78,7 @@ easy_admin:
             - Category
             - Content
             - Comment
+            - User
             - { label: 'Retour au site'}
             - { label: 'Accueil', route: 'index' }
 #            - { label: 'Other Task', route: 'other_task', params: { max: 7 } }
