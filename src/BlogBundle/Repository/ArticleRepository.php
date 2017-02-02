@@ -16,11 +16,11 @@ class ArticleRepository extends EntityRepository
         $qb = $this->createQueryBuilder('a');
         $qb->select('a.id', 'a.title', 'a.img', 'a.content');
         $qb->where('a.visible = 1');
-            if($category != NULL) {
+       //     if($category != NULL) {
                 $qb->andWhere('c.name = :category');
                     $qb->setParameter('category', $category);
                     $qb->innerJoin('a.categories', 'c');
-            };
+      //      };
         $qb->setMaxResults($number);
         $qb->orderBy('a.id', 'DESC');
         return $qb->getQuery()->getResult();
