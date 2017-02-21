@@ -18,7 +18,4 @@ BlogBundle\Entity\Category:
         articles:
           targetEntity: Article
           mappedBy: categories
-        content:
-            targetEntity: BlogBundle\Entity\Content
-            mappedBy: categories
     lifecycleCallbacks: {  }
