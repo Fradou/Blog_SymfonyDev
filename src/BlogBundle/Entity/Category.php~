@@ -2,6 +2,9 @@
 
 namespace BlogBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+
 /**
  * Category
  */

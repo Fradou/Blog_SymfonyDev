@@ -14,18 +14,6 @@ $(document).ready(function () {
         $(".log_article:first-child").simulate('mousedown');
     });
 
-    /**
-     *
-     var options = [
-     {selector: '.class', offset: 200, callback: customCallbackFunc },
-     {selector: '.other-class', offset: 200, callback: function() {
-         customCallbackFunc();
-         }
-     }
-     ];
-     Materialize.scrollFire(options);
-     */
-
 
     /**
      *      MATERIALIZE

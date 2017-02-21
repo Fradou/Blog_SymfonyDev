@@ -37,3 +37,7 @@ nav > a {
 nav {
     z-index: 2;
 }
+
+.chip {
+    display: inline;
+}

@@ -101,8 +101,48 @@ class Category
         return $this->articles;
     }
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $content;
+
+
+    /**
+     * Add content
+     *
+     * @param \BlogBundle\Entity\Content $content
+     *
+     * @return Category
+     */
+    public function addContent(\BlogBundle\Entity\Content $content)
+    {
+        $this->content[] = $content;
+
+        return $this;
+    }
+
+    /**
+     * Remove content
+     *
+     * @param \BlogBundle\Entity\Content $content
+     */
+    public function removeContent(\BlogBundle\Entity\Content $content)
+    {
+        $this->content->removeElement($content);
+    }
+
+    /**
+     * Get content
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
     public function __toString()
     {
-        return strval($this->id);
+        return strval($this->name);
     }
 }

@@ -1,0 +1,1 @@
+$(document).ready(function(){var c=[];$(".project-card").each(function(){c.push($(this).height())});var o=Math.max.apply(null,c);console.log(c),console.log(o),$(".project-card").each(function(){$(this).height(o)})});
