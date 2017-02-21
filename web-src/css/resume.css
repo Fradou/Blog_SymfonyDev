@@ -1,5 +1,6 @@
 header, main, footer {
     padding-left: 175px;
+    text-align: center;
 }
 
 @media only screen and (max-width : 992px) {

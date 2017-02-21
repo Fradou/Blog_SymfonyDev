@@ -17,7 +17,7 @@ class ContentRepository extends EntityRepository
             ->select('c')
             ->where('c.visible = 1')
             ->andWhere('c.category = :type')
-            ->orderBy('c.id', 'ASC')
+            ->orderBy('c.id', 'DESC')
             ->setParameter('type', $type)
             ->getQuery();
         return $qb->getResult();
