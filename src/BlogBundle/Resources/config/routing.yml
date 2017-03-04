@@ -1,5 +1,11 @@
-site_main:
-    resource: "@BlogBundle/Resources/config/routing/main.yml"
-    prefix:   /
+index:
+    path:     /
+    defaults: { _controller: "BlogBundle:Main:index" }
+    methods:  GET
+
+resume:
+    path:     /CV
+    defaults: { _controller: "BlogBundle:Main:resume" }
+    methods:  GET
 
 
