@@ -6,7 +6,3 @@ BlogBundle\Entity\User:
             type: integer
             generator:
                 strategy: AUTO
-    oneToMany:
-        comments:
-            targetEntity: Comment
-            mappedBy: user

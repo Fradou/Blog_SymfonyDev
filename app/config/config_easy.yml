@@ -6,30 +6,6 @@ easy_admin:
         time:     'H:i'
         datetime: 'd/m/Y H:i:s'
     entities:
-        Article:
-            class: BlogBundle\Entity\Article
-            image_base_path: ''
-            label: 'Article'
-            list:
-                title: "Articles de la partie Blog du site"
-                fields:
-                    - 'id'
-                    - { property: 'title', label: 'Titre' }
-                    - { property: 'img', label: 'Adresse image', type: 'image', base_path: 'img/' }
-                    - { property: 'content', label: "Contenu" }
-                    - { property: 'visible', label: "Visible" }
-                    - { property: 'categories', label: "Categories associées" }
-        Category:
-            class: BlogBundle\Entity\Category
-            label: 'Categories'
-            list:
-                title: "Categories des articles"
-                fields:
-                    - 'id'
-                    - { property: 'name', label: 'Nom' }
-                    - { property: 'articles', label: 'Articles liés' }
-                    - 'contents'
-
         Content:
             class: BlogBundle\Entity\Content
             label: 'Contenus divers'
@@ -44,15 +20,7 @@ easy_admin:
                     - { property: 'img', type: 'image', base_path: 'img/'}
                     - { property: 'url'}
                     - { property: 'categories', label: "Categories associées" }
-        Comment:
-            class: BlogBundle\Entity\Comment
-            label: 'Comm blog'
-            list:
-                fields:
-                    - 'id'
-                    - { property: 'subject'}
-                    - { property: 'content'}
-                    - { property: 'visible', label: "Visible" }
+
         User:
             class: BlogBundle\Entity\User
             label: 'Utilisateurs'
@@ -74,10 +42,7 @@ easy_admin:
         brand_color: '#377E27'
         menu:
             - { label: 'Gestion DB'}
-            - Article
-            - Category
             - Content
-            - Comment
             - User
             - { label: 'Retour au site'}
             - { label: 'Accueil', route: 'index' }
