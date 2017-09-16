@@ -145,4 +145,19 @@ class Category
     {
         return strval($this->name);
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $contents;
+
+
+    /**
+     * Get contents
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getContents()
+    {
+        return $this->contents;
+    }
 }
