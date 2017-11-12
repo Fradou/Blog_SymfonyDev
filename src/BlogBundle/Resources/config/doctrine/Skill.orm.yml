@@ -15,7 +15,7 @@ BlogBundle\Entity\Skill:
             unique: true
         priority:
             type: integer
-            nullable: true
+            nullable: false
         display:
             type: boolean
     oneToMany:

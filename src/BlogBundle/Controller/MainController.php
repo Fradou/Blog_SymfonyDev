@@ -7,6 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class MainController extends Controller
 {
+    private $colorsRange = ['light-green','lime','green'];
+
     public function indexAction()
     {
         return $this->render('Main/index.html.twig', array(
@@ -54,7 +56,7 @@ class MainController extends Controller
             $twigcontent[$section]= $em->getRepository('BlogBundle:Content')->getContent($section);
         }
 
-           $twigcontent['Skills']= $em->getRepository('BlogBundle:Skill')->findAll();
+           $twigcontent['Skills']= $em->getRepository('BlogBundle:Skill')->findBy([],['priority'=>'ASC']);
      //   var_dump($twigcontent['Skill']);
 
 
