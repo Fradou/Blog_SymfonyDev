@@ -43,15 +43,20 @@ class MainController extends Controller
     public function resumeAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $sections = ['Presentation','Hackaton', 'Project' ];
+        $sections = ['Presentation','Hackaton', 'Project'];
+        $others = ['Skill'];
         $twigcontent = [];
 
         /**
          * @var $repository ContentRepository
          */
-        foreach ($sections as $value) {
-            $twigcontent[$value]= $em->getRepository('BlogBundle:Content')->getContent($value);
+        foreach ($sections as $section) {
+            $twigcontent[$section]= $em->getRepository('BlogBundle:Content')->getContent($section);
         }
+
+           $twigcontent['Skills']= $em->getRepository('BlogBundle:Skill')->findAll();
+     //   var_dump($twigcontent['Skill']);
+
 
         return $this->render('Main/resume.html.twig', $twigcontent);
     }

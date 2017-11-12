@@ -1,0 +1,113 @@
+<?php
+
+namespace BlogBundle\Entity;
+
+/**
+ * SkillDetail
+ */
+class SkillDetail
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $label;
+
+    /**
+     * @var int
+     */
+    private $priority;
+
+    /**
+     * @var bool
+     */
+    private $display;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set label
+     *
+     * @param string $label
+     *
+     * @return SkillDetail
+     */
+    public function setLabel($label)
+    {
+        $this->label = $label;
+
+        return $this;
+    }
+
+    /**
+     * Get label
+     *
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * Set priority
+     *
+     * @param integer $priority
+     *
+     * @return SkillDetail
+     */
+    public function setPriority($priority)
+    {
+        $this->priority = $priority;
+
+        return $this;
+    }
+
+    /**
+     * Get priority
+     *
+     * @return int
+     */
+    public function getPriority()
+    {
+        return $this->priority;
+    }
+
+    /**
+     * Set display
+     *
+     * @param boolean $display
+     *
+     * @return SkillDetail
+     */
+    public function setDisplay($display)
+    {
+        $this->display = $display;
+
+        return $this;
+    }
+
+    /**
+     * Get display
+     *
+     * @return bool
+     */
+    public function getDisplay()
+    {
+        return $this->display;
+    }
+}
+
