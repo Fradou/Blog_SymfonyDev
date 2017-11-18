@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %}CV {{ site_name }} - Développeur PHP Symfony 2 à Lyon{% endblock %}
+{% block title %}CV {{ site_name }} - Développeur Java EE - PHP Symfony 2 à Lyon{% endblock %}
 
 {% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/resume.css') }}" />{% endblock %}
 
@@ -42,91 +42,20 @@
 
 
     <div class="container">
-        <div class="row resume-title" id="name">
-            <h1>Alexandre Fradet, Développeur Web Jr</h1>
-        </div>
-
         <!-- Presentation -->
-
-        <div class="row resume-title section scrollspy" id="presentation">
-            {# Presentation.1.0.0.title #}
-            <h2>{{ Presentation.0.title }}</h2>
-            <h3>{{ Presentation.0.subtitle }}</h3>
-
-        </div>
-        <div class="row">
-            <div class="col offset-s3 s6 offset-m1 m3">
-                <img src="{{ asset( 'img/' ~ Presentation.0.img ) }}" alt="portrait" class="responsive-img circle">
-            </div>
-            <div class="col offset-s1 s10 m7">
-                <p style="text-align: justify">{{ Presentation.0.content | raw }}
-                </p>
-            </div>
-        </div>
+        {% include 'Main/ResumeBlock/presentation.html.twig' %}
         <div class="bl_sp_sm"></div>
 
         <!-- Competences -->
-
         {% include 'Main/ResumeBlock/skill.html.twig' %}
-
         <div class="bl_sp_sm"></div>
 
         <!-- Projets -->
-
-        <div class="row resume-title section scrollspy" id="projects">
-            <h2>Projets</h2>
-            <h3>Réalisations & Contributions</h3>
-        </div>
-
-        <div class="row projects-tile">
-            {% for proj in Project %}
-                <div class="col offset-s1 s10 m4">
-                    <div class="card z-depth-3 ">
-                        <div class="card-image">
-                            <img src="{{ asset( 'img/'~ proj.img ) }}" alt="hackaton-{{ proj.title }}">
-                            <span class="card-title">{{ proj.title }}</span>
-                        </div>
-                        <div class="card-content valign-wrapper project-card">
-                            <p class="valign">
-                                {{ proj.content | raw }}
-                        </div>
-                        <div class="card-action">
-                            <a href={{ proj.url }} >{{ proj.title }}</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+        {% include 'Main/ResumeBlock/project.html.twig' %}
         <div class="bl_sp_sm"></div>
 
-
         <!-- Hackatons -->
-
-        <div class="row resume-title section scrollspy" id="hackatons">
-            <h2>Hackatons</h2>
-            <h3>Les sessions de codage intensif</h3>
-        </div>
-        <div class="row hackatons-tile">
-
-            {# for hacks in Hackaton.1 #}
-            {% for hacks in Hackaton %}
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3 hackaton-card">
-                    <div class="card-image">
-                        <img src="{{ asset( 'img/'~ hacks.img ) }}" alt="hackaton-{{ hacks.title }}">
-                        <span class="card-title">{{ hacks.title }}</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">
-                            {{ hacks.content | raw }}
-                    </div>
-                    <div class="card-action">
-                        <a href={{ hacks.url }} >{{ hacks.title }}</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+        {% include 'Main/ResumeBlock/hackaton.html.twig' %}
         <div class="bl_sp_sm"></div>
 
     </div>

@@ -42,7 +42,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
-        site_name: "Alexandre FRADET - Développeur Web Jr"
+        site_name: "Alexandre FRADET - Développeur Java EE - PHP Symfony"
         twitter: "alex_fradet"
         github: "Fradou"
         linkedin: "alexandrefradet"

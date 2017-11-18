@@ -1,0 +1,24 @@
+<div class="row resume-title section scrollspy" id="projects">
+    <h2>Projets</h2>
+    <h3>Réalisations & Contributions</h3>
+</div>
+
+<div class="row projects-tile">
+    {% for proj in Project %}
+        <div class="col offset-s1 s10 m4">
+            <div class="card z-depth-3 ">
+                <div class="card-image">
+                    <img src="{{ asset( 'img/'~ proj.img ) }}" alt="hackaton-{{ proj.title }}">
+                    <span class="card-title">{{ proj.title }}</span>
+                </div>
+                <div class="card-content valign-wrapper project-card">
+                    <p class="valign">
+                        {{ proj.content | raw }}
+                </div>
+                <div class="card-action">
+                    <a href={{ proj.url }} >{{ proj.title }}</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
