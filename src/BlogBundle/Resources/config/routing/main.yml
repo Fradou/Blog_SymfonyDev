@@ -7,7 +7,3 @@ resume:
     path:     /CV
     defaults: { _controller: "BlogBundle:Main:resume" }
     methods:  GET
-
-#project:
- #   path:     /project
-  #  defaults: { _controller: BlogBundle:Main:project }

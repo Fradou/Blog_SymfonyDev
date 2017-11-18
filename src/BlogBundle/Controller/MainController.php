@@ -16,13 +16,6 @@ class MainController extends Controller
         ));
     }
 
-    public function projectAction()
-    {
-        return $this->render('Main/project.html.twig', array(
-            // ...
-        ));
-    }
-
     public function resumeAction()
     {
         $em = $this->getDoctrine()->getManager();
