@@ -47,6 +47,7 @@ twig:
         github: "Fradou"
         linkedin: "alexandrefradet"
         mail: "alex.fradet.1@gmail.com"
+        resume_pdf_name: "%resume_pdf_name%"
 
 # Doctrine Configuration
 doctrine:
