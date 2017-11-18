@@ -1,0 +1,24 @@
+<div class="row resume-title section scrollspy" id="hackatons">
+    <h2>Hackatons</h2>
+    <h3>Les sessions de codage intensif</h3>
+</div>
+<div class="row hackatons-tile">
+
+    {% for hacks in Hackaton %}
+        <div class="col offset-s1 s10 m4">
+            <div class="card z-depth-3 hackaton-card">
+                <div class="card-image">
+                    <img src="{{ asset( 'img/'~ hacks.img ) }}" alt="hackaton-{{ hacks.title }}">
+                    <span class="card-title">{{ hacks.title }}</span>
+                </div>
+                <div class="card-content valign-wrapper">
+                    <p class="valign">
+                        {{ hacks.content | raw }}
+                </div>
+                <div class="card-action">
+                    <a href={{ hacks.url }} >{{ hacks.title }}</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

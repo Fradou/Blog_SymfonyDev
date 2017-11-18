@@ -3,12 +3,6 @@ index:
     defaults: { _controller: "BlogBundle:Main:index" }
     methods:  GET
 
-
-logbook:
-    path:     /logbook
-    defaults: { _controller: "BlogBundle:Main:logbook" }
-    methods:  GET
-
 resume:
     path:     /CV
     defaults: { _controller: "BlogBundle:Main:resume" }
