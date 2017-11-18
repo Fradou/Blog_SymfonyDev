@@ -11,4 +11,6 @@
 /bin/
 /composer.phar
 /node_modules
+/web/download/*
+!web/download/.gitkeep
 .idea
