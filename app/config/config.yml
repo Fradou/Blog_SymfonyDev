@@ -42,11 +42,12 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
-        site_name: "Alexandre FRADET - Développeur Web Jr"
+        site_name: "Alexandre FRADET - Développeur Java EE - PHP Symfony"
         twitter: "alex_fradet"
         github: "Fradou"
         linkedin: "alexandrefradet"
         mail: "alex.fradet.1@gmail.com"
+        resume_pdf_name: "%resume_pdf_name%"
 
 # Doctrine Configuration
 doctrine:
@@ -82,5 +83,8 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: BlogBundle\Entity\User
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
 
 

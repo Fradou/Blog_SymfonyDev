@@ -15,6 +15,19 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $comments;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -24,56 +37,6 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
-    }
-
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $logcoms;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $comments;
-
-
-    /**
-     * Add logcom
-     *
-     * @param \BlogBundle\Entity\Logcom $logcom
-     *
-     * @return User
-     */
-    public function addLogcom(\BlogBundle\Entity\Logcom $logcom)
-    {
-        $this->logcoms[] = $logcom;
-
-        return $this;
-    }
-
-    /**
-     * Remove logcom
-     *
-     * @param \BlogBundle\Entity\Logcom $logcom
-     */
-    public function removeLogcom(\BlogBundle\Entity\Logcom $logcom)
-    {
-        $this->logcoms->removeElement($logcom);
-    }
-
-    /**
-     * Get logcoms
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getLogcoms()
-    {
-        return $this->logcoms;
     }
 
     /**
@@ -109,4 +72,6 @@ class User extends BaseUser
     {
         return $this->comments;
     }
+
+
 }

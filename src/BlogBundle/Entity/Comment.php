@@ -2,13 +2,16 @@
 
 namespace BlogBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+
 /**
  * Comment
  */
 class Comment
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -22,11 +25,26 @@ class Comment
      */
     private $content;
 
+    /**
+     * @var boolean
+     */
+    private $visible;
+
+    /**
+     * @var \BlogBundle\Entity\Article
+     */
+    private $article;
+
+    /**
+     * @var \BlogBundle\Entity\User
+     */
+    private $user;
+
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -80,45 +98,6 @@ class Comment
     {
         return $this->content;
     }
-    /**
-     * @var \BlogBundle\Entity\Article
-     */
-    private $article;
-
-
-    /**
-     * Set article
-     *
-     * @param \BlogBundle\Entity\Article $article
-     *
-     * @return Comment
-     */
-    public function setArticle(\BlogBundle\Entity\Article $article = null)
-    {
-        $this->article = $article;
-
-        return $this;
-    }
-
-    /**
-     * Get article
-     *
-     * @return \BlogBundle\Entity\Article
-     */
-    public function getArticle()
-    {
-        return $this->article;
-    }
-    /**
-     * @var boolean
-     */
-    private $visible;
-
-    /**
-     * @var \BlogBundle\Entity\User
-     */
-    private $user;
-
 
     /**
      * Set visible
@@ -145,6 +124,30 @@ class Comment
     }
 
     /**
+     * Set article
+     *
+     * @param \BlogBundle\Entity\Article $article
+     *
+     * @return Comment
+     */
+    public function setArticle(\BlogBundle\Entity\Article $article = null)
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    /**
+     * Get article
+     *
+     * @return \BlogBundle\Entity\Article
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
+
+    /**
      * Set user
      *
      * @param \BlogBundle\Entity\User $user
@@ -166,5 +169,10 @@ class Comment
     public function getUser()
     {
         return $this->user;
+    }
+
+    public function __toString()
+    {
+        return strval($this->id);
     }
 }

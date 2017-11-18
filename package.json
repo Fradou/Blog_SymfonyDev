@@ -27,5 +27,8 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-jsmin": "^0.1.5",
     "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "materialize-css": "^0.100.2"
   }
 }

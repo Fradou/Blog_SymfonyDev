@@ -1,5 +1,6 @@
 header, main, footer {
     padding-left: 175px;
+    text-align: center;
 }
 
 @media only screen and (max-width : 992px) {
@@ -35,4 +36,19 @@ nav > a {
 
 nav {
     z-index: 2;
+}
+
+.chip {
+    display: inline;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.card-title {
+    margin:0;
 }

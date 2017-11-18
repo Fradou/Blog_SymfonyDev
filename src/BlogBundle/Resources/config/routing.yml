@@ -1,16 +1,13 @@
-blog_main:
+site_main:
     resource: "@BlogBundle/Resources/config/routing/main.yml"
     prefix:   /
 
-# blog_logbook:
- #   resource: "@BlogBundle/Resources/config/routing/logbook.yml"
-  #  prefix:   /logbook
+#blog_main:
+#    resource: "@BlogBundle/Resources/config/routing/blog.yml"
+#    prefix:   /blog
 
-# blog_category:
- #   resource: "@BlogBundle/Resources/config/routing/category.yml"
-  #  prefix:   /category
+#blog_article:
+#        resource: "@BlogBundle/Resources/config/routing/article.yml"
+#        prefix:   /article
 
-# blog_logcom:
- #       resource: "@BlogBundle/Resources/config/routing/logcom.yml"
-  #      prefix:   /logcom
 

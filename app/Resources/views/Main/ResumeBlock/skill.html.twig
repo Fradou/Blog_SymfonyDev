@@ -1,0 +1,27 @@
+<div class="row resume-title section scrollspy" id="skills">
+    <h2>Compètences techniques</h2>
+    <h3>Stack technique perso</h3>
+</div>
+
+<div class="row skills-tile">
+    {% for i in 0..1 %}
+        <div class="col offset-s1 s10 m6">
+            {% for skill in Skills %}
+                {%  if loop.index0 % 2 == i %}
+                    <div class="card {{ random(['light-green','green'])}} {{ random(['darken','lighten']) }}-{{ random([1,2,3,4]) }} z-depth-4">
+                        <div class="card-content black-text text-darken-4">
+                                <span class="card-title"><strong>{{ skill.label | raw }}</strong></span>
+                            {% if skill.skillDetails | length >= 1 %}
+                                <ul>
+                                    {% for skillDetail in skill.skillDetails %}
+                                        <li>{{ skillDetail.label | raw}}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

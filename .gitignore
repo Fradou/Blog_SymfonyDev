@@ -10,6 +10,7 @@
 /vendor/
 /bin/
 /composer.phar
-/todo.txt
-Supprimerait todo.txt
 /node_modules
+/web/download/*
+!web/download/.gitkeep
+.idea

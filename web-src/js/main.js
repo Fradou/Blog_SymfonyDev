@@ -14,30 +14,10 @@ $(document).ready(function () {
         $(".log_article:first-child").simulate('mousedown');
     });
 
-    /**
-     *
-     var options = [
-     {selector: '.class', offset: 200, callback: customCallbackFunc },
-     {selector: '.other-class', offset: 200, callback: function() {
-         customCallbackFunc();
-         }
-     }
-     ];
-     Materialize.scrollFire(options);
-     */
-
 
     /**
      *      MATERIALIZE
      **/
-
-    //   Activate carousel
-    $('.carousel').carousel({indicators: true, dist: -100, time_constant: 500});
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 2500);
-    }
-    //   autoplay();
 
     //  Materialize mobile menu
     $(".button-collapse").sideNav({

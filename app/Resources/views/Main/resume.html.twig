@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %}CV {{ site_name }} - Développeur PHP Symfony 2 à Lyon{% endblock %}
+{% block title %}CV {{ site_name }} - Développeur Java EE - PHP Symfony 2 à Lyon{% endblock %}
 
 {% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/resume.css') }}" />{% endblock %}
 
@@ -21,17 +21,17 @@
             <li><a href="#projects">Projets</a></li>
             <li><a href="#hackatons">Hackatons</a></li>
             <li class="navbar-sp"></li>
-            <li><a href="{{ asset('download/CV_Alexandre_Fradet.pdf')}}" download="">Mon CV</a></li>
+            <li><a href="{{ asset('download/'~resume_pdf_name)}}" download="">Mon CV</a></li>
             <li class="navbar-sp"></li>
             <li>Contact :</li>
             <li class="contact">
-                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('/img/github-black.png') }}" alt="github" /></a>
-                <a href="mailto:{{ mail}}"><img src="{{ asset('/img/mail-black.png')}}" alt="mail"/></a>
+                <a href="https://github.com/{{ github }}" target="_blank"><img src="{{ asset('img/github-black.png') }}" alt="github" /></a>
+                <a href="mailto:{{ mail}}"><img src="{{ asset('img/mail-black.png')}}" alt="mail"/></a>
 
             </li>
             <li class="contact">
-                <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('/img/linkedin-black.png')}}" alt="linkedin"></a>
-                <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('/img/twitter-black.png')}}" alt="twitter"/></a>
+                <a href="https://fr.linkedin.com/in/{{ linkedin }}" target="_blank"><img src="{{ asset('img/linkedin-black.png')}}" alt="linkedin"></a>
+                <a href="https://twitter.com/{{ twitter }}" target="_blank"><img src="{{ asset('img/twitter-black.png')}}" alt="twitter"/></a>
             </li>
 
         </ul>
@@ -42,241 +42,30 @@
 
 
     <div class="container">
-        <div class="row resume-title" id="name">
-            <h1>Alexandre Fradet, Développeur Web Jr</h1>
-        </div>
-
         <!-- Presentation -->
-
-        <div class="row resume-title section scrollspy" id="presentation">
-            <h2>A propos</h2>
-            <h3>Présentation en quelques mots</h3>
-
-        </div>
-        <div class="row">
-            <div class="col offset-s3 s6 offset-m1 m3">
-                <img src="{{ asset('img/portrait_alexandrefradet.jpg') }}" alt="portrait" class="responsive-img circle">
-            </div>
-            <div class="col offset-s1 s10 m7">
-                <p style="text-align: justify">Ancien de la relation client et du télémarketing, je suis actuellement en reconversion au métier de Développeur Web.<br><br>
-                    En formation sur les technos PHP / Symfony2, je suis actuellement en recherche de stage / autres pour février 2017 !<br><br>
-                    Plutôt attiré par la partie back-end des applications, j'aspire à rejoindre une entreprise qui me permettra de travailler
-                    sur des projets complexes et me soutiendra dans ma montée en compétences. Actuellement formé en Symfony 2, je préférerais dans
-                    un premier temps solidifier mes bases
-                    dessus mais reste ouvert aux autres technos avec une attirance particulière pour MEAN.<br><br>
-                    Pour l'instant sur Lyon mais habitué à bouger, je suis mobile.
-                </p>
-            </div>
-        </div>
+        {% include 'Main/ResumeBlock/presentation.html.twig' %}
         <div class="bl_sp_sm"></div>
 
         <!-- Competences -->
-
-        <div class="row resume-title section scrollspy" id="skills">
-            <h2>Compètences techniques</h2>
-            <h3>Stack technique perso</h3>
-        </div>
-
-        <div class="row skills-tile">
-            <div class="col offset-s1 s10 m6">
-                <div class="card light-green z-depth-4">
-                    <div class="card-content black-text text-darken-4">
-                        <span class="card-title"><strong>PHP</strong></span>
-                        <ul>
-                            <li>En formation <strong>Développeur PHP</strong></li>
-                            <li>Spécialisé <strong>Symfony 2</strong></li>
-                            <li>Développement en <strong>POO</strong> et <strong>MVC</strong></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card lime darken-1 z-depth-4">
-                    <div class="card-content black-text text-darken-4">
-                        <span class="card-title"><strong>JavaScript</strong></span>
-                        <ul>
-                            <li>Site réalisé avec <strong>jQuery</strong> avec lequel je travaille</li>
-                            <li>J'envisage <strong>NodeJS</strong> comme prochaine techno</li>
-                            <li>Je suis interessé par <strong>MEAN</strong></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card green accent-4 z-depth-4">
-                    <div class="card-content black-text text-darken-4">
-                            <span class="card-title">
-                                    Méthode <strong>SCRUM</strong>
-                            </span>
-                    </div>
-                </div>
-
-                <div class="card green accent-2 z-depth-4">
-                    <div class="card-content black-text text-darken-4">
-                            <span class="card-title"><small>
-                            Je travaille avec <strong>PhpStorm</strong>
-                            </small></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col offset-s1 s10 m6">
-                <div class="card lime lighten-2 z-depth-2">
-                    <div class="card-content black-text text-darken-4">
-                            <span class="card-title">
-                                    <strong>HTML 5</strong>
-                            </span>
-                    </div>
-                </div>
-
-                <div class="card green lighten-2 z-depth-4">
-                    <div class="card-content black-text text-darken-4">
-                        <span class="card-title"><strong>CSS 3</strong></span>
-                        <ul>
-                            <li>Je travaille sur <strong>Bootstrap</strong></li>
-                            <li>Site réalisé en <strong>Materializecss</strong></li>
-                            <li>J'envisage <strong>Foundation</strong> pour mon prochain projet</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card green accent-5 z-depth-4">
-                    <div class="card-content black-text text-darken-4">
-                        <span class="card-title">Autres <strong>outils</strong>
-                        </span>
-                        <ul>
-                            <li>Base de données <strong>MySQL</strong>.</li>
-                            <li>Dépendances <strong>Composer</strong> / <strong>Gulp</strong></li>
-                            <li>Serveur <strong>Apache2</strong></li>
-                            <li>CMS <strong>Drupal</strong></li>
-                            <li>Versionnage <strong>Git</strong> / <strong>Github</strong></li>
-                            <li>Linux <strong>Ubuntu</strong></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include 'Main/ResumeBlock/skill.html.twig' %}
         <div class="bl_sp_sm"></div>
 
         <!-- Projets -->
-
-        <div class="row resume-title section scrollspy" id="projects">
-            <h2>Projets</h2>
-            <h3>Réalisations & Contributions</h3>
-        </div>
-
-        <div class="row projects-tile">
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3">
-                    <div class="card-image">
-                        <img src="{{ asset('img/mondial-1.png') }}" alt="tag-ton-metier">
-                        <span class="card-title">Tag ton métier</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">Création d'une application de vote en Symfony2.<br><br>
-                            Destinée aux visiteurs du Mondial des Métiers, elle leur permettra de saisir, sous forme de tags, des mot-clés
-                            qualifiant le métier après chaque rencontre avec un professionnel du salon.
-                            Chaque participant pourra également évaluer le salon.
-                           </p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://github.com/WildCodeSchool/lyon_1116_mondial_des_metiers">Github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3">
-                    <div class="card-image">
-                        <img src="{{ asset('img/the-booster-2.png') }}" alt="the-booster">
-                        <span class="card-title">The Booster</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">
-                            Développement v1 du site en Symfony2.<br><br>
-                            Mise en place du site présentant le concept et permettant aux futurs boosteurs et boostés de se préinscrire en prévision du lancement officiel.
-                            Création d'une interface backoffice de gestion des utilisateurs.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://the-booster.com/">The Booster</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3">
-                    <div class="card-image">
-                        <img src="{{ asset('img/jekyll-1.png') }}" alt="jekyll">
-                        <span class="card-title">Restaurant Jekyll</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">Projet fictif réalisé en PHP procédural :<br><br>
-                            Création d'un site vitrine pour un restaurant spécialisé dans la ratatouille.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://github.com/Fradou/Jekylls-Restaurant">Github</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include 'Main/ResumeBlock/project.html.twig' %}
         <div class="bl_sp_sm"></div>
 
-
         <!-- Hackatons -->
-
-        <div class="row resume-title section scrollspy" id="hackatons">
-            <h2>Hackatons</h2>
-            <h3>Les sessions de codage intensif</h3>
-        </div>
-        <div class="row hackatons-tile">
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3">
-                    <div class="card-image">
-                        <img src="{{ asset('img/Hackaton48-1.png') }}" alt="hackaton-insead">
-                        <span class="card-title">JustAsk</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">
-                            48h - Symfony 2<br>
-                            Projet conjoint WCS et INSEAD, réalisation d'une application basée sur une idée des élèves INSEAD.
-                            Elle permet à des visiteurs ou résidents étrangers de se mettre en relation avec un "local" qui va leur servir d'intermédiaire dans le cadre
-                            de démarches administratives ou autres.</div>
-                    <div class="card-action">
-                        <a href="https://github.com/Fradou/Hackaton_INSEAD-WCS">Github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3">
-                    <div class="card-image">
-                        <img src="{{ asset('img/Hackaton36-1.png') }}" alt="hackaton-36h">
-                        <span class="card-title">Lyon à la carte</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">36h - Symfony2<br>
-                            Création d'un générateur de circuits touristiques.<br>
-                            En utilisant une base de points d’intérêt lyonnais (Data Grand Lyon), création de circuits touristiques avec pour paramètres une thématique et un nombre d'étapes.
-                            Le circuit s'affiche ensuite sur une carte via l'API Google Map.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://github.com/WildCodeSchool/lyon_hack_112016_alexandre_riad">Github</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col offset-s1 s10 m4">
-                <div class="card z-depth-3">
-                    <div class="card-image">
-                        <img src="{{ asset('img/Hackaton24-1.png') }}" alt="hackaton-24h">
-                        <span class="card-title">La fête à la chaussette</span>
-                    </div>
-                    <div class="card-content valign-wrapper">
-                        <p class="valign">24h - PHP procédural<br>
-                            Création d'un site de vote pour la soirée d'inauguration de la WCS Lyon.
-                            Site permettant l'upload de photos puis le vote de la plus belle paire de chaussettes de la soirée.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://github.com/WildCodeSchool/lyon_hack_102016_florent_alexandre">Github</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include 'Main/ResumeBlock/hackaton.html.twig' %}
         <div class="bl_sp_sm"></div>
 
     </div>
+{% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script type="text/javascript" src="{{ asset('js/main.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('js/resume.js') }}" ></script>
+
 {% endblock %}

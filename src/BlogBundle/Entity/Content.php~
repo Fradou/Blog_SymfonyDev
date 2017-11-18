@@ -4,13 +4,14 @@ namespace BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Content
  */
 class Content
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -18,6 +19,11 @@ class Content
      * @var string
      */
     private $title;
+
+    /**
+     * @var string
+     */
+    private $subtitle;
 
     /**
      * @var string
@@ -39,11 +45,21 @@ class Content
      */
     private $img;
 
+    /**
+     * @var string
+     */
+    private $url;
+
+    /**
+     * @var boolean
+     */
+    private $visible;
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -54,6 +70,7 @@ class Content
      * Set title
      *
      * @param string $title
+     *
      * @return Content
      */
     public function setTitle($title)
@@ -66,7 +83,7 @@ class Content
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -74,9 +91,34 @@ class Content
     }
 
     /**
+     * Set subtitle
+     *
+     * @param string $subtitle
+     *
+     * @return Content
+     */
+    public function setSubtitle($subtitle)
+    {
+        $this->subtitle = $subtitle;
+
+        return $this;
+    }
+
+    /**
+     * Get subtitle
+     *
+     * @return string
+     */
+    public function getSubtitle()
+    {
+        return $this->subtitle;
+    }
+
+    /**
      * Set category
      *
      * @param string $category
+     *
      * @return Content
      */
     public function setCategory($category)
@@ -89,7 +131,7 @@ class Content
     /**
      * Get category
      *
-     * @return string 
+     * @return string
      */
     public function getCategory()
     {
@@ -100,6 +142,7 @@ class Content
      * Set content
      *
      * @param string $content
+     *
      * @return Content
      */
     public function setContent($content)
@@ -112,7 +155,7 @@ class Content
     /**
      * Get content
      *
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
@@ -123,6 +166,7 @@ class Content
      * Set other
      *
      * @param string $other
+     *
      * @return Content
      */
     public function setOther($other)
@@ -135,7 +179,7 @@ class Content
     /**
      * Get other
      *
-     * @return string 
+     * @return string
      */
     public function getOther()
     {
@@ -146,6 +190,7 @@ class Content
      * Set img
      *
      * @param string $img
+     *
      * @return Content
      */
     public function setImg($img)
@@ -158,10 +203,110 @@ class Content
     /**
      * Get img
      *
-     * @return string 
+     * @return string
      */
     public function getImg()
     {
         return $this->img;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return Content
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     *
+     * @return Content
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $categories;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add category
+     *
+     * @param \BlogBundle\Entity\Category $category
+     *
+     * @return Content
+     */
+    public function addCategory(\BlogBundle\Entity\Category $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \BlogBundle\Entity\Category $category
+     */
+    public function removeCategory(\BlogBundle\Entity\Category $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    public function __toString()
+    {
+        return strval($this->title);
     }
 }

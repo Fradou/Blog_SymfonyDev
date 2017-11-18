@@ -24,7 +24,7 @@ BlogBundle\Entity\Article:
     oneToMany:
         comments:
             targetEntity: Comment
-            mappedBy: Article
+            mappedBy: article
 
     manyToMany:
         categories:

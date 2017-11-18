@@ -12,4 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class ContentRepository extends EntityRepository
 {
+    public function getContent($type){
+        $qb= $this->createQueryBuilder('c')
+            ->select('c')
+            ->where('c.visible = 1')
+            ->andWhere('c.category = :type')
+            ->orderBy('c.id', 'DESC')
+            ->setParameter('type', $type)
+            ->getQuery();
+        return $qb->getResult();
+    }
+
 }

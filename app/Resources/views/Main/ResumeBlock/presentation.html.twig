@@ -1,0 +1,20 @@
+<div class="row resume-title" id="name">
+    <h1>Alexandre Fradet, Développeur Web Jr</h1>
+</div>
+
+<!-- Presentation -->
+
+<div class="row resume-title section scrollspy" id="presentation">
+    <h2>{{ Presentation.0.title }}</h2>
+    <h3>{{ Presentation.0.subtitle }}</h3>
+
+</div>
+<div class="row">
+    <div class="col offset-s3 s6 offset-m1 m3">
+        <img src="{{ asset( 'img/' ~ Presentation.0.img ) }}" alt="portrait" class="responsive-img circle">
+    </div>
+    <div class="col offset-s1 s10 m7">
+        <p style="text-align: justify">{{ Presentation.0.content | raw }}
+        </p>
+    </div>
+</div>

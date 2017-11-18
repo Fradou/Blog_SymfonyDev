@@ -1,0 +1,25 @@
+BlogBundle\Entity\Skill:
+    type: entity
+    table: null
+    repositoryClass: BlogBundle\Repository\SkillRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        label:
+            type: string
+            length: 255
+            unique: true
+        priority:
+            type: integer
+            nullable: false
+        display:
+            type: boolean
+    oneToMany:
+        skill_details:
+          targetEntity: SkillDetail
+          mappedBy: skill
+    lifecycleCallbacks: {  }

@@ -4,13 +4,14 @@ namespace BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Category
  */
 class Category
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -19,11 +20,23 @@ class Category
      */
     private $name;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $articles;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -34,6 +47,7 @@ class Category
      * Set name
      *
      * @param string $name
+     *
      * @return Category
      */
     public function setName($name)
@@ -46,23 +60,11 @@ class Category
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
         return $this->name;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $articles;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -99,8 +101,63 @@ class Category
         return $this->articles;
     }
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $content;
+
+
+    /**
+     * Add content
+     *
+     * @param \BlogBundle\Entity\Content $content
+     *
+     * @return Category
+     */
+    public function addContent(\BlogBundle\Entity\Content $content)
+    {
+        $this->content[] = $content;
+
+        return $this;
+    }
+
+    /**
+     * Remove content
+     *
+     * @param \BlogBundle\Entity\Content $content
+     */
+    public function removeContent(\BlogBundle\Entity\Content $content)
+    {
+        $this->content->removeElement($content);
+    }
+
+    /**
+     * Get content
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
     public function __toString()
     {
         return strval($this->name);
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $contents;
+
+
+    /**
+     * Get contents
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getContents()
+    {
+        return $this->contents;
     }
 }

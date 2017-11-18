@@ -15,7 +15,7 @@ easy_admin:
                 fields:
                     - 'id'
                     - { property: 'title', label: 'Titre' }
-                    - { property: 'img', label: 'Adresse image', type: 'image', base_path: '' }
+                    - { property: 'img', label: 'Adresse image', type: 'image', base_path: 'img/' }
                     - { property: 'content', label: "Contenu" }
                     - { property: 'visible', label: "Visible" }
                     - { property: 'categories', label: "Categories associées" }
@@ -28,20 +28,22 @@ easy_admin:
                     - 'id'
                     - { property: 'name', label: 'Nom' }
                     - { property: 'articles', label: 'Articles liés' }
+                    - 'contents'
 
-        Logbook:
-            class: BlogBundle\Entity\Logbook
-            list:
-                fields: ['title', { property: 'content', label: 'Contenu du post', type: 'raw' }, 'date']
         Content:
             class: BlogBundle\Entity\Content
             label: 'Contenus divers'
             list:
                 fields:
                     - 'id'
+                    - { property: 'visible'}
                     - { property: 'title'}
+                    - { property: 'subtitle'}
+                    - { property: 'category'}
                     - { property: 'content', label: 'Contenu du post', type: 'raw' }
-                    - { property: 'img', type: 'image'}
+                    - { property: 'img', type: 'image', base_path: 'img/'}
+                    - { property: 'url'}
+                    - { property: 'categories', label: "Categories associées" }
         Comment:
             class: BlogBundle\Entity\Comment
             label: 'Comm blog'
@@ -51,18 +53,17 @@ easy_admin:
                     - { property: 'subject'}
                     - { property: 'content'}
                     - { property: 'visible', label: "Visible" }
-
-        Logcom:
-            class: BlogBundle\Entity\Logcom
-            label: 'Comm logbook'
+        User:
+            class: BlogBundle\Entity\User
+            label: 'Utilisateurs'
             list:
                 fields:
                     - 'id'
-                    - { property: 'subject'}
-                    - { property: 'content'}
-                    - { property: 'visible', label: "Visible" }
-
-
+                    - 'username'
+                    - 'email'
+                    - 'last_login'
+                    - 'enabled'
+                    - 'roles'
 
     # Pour la page search, determine les champs ou faire la recherche
     list:
@@ -75,11 +76,9 @@ easy_admin:
             - { label: 'Gestion DB'}
             - Article
             - Category
-            - Logbook
             - Content
             - Comment
-            - Logcom
+            - User
             - { label: 'Retour au site'}
             - { label: 'Accueil', route: 'index' }
-            - { label: 'Log', route: 'logbook' }
 #            - { label: 'Other Task', route: 'other_task', params: { max: 7 } }
